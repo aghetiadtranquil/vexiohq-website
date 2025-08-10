@@ -1,0 +1,20 @@
+services:
+  company-website:
+    build: .
+    container_name: company-website
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    networks:
+      - frontend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=frontend"
+      - "traefik.http.routers.company.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"
+      - "traefik.http.routers.company.entrypoints=websecure"  
+      - "traefik.http.routers.company.tls.certresolver=le"
+      - "traefik.http.services.company.loadbalancer.server.port=3000"
+
+networks:
+  frontend:
+    external: true
