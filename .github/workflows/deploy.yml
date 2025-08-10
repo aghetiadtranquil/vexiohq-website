@@ -9,6 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
+    
     steps:
       - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.5
@@ -21,16 +22,16 @@ jobs:
             echo "Deploying Company Website..."
             cd /opt/stack/apps/company-website
             
-            # Clone or update
+            # Clone or update using SSH instead of HTTPS
             if [ ! -d "src/.git" ]; then
-              git clone https://github.com/DataTranquil/comapny-website.git src
+              git clone git@github.com:DataTranquil/comapny-website.git src
             else
               cd src && git pull origin main && cd ..
             fi
             
-            # Create docker files if missing
+            # Create Dockerfile if missing
             if [ ! -f "Dockerfile" ]; then
-              cat > Dockerfile << 'EOF'
+              cat > Dockerfile << 'DOCKERFILE'
             FROM node:18-alpine
             WORKDIR /app
             COPY src/package*.json ./
@@ -39,11 +40,12 @@ jobs:
             RUN npm run build
             EXPOSE 3000
             CMD ["npm", "start"]
-            EOF
+            DOCKERFILE
             fi
             
+            # Create docker-compose.yml if missing
             if [ ! -f "docker-compose.yml" ]; then
-              cat > docker-compose.yml << 'EOF'
+              cat > docker-compose.yml << 'DOCKERCOMPOSE'
             version: '3.8'
             services:
               company-website:
@@ -57,7 +59,7 @@ jobs:
                 labels:
                   - "traefik.enable=true"
                   - "traefik.docker.network=frontend"
-                  - "traefik.http.routers.company.rule=Host(\`datatranquil.com\`) || Host(\`www.datatranquil.com\`)"
+                  - "traefik.http.routers.company.rule=Host(\\\`datatranquil.com\\\`) || Host(\\\`www.datatranquil.com\\\`)"
                   - "traefik.http.routers.company.entrypoints=websecure"
                   - "traefik.http.routers.company.tls.certresolver=le"
                   - "traefik.http.services.company.loadbalancer.server.port=3000"
@@ -65,11 +67,11 @@ jobs:
             networks:
               frontend:
                 external: true
-            EOF
+            DOCKERCOMPOSE
             fi
             
             # Build and deploy
             docker compose build
             docker compose up -d
             
-            echo "Company Website deployed!"
+            echo "Company Website deployed successfully!"
