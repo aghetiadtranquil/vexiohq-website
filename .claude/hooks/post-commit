@@ -1,0 +1,6 @@
+#!/bin/bash
+# Auto-update SESSION.md after commits
+
+echo "## Last Commit: $(date)" >> SESSION.md
+echo "- Message: $(git log -1 --pretty=%B)" >> SESSION.md
+echo "- Files changed: $(git diff-tree --no-commit-id --name-only -r HEAD)" >> SESSION.md

@@ -1,0 +1,150 @@
+# DataTranquil Robots.txt - Optimized for SEO
+# Last Updated: 2025-08-15
+
+# Default crawler rules
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: *.json$
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*source=
+Disallow: /*?*session=
+Disallow: /temp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Allow important static assets
+Allow: /_next/static/
+Allow: /_next/image/
+Allow: /images/
+Allow: /fonts/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.woff$
+Allow: /*.woff2$
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
+Disallow: /*?*session=
+Crawl-delay: 0
+
+# Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /api/
+
+# Bingbot specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
+Crawl-delay: 0
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+
+# Apple Bot (for Siri and Spotlight)
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+# Facebook crawler
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /api/
+
+# Twitter crawler
+User-agent: Twitterbot
+Allow: /
+Disallow: /api/
+
+# LinkedIn crawler
+User-agent: LinkedInBot
+Allow: /
+Disallow: /api/
+
+# WhatsApp crawler
+User-agent: WhatsApp
+Allow: /
+Disallow: /api/
+
+# AI Bots - Controlled access
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+Allow: /resources/
+Allow: /about/
+Allow: /services/
+Disallow: /api/
+Disallow: /private/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /blog/
+Allow: /resources/
+Allow: /about/
+Allow: /services/
+Disallow: /api/
+
+User-agent: CCBot
+Allow: /blog/
+Allow: /resources/
+Disallow: /
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /blog/
+Allow: /resources/
+Disallow: /api/
+
+# Bad bots to block
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://datatranquil.com/sitemap.xml
+
+# Host directive (non-standard but supported by some crawlers)
+Host: https://datatranquil.com

@@ -1,0 +1,31 @@
+{
+  "autoActions": {
+    "onFileCreate": {
+      "*.tsx": "Create test file and add to git",
+      "*.api.ts": "Generate TypeScript types",
+      "*.md": "Update documentation index"
+    },
+    "onError": {
+      "importError": "auto-fix",
+      "lintError": "auto-fix", 
+      "typeError": "show-fix-suggestions"
+    },
+    "preCommit": {
+      "runTests": true,
+      "fixLint": true,
+      "updateImports": true
+    }
+  },
+  "shortcuts": {
+    "ff": "fresh-start",
+    "td": "find-todos",
+    "fx": "/auto-fix",
+    "cm": "/smart-commit"
+  },
+  "smartDefaults": {
+    "alwaysTypecheck": true,
+    "autoSessionSave": true,
+    "verboseErrors": false,
+    "autoSuggestNext": true
+  }
+}

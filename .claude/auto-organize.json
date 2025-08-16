@@ -1,0 +1,32 @@
+{
+  "fileOrganization": {
+    "preventDuplicates": true,
+    "consolidateRelated": true,
+    "rules": [
+      {
+        "pattern": "*command*.md",
+        "checkExisting": [
+          ".claude/commands/development.md",
+          ".claude/commands/git-workflow.md",
+          ".claude/commands/session.md"
+        ],
+        "action": "append-to-relevant"
+      },
+      {
+        "pattern": "*session*|*state*|*resume*",
+        "target": ".claude/state/SESSION.md",
+        "action": "append"
+      },
+      {
+        "pattern": "*config*|*rule*|*convention*",
+        "target": "CLAUDE.md",
+        "action": "append-section"
+      }
+    ]
+  },
+  "smartDetection": {
+    "beforeCreate": "check-similar-content",
+    "onSave": "move-to-correct-location",
+    "duplicateThreshold": 0.7
+  }
+}
