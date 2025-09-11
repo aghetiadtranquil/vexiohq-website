@@ -439,21 +439,21 @@ export default function AIConsultingServicesPage() {
                   </p>
                   <div className="space-y-4 mb-8">
                     <div className="flex items-start">
-                      <Zap className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <div className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0">{icons.zap}</div>
                       <div>
                         <h4 className="font-semibold text-slate-900">Model Selection & Design</h4>
                         <p className="text-slate-600">Choose the right algorithms for your use case</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Zap className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <div className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0">{icons.zap}</div>
                       <div>
                         <h4 className="font-semibold text-slate-900">Training & Optimization</h4>
                         <p className="text-slate-600">Maximize model performance and efficiency</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Zap className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                      <div className="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0">{icons.zap}</div>
                       <div>
                         <h4 className="font-semibold text-slate-900">MLOps & Deployment</h4>
                         <p className="text-slate-600">Production-ready deployment with monitoring</p>

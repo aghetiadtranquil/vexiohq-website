@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 
 // Modern inline SVG icons to avoid import issues
@@ -121,49 +121,29 @@ const icons = {
     </svg>
   ),
   // Resources menu icons  
-  blog: (
+  resourceBlog: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
     </svg>
   ),
-  caseStudy: (
+  resourceCaseStudy: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
     </svg>
   ),
-  webinar: (
+  resourceWebinar: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
     </svg>
   ),
-  research: (
+  resourceResearch: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>
   ),
-  calculator: (
+  resourceCalculator: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-    </svg>
-  ),
-  assessment: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-    </svg>
-  ),
-  solution: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-    </svg>
-  ),
-  benchmark: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-    </svg>
-  ),
-  partners: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
     </svg>
   ),
   // Additional icons for Products menu
@@ -402,47 +382,193 @@ const menuData = {
 
 export default function StableMegaMenu() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const navigationRef = useRef<HTMLElement>(null);
+  const menuRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
+  const buttonRefs = useRef<{[key: string]: HTMLButtonElement | null}>({});
+
+  // #COMPLETION_DRIVE_IMPL: Assuming standard WCAG keyboard navigation patterns
+  const handleKeyDown = useCallback((e: KeyboardEvent, menuKey: string) => {
+    switch (e.key) {
+      case 'Escape':
+        setActiveMenu(null);
+        buttonRefs.current[menuKey]?.focus();
+        break;
+      case 'ArrowDown':
+        e.preventDefault();
+        if (!activeMenu) {
+          setActiveMenu(menuKey);
+          // Focus first menu item
+          setTimeout(() => {
+            const firstLink = menuRefs.current[menuKey]?.querySelector('a');
+            firstLink?.focus();
+          }, 0);
+        }
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        if (activeMenu === menuKey) {
+          setActiveMenu(null);
+          buttonRefs.current[menuKey]?.focus();
+        }
+        break;
+      case 'ArrowLeft':
+      case 'ArrowRight':
+        if (!activeMenu) {
+          const menuKeys = Object.keys(menuData);
+          const currentIndex = menuKeys.indexOf(menuKey);
+          const nextIndex = e.key === 'ArrowRight' ? 
+            (currentIndex + 1) % menuKeys.length : 
+            (currentIndex - 1 + menuKeys.length) % menuKeys.length;
+          const nextMenuKey = menuKeys[nextIndex];
+          buttonRefs.current[nextMenuKey]?.focus();
+        }
+        break;
+    }
+  }, [activeMenu]);
+
+  // #COMPLETION_DRIVE_IMPL: Assuming hover delays are beneficial for UX
+  const handleMouseEnter = useCallback((menuKey: string) => {
+    if (menuTimeoutRef.current) {
+      clearTimeout(menuTimeoutRef.current);
+    }
+    menuTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(menuKey);
+    }, 150);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    if (menuTimeoutRef.current) {
+      clearTimeout(menuTimeoutRef.current);
+    }
+    menuTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(null);
+    }, 300);
+  }, []);
+
+  const handleFocus = useCallback((menuKey: string) => {
+    setActiveMenu(menuKey);
+  }, []);
+
+  const handleBlur = useCallback((e: React.FocusEvent) => {
+    // #COMPLETION_DRIVE_IMPL: Using relatedTarget to handle focus management
+    const currentTarget = e.currentTarget;
+    const relatedTarget = e.relatedTarget;
+    
+    setTimeout(() => {
+      if (!currentTarget.contains(relatedTarget as Node)) {
+        setActiveMenu(null);
+      }
+    }, 0);
+  }, []);
+
+  // Screen reader announcements
+  const [announcement, setAnnouncement] = useState('');
+  
+  useEffect(() => {
+    if (activeMenu) {
+      setAnnouncement(`${menuData[activeMenu as keyof typeof menuData].title} menu expanded`);
+    } else {
+      setAnnouncement('');
+    }
+  }, [activeMenu]);
+
+  // Close menu on escape key globally
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && activeMenu) {
+        setActiveMenu(null);
+      }
+    };
+    
+    document.addEventListener('keydown', handleGlobalKeyDown);
+    return () => document.removeEventListener('keydown', handleGlobalKeyDown);
+  }, [activeMenu]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <>
+      {/* Screen reader announcements */}
+      <div 
+        aria-live="polite" 
+        aria-atomic="true" 
+        className="sr-only"
+      >
+        {announcement}
+      </div>
+      
+      <nav 
+        ref={navigationRef}
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link 
+              href="/" 
+              className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
+              aria-label="DataTranquil home"
+            >
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">DT</span>
+                <span className="text-white font-bold text-lg" aria-hidden="true">DT</span>
               </div>
               <span className="text-xl font-bold text-gray-900">DataTranquil</span>
             </Link>
           </div>
 
           {/* Main Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1" role="menubar">
             {Object.entries(menuData).map(([key, menu]) => (
               <div 
                 key={key}
                 className="relative"
-                onMouseEnter={() => setActiveMenu(key)}
-                onMouseLeave={() => setActiveMenu(null)}
+                onMouseEnter={() => handleMouseEnter(key)}
+                onMouseLeave={handleMouseLeave}
+                onFocus={() => handleFocus(key)}
+                onBlur={handleBlur}
               >
-                <button className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1.5 group">
+                <button 
+                  ref={(el) => { buttonRefs.current[key] = el; }}
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1.5 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded-lg transition-all"
+                  aria-expanded={activeMenu === key}
+                  aria-haspopup="true"
+                  aria-controls={`menu-${key}`}
+                  onKeyDown={(e) => handleKeyDown(e.nativeEvent, key)}
+                  role="menuitem"
+                  tabIndex={0}
+                >
                   {menu.title}
-                  <span className={`inline-flex transition-all duration-200 ${activeMenu === key ? 'rotate-180' : ''} text-gray-500 group-hover:text-blue-600`}>
+                  <span 
+                    className={`inline-flex transition-all duration-200 ${activeMenu === key ? 'rotate-180' : ''} text-gray-500 group-hover:text-blue-600`}
+                    aria-hidden="true"
+                  >
                     {icons.arrow}
                   </span>
                 </button>
                 
                 {activeMenu === key && (
-                  <div className="absolute top-full left-0 mt-1 bg-white shadow-xl border-t-4 border-blue-600 rounded-b-lg" style={{minWidth: '600px'}}>
+                  <div 
+                    ref={(el) => { menuRefs.current[key] = el; }}
+                    id={`menu-${key}`}
+                    className="absolute top-full left-0 mt-1 bg-white shadow-xl border-t-4 border-blue-600 rounded-b-lg" 
+                    style={{minWidth: '600px'}}
+                    role="menu"
+                    aria-labelledby={`menu-button-${key}`}
+                  >
                     <div className="p-6">
                       <div className="grid grid-cols-3 gap-8">
                         {menu.columns.map((column, idx) => (
-                          <div key={idx}>
-                            <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
+                          <div key={idx} role="group" aria-labelledby={`menu-section-${key}-${idx}`}>
+                            <h3 
+                              id={`menu-section-${key}-${idx}`}
+                              className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3"
+                            >
                               {column.title}
                             </h3>
-                            <div className="space-y-2">
+                            <div className="space-y-2" role="none">
                               {column.items.map((item, itemIdx) => {
                                 // Map item titles to icons
                                 const iconMap: {[key: string]: any} = {
@@ -506,18 +632,24 @@ export default function StableMegaMenu() {
                                   <Link
                                     key={itemIdx}
                                     href={item.href}
-                                    className="flex items-start gap-2 p-2 rounded hover:bg-blue-50 transition-colors group"
+                                    className="flex items-start gap-2 p-2 rounded hover:bg-blue-50 focus:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-colors group"
+                                    role="menuitem"
+                                    tabIndex={-1}
+                                    aria-describedby={`menu-item-desc-${key}-${idx}-${itemIdx}`}
                                   >
                                     {itemIcon && (
-                                      <div className="text-blue-500 mt-0.5">
+                                      <div className="text-blue-500 mt-0.5" aria-hidden="true">
                                         {itemIcon}
                                       </div>
                                     )}
                                     <div className="flex-1">
-                                      <div className="font-medium text-gray-900 group-hover:text-blue-600 text-sm">
+                                      <div className="font-medium text-gray-900 group-hover:text-blue-600 group-focus:text-blue-600 text-sm">
                                         {item.title}
                                       </div>
-                                      <div className="text-xs text-gray-500 mt-0.5">
+                                      <div 
+                                        id={`menu-item-desc-${key}-${idx}-${itemIdx}`}
+                                        className="text-xs text-gray-500 mt-0.5"
+                                      >
                                         {item.desc}
                                       </div>
                                     </div>
@@ -534,26 +666,126 @@ export default function StableMegaMenu() {
               </div>
             ))}
             
-            <Link href="/docs" className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium">
+            <Link 
+              href="/docs" 
+              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 rounded-lg transition-all"
+              role="menuitem"
+            >
               Docs
             </Link>
           </div>
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Link href="/portal/login" className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2">
-              {icons.user}
+            <Link 
+              href="/portal/login" 
+              className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 transition-all"
+              aria-label="Login to portal"
+            >
+              <span aria-hidden="true">{icons.user}</span>
               Login
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900 font-medium">
+            <Link 
+              href="/contact" 
+              className="text-gray-700 hover:text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-3 py-2 transition-all"
+            >
               Contact
             </Link>
-            <Link href="/get-started" className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg">
+            <Link 
+              href="/get-started" 
+              className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all"
+            >
               Get Started →
             </Link>
           </div>
+
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label="Toggle mobile menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            </svg>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div 
+          id="mobile-menu"
+          className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t z-40"
+          role="menu"
+          aria-label="Mobile navigation menu"
+        >
+          <div className="px-4 py-2 space-y-1">
+            {Object.entries(menuData).map(([key, menu]) => (
+              <div key={key}>
+                <div className="font-semibold text-gray-900 px-3 py-2 text-sm">
+                  {menu.title}
+                </div>
+                {menu.columns.map((column, colIdx) => (
+                  <div key={colIdx} className="ml-4">
+                    <div className="text-xs font-medium text-gray-500 px-3 py-1 uppercase tracking-wider">
+                      {column.title}
+                    </div>
+                    {column.items.map((item, itemIdx) => (
+                      <Link
+                        key={itemIdx}
+                        href={item.href}
+                        className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded"
+                        role="menuitem"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+            <div className="border-t border-gray-200 pt-4">
+              <Link
+                href="/docs"
+                className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded"
+                role="menuitem"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Docs
+              </Link>
+              <Link
+                href="/portal/login"
+                className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded"
+                role="menuitem"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Login
+              </Link>
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded"
+                role="menuitem"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
+                href="/get-started"
+                className="block mx-3 my-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium text-center focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
+                role="menuitem"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Started →
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
+    </>
   );
 }

@@ -591,7 +591,7 @@ export default function AIImplementationGuide() {
 
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="bg-blue-50 rounded-lg p-6 text-center">
-                <TrendingUp className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+                <icons.TrendingUp className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                 <h4 className="font-semibold text-slate-900 mb-2">Business Metrics</h4>
                 <ul className="text-sm text-slate-600 text-left">
                   <li>• Revenue increase</li>

@@ -1,0 +1,13 @@
+# Image assets directory
+# This directory contains optimized images for the DataTranquil website
+# 
+# Directory structure:
+# - hero/: Hero section images and backgrounds
+# - features/: Feature section illustrations and icons  
+# - case-studies/: Client case study images
+# - blog/: Blog post featured images
+# - icons/: UI icons and small graphics
+# - logos/: Company and partner logos
+#
+# All images should be optimized using the scripts/optimize-images.js script
+# before being committed to the repository.

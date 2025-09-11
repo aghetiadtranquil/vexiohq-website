@@ -885,7 +885,7 @@ export default function DataQualityAISolutionsPage() {
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <div className="flex items-center mb-4">
-                      <Building2 className="h-8 w-8 text-green-600 mr-3" />
+                      <div className="h-8 w-8 text-green-600 mr-3">{icons.building2}</div>
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">Healthcare Network (500+ Facilities)</h3>
                         <p className="text-slate-600">Patient Data Quality</p>
@@ -958,7 +958,7 @@ export default function DataQualityAISolutionsPage() {
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="md:col-span-2">
                     <div className="flex items-center mb-4">
-                      <Building2 className="h-8 w-8 text-purple-600 mr-3" />
+                      <div className="h-8 w-8 text-purple-600 mr-3">{icons.building2}</div>
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">E-commerce Giant</h3>
                         <p className="text-slate-600">Product Catalog Quality</p>

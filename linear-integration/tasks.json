@@ -1,0 +1,350 @@
+{
+  "project": "comapny-website",
+  "metadata": {
+    "generated_by": "Claude Code",
+    "timestamp": "2024-12-20T10:00:00Z",
+    "session_context": "Website modernization and SEO optimization",
+    "framework": "Next.js 14",
+    "deployment": "GitHub Actions to 72.60.27.165"
+  },
+  "tasks": [
+    {
+      "title": "Fix build error - Import missing Zap icon",
+      "description": "The build is failing due to a missing Zap icon import from lucide-react in the ai-consulting-services page",
+      "priority": "high",
+      "stage": "Build",
+      "labels": ["Bug", "Critical", "Frontend"],
+      "estimate_minutes": 30,
+      "acceptance_criteria": [
+        "Build completes successfully without errors",
+        "Zap icon displays correctly on the ai-consulting-services page",
+        "No TypeScript compilation errors"
+      ],
+      "technical_notes": "Error location: src/app/ai-consulting-services/page.tsx:442. Need to import { Zap } from 'lucide-react'",
+      "dependencies": [],
+      "initial_comment": "This is blocking deployment. The icon is used in the Model Selection & Design section."
+    },
+    {
+      "title": "Remove Oracle BI references",
+      "description": "Update all content to focus on modern AI technologies only, removing legacy Oracle BI mentions",
+      "priority": "high",
+      "stage": "Content",
+      "labels": ["Content", "Cleanup", "Branding"],
+      "estimate_minutes": 45,
+      "acceptance_criteria": [
+        "No Oracle BI references remain in the codebase",
+        "Content updated to emphasize modern AI and ML technologies",
+        "Hero section tagline updated to reflect current positioning"
+      ],
+      "technical_notes": "Main reference found in src/app/page.tsx:39-40. Search entire codebase for 'Oracle', 'BI', 'legacy'",
+      "dependencies": [],
+      "initial_comment": "Important for brand positioning as a modern AI consultancy"
+    },
+    {
+      "title": "Create Hero Design v1 - Minimalist Gradient",
+      "description": "Design a clean, minimalist hero section with gradient background and floating glass cards",
+      "priority": "medium",
+      "stage": "Design",
+      "labels": ["Design", "Frontend", "Hero"],
+      "estimate_minutes": 60,
+      "acceptance_criteria": [
+        "Gradient background with smooth color transitions",
+        "Floating glass-morphism cards with key metrics",
+        "Responsive design for mobile and desktop",
+        "Smooth scroll animations"
+      ],
+      "technical_notes": "Create as HeroDesignA.tsx component. Use Tailwind CSS for styling, framer-motion for animations",
+      "dependencies": [],
+      "initial_comment": "First of 4 hero design variations for A/B testing"
+    },
+    {
+      "title": "Create Hero Design v2 - Neural Network Animation",
+      "description": "Design hero section with animated 3D neural network visualization in background",
+      "priority": "medium",
+      "stage": "Design",
+      "labels": ["Design", "Frontend", "Hero", "Animation"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "3D neural network animation using Three.js or CSS",
+        "Performance optimized (60fps on modern devices)",
+        "Fallback for low-performance devices",
+        "Interactive elements responding to mouse movement"
+      ],
+      "technical_notes": "Create as HeroDesignB.tsx. Consider using react-three-fiber or pure CSS animations",
+      "dependencies": ["Create Hero Design v1"],
+      "initial_comment": "Advanced design showcasing AI/ML theme visually"
+    },
+    {
+      "title": "Create Hero Design v3 - Video Background",
+      "description": "Hero section with background video of AI/tech workspace with overlay content",
+      "priority": "medium",
+      "stage": "Design",
+      "labels": ["Design", "Frontend", "Hero", "Video"],
+      "estimate_minutes": 60,
+      "acceptance_criteria": [
+        "Autoplay muted video background",
+        "Dark overlay for text readability",
+        "Video optimized for web (< 5MB)",
+        "Mobile fallback to static image"
+      ],
+      "technical_notes": "Create as HeroDesignC.tsx. Need to source or create appropriate video content",
+      "dependencies": ["Create Hero Design v1"],
+      "initial_comment": "Professional look with dynamic video content"
+    },
+    {
+      "title": "Create Hero Design v4 - Interactive Particles",
+      "description": "Hero with interactive particle system that responds to mouse movement",
+      "priority": "medium",
+      "stage": "Design",
+      "labels": ["Design", "Frontend", "Hero", "Interactive"],
+      "estimate_minutes": 75,
+      "acceptance_criteria": [
+        "Particle system with 100+ particles",
+        "Smooth mouse interaction",
+        "Performance optimized",
+        "Mobile touch support"
+      ],
+      "technical_notes": "Create as HeroDesignD.tsx. Use canvas or WebGL for particle rendering",
+      "dependencies": ["Create Hero Design v1"],
+      "initial_comment": "Interactive and engaging design for user retention"
+    },
+    {
+      "title": "Build Hero Selector Component",
+      "description": "Create component to switch between hero designs for A/B testing",
+      "priority": "medium",
+      "stage": "Frontend",
+      "labels": ["Frontend", "Component", "Testing"],
+      "estimate_minutes": 45,
+      "acceptance_criteria": [
+        "Dropdown or toggle to switch designs",
+        "Persist selection in localStorage",
+        "Smooth transitions between designs",
+        "Analytics tracking for each design"
+      ],
+      "technical_notes": "Create HeroSelector.tsx that dynamically imports hero components",
+      "dependencies": ["Create Hero Design v1", "Create Hero Design v2", "Create Hero Design v3", "Create Hero Design v4"],
+      "initial_comment": "Enables testing different designs with users"
+    },
+    {
+      "title": "Replace placeholder images",
+      "description": "Replace all /api/placeholder references with actual AI-themed images",
+      "priority": "high",
+      "stage": "Content",
+      "labels": ["Content", "Images", "Frontend"],
+      "estimate_minutes": 60,
+      "acceptance_criteria": [
+        "All placeholder images replaced",
+        "Images optimized for web (WebP format)",
+        "Proper alt text for accessibility",
+        "Lazy loading implemented"
+      ],
+      "technical_notes": "Found in AIFeatureSection.tsx. Need to source from Unsplash or generate with AI",
+      "dependencies": [],
+      "initial_comment": "Critical for professional appearance"
+    },
+    {
+      "title": "Create use-cases page",
+      "description": "Build comprehensive use-cases page with 5 industry-specific AI implementation examples",
+      "priority": "high",
+      "stage": "Content",
+      "labels": ["Content", "SEO", "Page"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "5 detailed industry use cases (Healthcare, Finance, Retail, Manufacturing, Logistics)",
+        "Each with problem, solution, and ROI metrics",
+        "Schema markup for better SEO",
+        "Internal linking to relevant service pages"
+      ],
+      "technical_notes": "Create at src/app/use-cases/page.tsx. Include real metrics and case study data",
+      "dependencies": [],
+      "initial_comment": "Key page for SEO and demonstrating expertise"
+    },
+    {
+      "title": "Build comparison pages",
+      "description": "Create comparison pages: DataTranquil vs Accenture, Deloitte, McKinsey AI consulting",
+      "priority": "medium",
+      "stage": "Content",
+      "labels": ["Content", "SEO", "Competitive"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "3 comparison pages created",
+        "Fair and factual comparisons",
+        "Focus on DataTranquil's unique value props",
+        "Comparison tables with clear differentiators"
+      ],
+      "technical_notes": "Create under src/app/compare/. Use structured data for comparison tables",
+      "dependencies": [],
+      "initial_comment": "Important for competitive SEO keywords"
+    },
+    {
+      "title": "Add pricing calculator page",
+      "description": "Interactive pricing calculator with tiered packages and ROI estimation",
+      "priority": "high",
+      "stage": "Frontend",
+      "labels": ["Frontend", "Interactive", "Lead Gen"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "3 service tiers (Starter, Growth, Enterprise)",
+        "Interactive calculator for custom pricing",
+        "ROI estimation based on inputs",
+        "Lead capture for quotes"
+      ],
+      "technical_notes": "Create at src/app/pricing/page.tsx. Use React state for calculations",
+      "dependencies": [],
+      "initial_comment": "Critical for lead generation and transparency"
+    },
+    {
+      "title": "Implement customer success stories",
+      "description": "Add customer success stories section with measurable ROI metrics",
+      "priority": "high",
+      "stage": "Content",
+      "labels": ["Content", "Trust", "SEO"],
+      "estimate_minutes": 75,
+      "acceptance_criteria": [
+        "5+ customer success stories",
+        "Specific ROI metrics and outcomes",
+        "Client logos and testimonials",
+        "Before/after comparisons"
+      ],
+      "technical_notes": "Update src/app/case-studies/page.tsx with real client data",
+      "dependencies": [],
+      "initial_comment": "Builds trust and demonstrates value"
+    },
+    {
+      "title": "Create testimonials section",
+      "description": "Build testimonials section with review schema markup",
+      "priority": "medium",
+      "stage": "Frontend",
+      "labels": ["Frontend", "Trust", "Schema"],
+      "estimate_minutes": 60,
+      "acceptance_criteria": [
+        "Video and text testimonials",
+        "Review schema markup for SEO",
+        "Star ratings display",
+        "Carousel or grid layout"
+      ],
+      "technical_notes": "Create TestimonialsSection.tsx component with schema.org Review markup",
+      "dependencies": [],
+      "initial_comment": "Social proof for conversion optimization"
+    },
+    {
+      "title": "Build partner ecosystem page",
+      "description": "Showcase technology partnerships with AWS, Azure, Google Cloud, OpenAI",
+      "priority": "medium",
+      "stage": "Content",
+      "labels": ["Content", "Trust", "Partners"],
+      "estimate_minutes": 60,
+      "acceptance_criteria": [
+        "Partner logos and descriptions",
+        "Certification badges",
+        "Integration capabilities",
+        "Joint solution offerings"
+      ],
+      "technical_notes": "Create at src/app/partners/page.tsx",
+      "dependencies": [],
+      "initial_comment": "Demonstrates technical credibility"
+    },
+    {
+      "title": "Create industry landing pages",
+      "description": "Build 3 industry-specific landing pages for Healthcare, Finance, and Retail AI solutions",
+      "priority": "high",
+      "stage": "Content",
+      "labels": ["Content", "SEO", "Industry"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "3 industry pages with specific use cases",
+        "Industry-specific keywords and content",
+        "Compliance and regulation mentions",
+        "Industry-specific case studies"
+      ],
+      "technical_notes": "Create under src/app/industries/. Target long-tail keywords",
+      "dependencies": [],
+      "initial_comment": "Critical for industry-specific SEO"
+    },
+    {
+      "title": "Implement privacy-first analytics",
+      "description": "Set up privacy-compliant analytics with consent management",
+      "priority": "high",
+      "stage": "Backend",
+      "labels": ["Analytics", "Privacy", "GDPR"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "Cookie consent banner",
+        "Analytics only after consent",
+        "GDPR/CCPA compliant",
+        "Server-side tracking option"
+      ],
+      "technical_notes": "Implement using existing CookieConsent component. Add PostHog or Plausible",
+      "dependencies": [],
+      "initial_comment": "Required for compliance and user trust"
+    },
+    {
+      "title": "Setup conversion tracking",
+      "description": "Implement server-side conversion tracking for Google and Meta ads",
+      "priority": "high",
+      "stage": "Backend",
+      "labels": ["Analytics", "Marketing", "Tracking"],
+      "estimate_minutes": 75,
+      "acceptance_criteria": [
+        "Google Ads conversion tracking",
+        "Meta Pixel with CAPI",
+        "Server-side implementation",
+        "Test conversions working"
+      ],
+      "technical_notes": "Create API routes for conversion events. Use Conversion API for privacy",
+      "dependencies": ["Implement privacy-first analytics"],
+      "initial_comment": "Essential for measuring marketing ROI"
+    },
+    {
+      "title": "Create downloadable whitepapers",
+      "description": "Create 2 gated whitepapers with lead capture forms",
+      "priority": "medium",
+      "stage": "Content",
+      "labels": ["Content", "Lead Gen", "SEO"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "2 whitepapers (AI Readiness Guide, ROI Framework)",
+        "PDF generation from content",
+        "Lead capture forms",
+        "Email delivery system"
+      ],
+      "technical_notes": "Use existing LeadCapture component. Store PDFs in public/downloads",
+      "dependencies": [],
+      "initial_comment": "Lead magnets for email list building"
+    },
+    {
+      "title": "Build AI readiness assessment tool",
+      "description": "Interactive assessment tool with scoring and recommendations",
+      "priority": "medium",
+      "stage": "Frontend",
+      "labels": ["Frontend", "Interactive", "Lead Gen"],
+      "estimate_minutes": 90,
+      "acceptance_criteria": [
+        "10-15 assessment questions",
+        "Scoring algorithm",
+        "Personalized recommendations",
+        "Results capture for leads"
+      ],
+      "technical_notes": "Create at src/app/assessment/page.tsx. Use React for interactivity",
+      "dependencies": [],
+      "initial_comment": "Engaging tool for lead qualification"
+    },
+    {
+      "title": "Add local SEO structured data",
+      "description": "Implement LocalBusiness schema for San Francisco AI consulting",
+      "priority": "medium",
+      "stage": "SEO",
+      "labels": ["SEO", "Schema", "Local"],
+      "estimate_minutes": 45,
+      "acceptance_criteria": [
+        "LocalBusiness schema markup",
+        "San Francisco location data",
+        "Service area definitions",
+        "Opening hours and contact"
+      ],
+      "technical_notes": "Add to existing SchemaMarkup component. Target 'AI consulting San Francisco'",
+      "dependencies": [],
+      "initial_comment": "Important for local search visibility"
+    }
+  ]
+}

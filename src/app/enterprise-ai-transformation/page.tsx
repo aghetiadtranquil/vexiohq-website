@@ -721,15 +721,15 @@ export default function EnterpriseAITransformationPage() {
                     <div className="bg-purple-50 rounded-lg p-6 mr-8">
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-purple-600 mr-2" />
+                          <div className="h-4 w-4 text-purple-600 mr-2">{icons.checkCircle}</div>
                           <span>Infrastructure setup</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-purple-600 mr-2" />
+                          <div className="h-4 w-4 text-purple-600 mr-2">{icons.checkCircle}</div>
                           <span>Data pipeline creation</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-purple-600 mr-2" />
+                          <div className="h-4 w-4 text-purple-600 mr-2">{icons.checkCircle}</div>
                           <span>Team onboarding</span>
                         </li>
                       </ul>
@@ -748,15 +748,15 @@ export default function EnterpriseAITransformationPage() {
                     <div className="bg-green-50 rounded-lg p-6 ml-8">
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                          <div className="h-4 w-4 text-green-600 mr-2">{icons.checkCircle}</div>
                           <span>Model development</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                          <div className="h-4 w-4 text-green-600 mr-2">{icons.checkCircle}</div>
                           <span>System integration</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
+                          <div className="h-4 w-4 text-green-600 mr-2">{icons.checkCircle}</div>
                           <span>User testing</span>
                         </li>
                       </ul>
@@ -775,15 +775,15 @@ export default function EnterpriseAITransformationPage() {
                     <div className="bg-orange-50 rounded-lg p-6 mr-8">
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-orange-600 mr-2" />
+                          <div className="h-4 w-4 text-orange-600 mr-2">{icons.checkCircle}</div>
                           <span>Production rollout</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-orange-600 mr-2" />
+                          <div className="h-4 w-4 text-orange-600 mr-2">{icons.checkCircle}</div>
                           <span>Performance optimization</span>
                         </li>
                         <li className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-orange-600 mr-2" />
+                          <div className="h-4 w-4 text-orange-600 mr-2">{icons.checkCircle}</div>
                           <span>Scale planning</span>
                         </li>
                       </ul>
