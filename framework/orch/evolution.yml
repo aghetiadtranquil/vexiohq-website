@@ -1,0 +1,84 @@
+framework:
+  version: "3.1.1"
+  release_date: "2025-09-11"
+  
+governance:
+  protected_keys:
+    - optimization_weights.alpha
+    - optimization_weights.beta
+    - optimization_weights.gamma
+    - phase_slos
+    - ci_gates
+    - tag_schema
+    
+optimization_weights:
+  alpha: 0.52
+  beta: 0.28
+  gamma: 0.20
+  
+risk_scale: 5
+
+budgets:
+  hotfix_hours: 8
+  refactor_hours: 40
+  feature_hours: 80
+  
+agent_weights:
+  default: 1.0
+  min: 0.5
+  max: 1.5
+  penalty_per_debt: 0.1
+  
+phase_slos:
+  -1:
+    max_duration_seconds: 60
+    timeout_action: "use_defaults"
+  0:
+    max_duration_seconds: 300
+    timeout_action: "skip_with_low_confidence"
+  1:
+    max_duration_seconds: 600
+    timeout_action: "use_best_partial"
+  2:
+    max_duration_seconds: 300
+    timeout_action: "escalate_to_user"
+  3:
+    max_duration_seconds: 900
+    timeout_action: "checkpoint_and_continue"
+  4:
+    max_duration_seconds: 300
+    timeout_action: "mark_unverified"
+  5:
+    max_duration_seconds: 120
+    timeout_action: "defer_learning"
+
+ci_gates:
+  quality:
+    - metric: "brier_score"
+      operator: "<="
+      threshold: 0.10
+    - metric: "tag_f1_score"
+      operator: ">="
+      threshold: 0.70
+  security:
+    - metric: "secrets_found"
+      operator: "=="
+      threshold: 0
+    - metric: "allow_patterns_exists"
+      operator: "=="
+      threshold: true
+      
+retention_days:
+  verification_reports: 30
+  event_logs: 30
+  
+calibration:
+  window_size: 20
+  batch_day: "Monday"
+  
+quality_debt:
+  sla_sessions: 3
+  states: ["OPEN", "IN_PROGRESS", "RESOLVED", "VERIFIED"]
+  
+security:
+  deny_on_missing_allow_list: true
