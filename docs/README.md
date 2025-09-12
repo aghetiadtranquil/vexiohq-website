@@ -39,6 +39,18 @@ Planning and architecture documents:
 ### 📁 `/docs/testing/` - Test Reports
 - [Website Test Report](./testing/WEBSITE-TEST-REPORT.md)
 
+### 📁 `/docs/linear/` - Linear Integration & Workflow
+Linear project management and integration:
+- **[CHATPRD_LINEAR_INTEGRATION.md](linear/CHATPRD_LINEAR_INTEGRATION.md)** - Linear integration setup
+- **[CHATPRD_TEAM_SETUP.md](linear/CHATPRD_TEAM_SETUP.md)** - Team configuration guide
+- **[LINEAR_WORKFLOW_GUIDE.md](linear/LINEAR_WORKFLOW_GUIDE.md)** - Daily workflow procedures
+- **[Linear_push.md](linear/Linear_push.md)** - Push automation documentation
+- **[linear-integration/](linear/linear-integration/)** - Integration scripts and tools
+
+### 📁 `/docs/project/` - Project Management
+Project-specific documentation:
+- **[BRANCH_SUMMARY.md](project/BRANCH_SUMMARY.md)** - Current branch summary and status
+
 ## Key Achievements
 
 ### ✅ Build System
@@ -90,6 +102,8 @@ docs/
 ├── improvements/       # Website improvement documentation
 ├── framework/         # Response-Awareness Framework guides
 ├── planning/          # Architecture and planning documents
+├── linear/           # Linear integration and workflow
+├── project/          # Project management documents
 ├── technical/         # Technical guides and optimization
 ├── seo/              # SEO audits and reports
 ├── implementation/    # Implementation checklists and summaries
