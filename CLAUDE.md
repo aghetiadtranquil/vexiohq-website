@@ -1,7 +1,7 @@
-# Company Website - Project Guidelines for Claude Code
+# DataTranquil Website - Claude Code Development Guidelines
 
-## Project Overview
-This is the DataTranquil company website built with Node.js. The site is deployed automatically via GitHub Actions when pushing to the `main` branch.
+## 🎯 Project Overview
+DataTranquil is an enterprise AI consulting platform built with Next.js 14, TypeScript, and Tailwind CSS. The website features 65+ pages, 41+ custom components, and comprehensive AI/ML consulting content. This document provides guidelines for AI-assisted development.
 
 ## Important Context
 - **Default Branch**: Use `main` (not master) for all operations

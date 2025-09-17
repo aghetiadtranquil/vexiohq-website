@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { ClerkProvider } from '@clerk/nextjs';
+import * as gtag from '@/lib/gtag';
 // import CookieConsent from "@/components/CookieConsent";
 // import Footer from "@/components/Footer";
 // import ErrorBoundary from "@/components/ErrorBoundary";
@@ -9,7 +11,9 @@ import SimpleFooter from "@/components/SimpleFooter";
 // import SimpleCookieConsent from "@/components/SimpleCookieConsent";
 import CookiePreferenceCenter from "@/components/CookiePreferenceCenter";
 import StableMegaMenu from "@/components/StableMegaMenu";
-import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
+// Service Worker disabled - was causing cache issues
+// import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
+import { OrganizationSchema, LocalBusinessSchema, WebSiteSchema } from "@/components/StructuredData";
 // import Footer from "@/components/FooterSimple";
 // import Navigation from "@/components/Navigation";
 // Removed Vercel analytics imports as deploying to own server
@@ -367,7 +371,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         
         {/* Preload critical resources for Core Web Vitals */}
-        <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
         <link rel="preload" href="/images/hero/ai-consulting-hero-optimized.webp" as="image" type="image/webp" media="(min-width: 768px)" />
         <link rel="preload" href="/images/hero/ai-consulting-hero-mobile-optimized.webp" as="image" type="image/webp" media="(max-width: 767px)" />
         
@@ -379,6 +383,9 @@ export default function RootLayout({
         <link rel="prefetch" href="/enterprise-ai-transformation" />
         <link rel="prefetch" href="/ai-roi-calculator" />
         
+        {/* Preload calculator HTML for improved LCP */}
+        <link rel="preload" href="/calculators/business-transformation-calculator.html" as="document" />
+        
         {/* Module preload for critical JavaScript */}
         <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
         <link rel="modulepreload" href="/_next/static/chunks/main-app.js" />
@@ -387,16 +394,19 @@ export default function RootLayout({
         <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         
         {/* Favicon and App Icons */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Preload critical resources - Let Next.js handle CSS loading automatically */}
         
-        {/* Security headers */}
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;" />
+        {/* Security headers - CSP temporarily disabled for Clerk debugging */}
+        {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://*.clerk.accounts.dev https://*.clerk.dev https://*.clearkcdn.dev; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://*.clerk.accounts.dev https://*.clerk.dev https://*.clearkcdn.dev;" /> */}
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <Script
@@ -424,33 +434,93 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }}
         />
+        {/* Google Analytics 4 */}
+        {process.env.NEXT_PUBLIC_GA_ID && process.env.NEXT_PUBLIC_GA_ID !== 'G-XXXXXXXXXX' && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                
+                // Default consent mode
+                gtag('consent', 'default', {
+                  'analytics_storage': 'denied',
+                  'ad_storage': 'denied',
+                  'wait_for_update': 500
+                });
+                
+                // Configure GA4
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_path: window.location.pathname,
+                  cookie_domain: 'datatranquil.com',
+                  cookie_flags: 'SameSite=None;Secure'
+                });
+              `}
+            </Script>
+          </>
+        )}
+        
+        {/* Google Tag Manager (optional) */}
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <Script id="google-tag-manager" strategy="afterInteractive">
+            {`
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+            `}
+          </Script>
+        )}
       </head>
       <body className={`${inter.className} antialiased`} itemScope itemType="https://schema.org/WebSite">
-        {/* Skip to main content - hidden but accessible */}
-        <a 
-          href="#main-content" 
-          className="absolute -left-full focus:left-4 top-4 bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-200 z-[100]"
-          aria-label="Skip to main content"
-        >
-          Skip to main content
-        </a>
-        {/* Stable Mega Menu Navigation - Simple Design */}
-        <StableMegaMenu />
-        <main id="main-content" role="main">
-          {children}
-        </main>
-        {/* Simple Footer - Working version */}
-        <SimpleFooter />
-        {/* Privacy Preference Center - McKinsey-style cookie management */}
-        <CookiePreferenceCenter />
-        {/* Service Worker Registration for Progressive Enhancement */}
-        <ServiceWorkerRegistration />
-        {/* Removed Vercel analytics components as deploying to own server */}
-        <noscript>
-          <div style={{ padding: '20px', textAlign: 'center', background: '#f0f0f0' }}>
-            This website works best with JavaScript enabled for full interactive features.
-          </div>
-        </noscript>
+        {/* Google Tag Manager (noscript) */}
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <noscript>
+            <iframe 
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+              height="0" 
+              width="0" 
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
+        <ClerkProvider>
+          {/* Skip to main content - hidden but accessible */}
+          <a 
+            href="#main-content" 
+            className="absolute -left-full focus:left-4 top-4 bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-200 z-[100]"
+            aria-label="Skip to main content"
+          >
+            Skip to main content
+          </a>
+          {/* Stable Mega Menu Navigation - Simple Design */}
+          <StableMegaMenu />
+          <main id="main-content" role="main">
+            {children}
+          </main>
+          {/* Simple Footer - Working version */}
+          <SimpleFooter />
+          {/* Privacy Preference Center - McKinsey-style cookie management */}
+          <CookiePreferenceCenter />
+          {/* Service Worker DISABLED - was causing cache issues */}
+          {/* <ServiceWorkerRegistration /> */}
+          {/* Core Structured Data Schemas */}
+          <OrganizationSchema />
+          <LocalBusinessSchema />
+          <WebSiteSchema />
+          {/* Removed Vercel analytics components as deploying to own server */}
+          <noscript>
+            <div style={{ padding: '20px', textAlign: 'center', background: '#f0f0f0' }}>
+              This website works best with JavaScript enabled for full interactive features.
+            </div>
+          </noscript>
+        </ClerkProvider>
       </body>
     </html>
   );

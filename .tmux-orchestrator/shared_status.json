@@ -1,0 +1,10 @@
+{
+  "project": "comapny-website",
+  "start_time": 1757721621.585323,
+  "active_agents": [
+    "pm",
+    "developer",
+    "tester"
+  ],
+  "communication_dir": "/Users/admin/projects/comapny-website/.tmux-orchestrator"
+}

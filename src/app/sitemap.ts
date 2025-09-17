@@ -112,6 +112,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     },
+    {
+      url: `${baseUrl}/blog/genai-vs-traditional-ml`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
   ]
 
   // Resource pages
@@ -134,6 +140,207 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     },
+    {
+      url: `${baseUrl}/resources/ai-readiness-checklist`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+  ]
+  
+  // Product pages
+  const productPages = [
+    {
+      url: `${baseUrl}/products`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/products/agentic-ai`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/products/analytics`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/products/mlops`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/products/transformation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ]
+  
+  // Solution pages
+  const solutionPages = [
+    {
+      url: `${baseUrl}/solutions/ai-strategy`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/solutions/automation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/solutions/data-analytics`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/solutions/search`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ]
+  
+  // Insights pages
+  const insightPages = [
+    {
+      url: `${baseUrl}/insights/state-of-enterprise-ai-2025`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/insights/ai-economic-impact-report`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/insights/ai-governance-framework`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/insights/financial-services-ml-playbook`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/insights/healthcare-ai-transformation-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/insights/mlops-best-practices`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+  ]
+  
+  // Tool pages
+  const toolPages = [
+    {
+      url: `${baseUrl}/tools/calculator`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+  ]
+  
+  // Additional pages
+  // NOTE: /portal/login excluded due to runtime errors - add back after Dev fixes
+  const additionalPages = [
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/case-studies/fortune-500-retail-transformation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/consultation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/get-started`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/agentic-ai-assessment`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/agentic-ai-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ai-implementation-strategy-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/implementation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/privacy-notice`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cookie-notice`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
   ]
 
   // Combine all pages
@@ -141,6 +348,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...blogPosts,
     ...resourcePages,
+    ...productPages,
+    ...solutionPages,
+    ...insightPages,
+    ...toolPages,
+    ...additionalPages,
   ].sort((a, b) => b.priority - a.priority) // Sort by priority for better crawl budget optimization
 }
 

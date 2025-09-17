@@ -1,6 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import { blogArticles } from '@/data/blogArticles';
+import ReadingTime from '@/components/ReadingTime';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 // Inline SVG icons to avoid external dependencies
 const icons = {
@@ -32,134 +35,8 @@ const icons = {
   )
 };
 
-const blogPosts = [
-  {
-    slug: 'how-to-implement-ai-in-enterprise',
-    title: 'How to Implement AI in Enterprise: A Complete Guide for 2024',
-    excerpt: 'Learn the step-by-step process of implementing AI in your enterprise, from assessment to deployment. Discover best practices, common pitfalls, and ROI strategies.',
-    author: 'Sarah Chen',
-    date: '2024-12-20',
-    readTime: '8 min read',
-    category: 'AI Implementation',
-    featured: true,
-    image: '/blog/ai-implementation.jpg'
-  },
-  {
-    slug: 'genai-vs-traditional-ml',
-    title: 'GenAI vs Traditional ML: Key Differences & Use Cases',
-    excerpt: 'Understand the fundamental differences between Generative AI and Traditional Machine Learning, their unique capabilities, and when to use each approach.',
-    author: 'DataTranquil Team',
-    date: '2024-03-15',
-    readTime: '12 min read',
-    category: 'Technology',
-    featured: true,
-    image: '/blog/genai-ml.jpg'
-  },
-  {
-    slug: 'ai-vs-traditional-analytics',
-    title: 'AI vs Traditional Analytics: Which is Right for Your Business?',
-    excerpt: 'Compare AI-powered analytics with traditional methods. Understand the pros, cons, costs, and use cases to make an informed decision for your organization.',
-    author: 'Michael Rodriguez',
-    date: '2024-12-18',
-    readTime: '7 min read',
-    category: 'Analytics',
-    featured: true,
-    image: '/blog/ai-analytics.jpg'
-  },
-  {
-    slug: 'cost-of-bad-data-quality',
-    title: 'The Hidden Cost of Bad Data Quality: Impact on Business Decision Making',
-    excerpt: 'Discover how poor data quality affects your bottom line. Learn to identify, measure, and prevent data quality issues that cost businesses millions annually.',
-    author: 'Emily Thompson',
-    date: '2024-12-16',
-    readTime: '6 min read',
-    category: 'Data Quality',
-    featured: true,
-    image: '/blog/data-quality.jpg'
-  },
-  {
-    slug: 'agentic-ai-revolution-2024',
-    title: 'The Agentic AI Revolution: Why 2024 Changes Everything',
-    excerpt: 'Discover how autonomous AI agents are transforming enterprise operations, from decision-making to complex workflow automation. Learn why Fortune 500 companies are investing billions.',
-    author: 'DataTranquil Team',
-    date: '2024-12-15',
-    readTime: '8 min read',
-    category: 'Agentic AI',
-    featured: false,
-    image: '/blog/agentic-ai.jpg'
-  },
-  {
-    slug: 'oracle-to-ai-transformation-guide',
-    title: 'From Oracle BI to AI: A Practical Transformation Guide',
-    excerpt: 'Based on 36,000+ hours of experience, we share the roadmap for transitioning from traditional Oracle BI systems to modern AI-powered analytics platforms.',
-    author: 'DataTranquil Team',
-    date: '2024-12-10',
-    readTime: '12 min read',
-    category: 'Digital Transformation',
-    featured: true,
-    image: '/blog/oracle-transformation.jpg'
-  },
-  {
-    slug: 'vibe-coding-future-development',
-    title: 'Vibe Coding: The Future of Intuitive Software Development',
-    excerpt: 'Explore how Vibe Coding is revolutionizing the way we build software, making development more intuitive, collaborative, and aligned with human thinking patterns.',
-    author: 'DataTranquil Team',
-    date: '2024-12-05',
-    readTime: '10 min read',
-    category: 'Innovation',
-    image: '/blog/vibe-coding.jpg'
-  },
-  {
-    slug: 'roi-ai-implementation-fortune-500',
-    title: 'Measuring ROI in AI: Lessons from Fortune 500 Implementations',
-    excerpt: 'Real metrics and case studies showing 40% cost reductions and 3x productivity gains. Learn how to measure and maximize your AI investment returns.',
-    author: 'DataTranquil Team',
-    date: '2024-11-28',
-    readTime: '15 min read',
-    category: 'Business Strategy',
-    image: '/blog/roi-metrics.jpg'
-  },
-  {
-    slug: 'gcp-vs-aws-ai-workloads',
-    title: 'GCP vs AWS for AI Workloads: An Enterprise Perspective',
-    excerpt: 'Comprehensive comparison of Google Cloud and AWS for AI/ML workloads, based on real implementations at Sunrun, Wind River, and other enterprises.',
-    author: 'DataTranquil Team',
-    date: '2024-11-20',
-    readTime: '14 min read',
-    category: 'Cloud & Infrastructure',
-    image: '/blog/cloud-comparison.jpg'
-  },
-  {
-    slug: 'ethical-ai-implementation-guide',
-    title: 'Implementing Ethical AI: A Practical Framework for Enterprises',
-    excerpt: 'How to build AI systems that are fair, transparent, and aligned with your values. Includes governance frameworks and real-world examples.',
-    author: 'DataTranquil Team',
-    date: '2024-11-15',
-    readTime: '11 min read',
-    category: 'AI Governance',
-    image: '/blog/ethical-ai.jpg'
-  },
-  {
-    slug: 'data-quality-ai-success',
-    title: 'Why Data Quality Determines AI Success: A 500M Record Case Study',
-    excerpt: 'Learn how we transformed chaotic enterprise data into AI-ready assets, processing 500M+ records with 99.7% accuracy.',
-    author: 'DataTranquil Team',
-    date: '2024-11-10',
-    readTime: '9 min read',
-    category: 'Data Engineering',
-    image: '/blog/data-quality.jpg'
-  },
-  {
-    slug: 'genai-vs-traditional-ml',
-    title: 'GenAI vs Traditional ML: When to Use What',
-    excerpt: 'Clear guidance on choosing between Generative AI and traditional machine learning approaches for different business use cases.',
-    author: 'DataTranquil Team',
-    date: '2024-11-05',
-    readTime: '13 min read',
-    category: 'Machine Learning',
-    image: '/blog/genai-ml.jpg'
-  }
-];
+// #COMPLETION_DRIVE_IMPL: Using centralized blog data
+const blogPosts = blogArticles;
 
 export default function BlogPage() {
   return (
@@ -304,28 +181,14 @@ export default function BlogPage() {
           </div>
 
           {/* Newsletter CTA */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Ahead with AI Insights
-            </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get weekly insights on AI transformation, case studies, and practical guides 
-              delivered to your inbox.
-            </p>
-            <form className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-slate-900 placeholder-slate-500"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-              >
-                Subscribe
-              </button>
-            </form>
+          <div className="mt-16">
+            <NewsletterSignup 
+              variant="inline"
+              title="Stay Ahead with AI Insights"
+              description="Get weekly insights on AI transformation, case studies, and practical guides delivered to your inbox."
+              context="blog_listing"
+              className="rounded-2xl"
+            />
           </div>
         </div>
       </section>

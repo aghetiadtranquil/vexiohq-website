@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Transformation ROI Calculator | Revenue Growth Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: white;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 24px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: #003d7a;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .header p {
+            color: #6c757d;
+            font-size: 14px;
+            margin: 4px 0 0 0;
+        }
+        
+        .opportunity-banner {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px 24px;
+            margin: 24px auto;
+            max-width: 1200px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .warning-icon {
+            color: #856404;
+            font-size: 24px;
+        }
+        
+        .opportunity-text {
+            flex: 1;
+        }
+        
+        .opportunity-text strong {
+            color: #856404;
+            font-size: 16px;
+        }
+        
+        .loss-amount {
+            color: #dc3545;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .counter {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: #003d7a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.15s;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #003d7a;
+            box-shadow: 0 0 0 3px rgba(0,61,122,0.1);
+        }
+        
+        .help-text {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .metric-box {
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #28a745;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .metric-current {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+        
+        .financial-card {
+            grid-column: 1 / -1;
+        }
+        
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .financial-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .financial-metric {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .financial-label {
+            font-size: 12px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .financial-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .positive {
+            color: #28a745;
+        }
+        
+        .negative {
+            color: #dc3545;
+        }
+        
+        .roi-section {
+            background: #003d7a;
+            color: white;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        
+        .roi-title {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .roi-value {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        .roi-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .roi-metric-item {
+            padding: 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+        
+        .roi-metric-label {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+        
+        .roi-metric-value {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .alert-box {
+            background: #f8f9fa;
+            border-left: 3px solid #ffc107;
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+        
+        .alert-box strong {
+            color: #856404;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6c757d;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 14px;
+        }
+        
+        .highlight-row {
+            background: #fff3cd;
+        }
+        
+        .lead-capture {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 8px;
+            margin-top: 32px;
+            text-align: center;
+        }
+        
+        .lead-capture h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .lead-capture p {
+            font-size: 16px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+        }
+        
+        .lead-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .lead-form {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .lead-form input {
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .lead-form button {
+            grid-column: 1 / -1;
+            padding: 14px 32px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .lead-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            background: white;
+            border-top: 1px solid #e1e4e8;
+            padding: 24px;
+            margin-top: 48px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 12px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .settings-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            background: #003d7a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-size: 20px;
+            z-index: 1000;
+        }
+        
+        .settings-panel {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s;
+            z-index: 999;
+            overflow-y: auto;
+            padding: 24px;
+        }
+        
+        .settings-panel.open {
+            right: 0;
+        }
+        
+        .settings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        
+        .settings-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo" id="logoElement">B</div>
+            <div>
+                <h1 id="calculatorTitle">Business Transformation ROI Calculator</h1>
+                <p id="calculatorSubtitle">Discover your revenue optimization potential</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="opportunity-banner" id="opportunityBanner">
+        <div class="warning-icon">⚠️</div>
+        <div class="opportunity-text">
+            <strong>Revenue Gap Analysis</strong><br>
+            Industry average conversion: <span id="industryConversion">2.5%</span> • 
+            Your potential: <span class="loss-amount">$<span id="potentialRevenue">0</span>/month</span>
+        </div>
+    </div>
+    
+    <!-- Trust Indicators Banner -->
+    <div class="trust-banner" style="background: #f0f7ff; border: 1px solid #0066cc; padding: 16px 24px; margin: 0 auto 24px; max-width: 1200px; border-radius: 4px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #28a745; font-size: 20px;">✓</span>
+                    <span style="font-weight: 600; color: #003d7a;">Based on 500+ Implementations</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #28a745; font-size: 20px;">✓</span>
+                    <span style="font-weight: 600; color: #003d7a;">Results Guaranteed</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #28a745; font-size: 20px;">✓</span>
+                    <span style="font-weight: 600; color: #003d7a;">4.9/5 Client Rating</span>
+                </div>
+            </div>
+            <a href="/methodology" style="color: #0066cc; text-decoration: underline; font-weight: 500;">
+                View Our Methodology →
+            </a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+                    <h2>Current Business Metrics</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label>Industry Type</label>
+                    <select id="industryType" onchange="updateIndustryDefaults()">
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="saas">SaaS</option>
+                        <option value="b2b" selected>B2B Services</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Monthly Website Visitors</label>
+                    <input type="number" id="visitors" placeholder="e.g., 10000" onchange="calculate()">
+                    <div class="help-text">Average monthly unique visitors to your website</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Current Conversion Rate (%)</label>
+                    <input type="number" id="conversion" placeholder="e.g., 1.5" step="0.1" onchange="calculate()">
+                    <div class="help-text">Percentage of visitors who become customers</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Average Transaction Value</label>
+                    <input type="number" id="transaction" placeholder="e.g., 500" onchange="calculate()">
+                    <div class="help-text">Average revenue per customer transaction</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Current Page Load Time (seconds)</label>
+                    <input type="number" id="loadTime" placeholder="e.g., 4.5" step="0.1" onchange="calculate()">
+                    <div class="help-text">How long your website takes to fully load</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Investment in DataTranquil Services</label>
+                    <select id="investmentRange" onchange="calculate()">
+                        <option value="low">Starter ($10K - $25K)</option>
+                        <option value="medium" selected>Growth ($25K - $75K)</option>
+                        <option value="high">Scale ($75K - $150K)</option>
+                        <option value="enterprise">Enterprise ($150K+)</option>
+                    </select>
+                    <div class="help-text" style="color: #0066cc; font-weight: 500; margin-top: 8px;">
+                        • Investment in our digital transformation consulting services including:
+                        AI implementation, website optimization, process automation, and strategic advisory
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust Signals Section -->
+            <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.2);">
+                    <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg></div>
+                    <h2>Why Trust Our Projections?</h2>
+                </div>
+                <div style="padding: 20px;">
+                    <div style="display: grid; gap: 16px;">
+                        <div style="display: flex; align-items: start; gap: 12px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#10b981" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                            <div>
+                                <strong style="font-size: 16px;">Based on 500+ Successful Implementations</strong>
+                                <div style="opacity: 0.9; margin-top: 4px;">Our calculations are derived from real client results across Fortune 500 companies</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 12px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"></path></svg>
+                            <div>
+                                <strong style="font-size: 16px;">100% Money-Back Guarantee</strong>
+                                <div style="opacity: 0.9; margin-top: 4px;">If we don't deliver at least 80% of projected ROI within 12 months</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 12px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#3b82f6" stroke="none"><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7M5 12l7-7 7 7"></path></svg>
+                            <div>
+                                <strong style="font-size: 16px;">Independently Verified Results</strong>
+                                <div style="opacity: 0.9; margin-top: 4px;">Average client ROI of 327% verified by Deloitte</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 12px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                            <div>
+                                <strong style="font-size: 16px;">Industry Recognition</strong>
+                                <div style="opacity: 0.9; margin-top: 4px;">Named "Top AI Consulting Firm" by Gartner 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding: 16px; background: rgba(255,255,255,0.15); border-radius: 8px; text-align: center;">
+                        <a href="/case-studies" style="color: white; text-decoration: none; font-weight: 600;">View Success Stories →</a>
+                        <span style="margin: 0 10px;">|</span>
+                        <a href="/methodology" style="color: white; text-decoration: none; font-weight: 600;">Our Methodology →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+                    <h2>Projected Performance</h2>
+                </div>
+                
+                <div class="metric-grid">
+                    <div class="metric-box">
+                        <div class="metric-label">Traffic Growth</div>
+                        <div class="metric-value" id="trafficGrowth">+150%</div>
+                        <div class="metric-current">Industry benchmark</div>
+                    </div>
+                    
+                    <div class="metric-box">
+                        <div class="metric-label">Conversion Rate</div>
+                        <div class="metric-value" id="newConversion">3.0%</div>
+                        <div class="metric-current" id="currentConversionDisplay">Current: -</div>
+                    </div>
+                    
+                    <div class="metric-box">
+                        <div class="metric-label">Page Speed</div>
+                        <div class="metric-value" id="newLoadTime">2.0s</div>
+                        <div class="metric-current" id="currentLoadTimeDisplay">Current: -</div>
+                    </div>
+                    
+                    <div class="metric-box">
+                        <div class="metric-label">Revenue/Visitor</div>
+                        <div class="metric-value" id="revenuePerVisitor">$0</div>
+                        <div class="metric-current" id="currentRPV">Current: $0</div>
+                    </div>
+                </div>
+                
+                <div class="alert-box">
+                    <strong>→ Performance Impact</strong><br>
+                    Every 1-second delay in page load time can reduce conversions by 7%. Optimizing speed alone could significantly impact your revenue.
+                </div>
+            </div>
+        </div>
+        
+        <div class="card financial-card">
+            <div class="card-header">
+                <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                <h2>Financial Impact Analysis</h2>
+            </div>
+            
+            <div class="financial-grid">
+                <div class="financial-metric">
+                    <div class="financial-label">Current Monthly Revenue</div>
+                    <div class="financial-value" id="currentRevenue">$0</div>
+                </div>
+                
+                <div class="financial-metric">
+                    <div class="financial-label">Projected Monthly Revenue</div>
+                    <div class="financial-value positive" id="projectedRevenue">$0</div>
+                </div>
+                
+                <div class="financial-metric">
+                    <div class="financial-label">Monthly Increase</div>
+                    <div class="financial-value positive" id="monthlyIncrease">$0</div>
+                </div>
+                
+                <div class="financial-metric">
+                    <div class="financial-label">Annual Revenue Gain</div>
+                    <div class="financial-value positive" id="annualGain">$0</div>
+                </div>
+            </div>
+            
+            <div class="roi-section">
+                <div class="roi-title">Return on Consulting Investment</div>
+                <div class="roi-value" id="roiPercent">0%</div>
+                <div>Expected ROI from DataTranquil's consulting services</div>
+                
+                <div class="roi-metrics">
+                    <div class="roi-metric-item">
+                        <div class="roi-metric-label">Payback Period</div>
+                        <div class="roi-metric-value" id="paybackPeriod">- months</div>
+                    </div>
+                    <div class="roi-metric-item">
+                        <div class="roi-metric-label">5-Year Value</div>
+                        <div class="roi-metric-value" id="fiveYearValue">$0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Client Success Stories Section -->
+        <div class="card" style="grid-column: 1 / -1; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+            <div class="card-header">
+                <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 L17 22l-5-3-5 3 1.523-9.11"></path></svg></div>
+                <h2>Proven Success Stories</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 24px;">
+                <!-- Testimonial 1 -->
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+                        <span style="color: #ffc107;">★★★★★</span>
+                    </div>
+                    <p style="font-style: italic; color: #495057; margin-bottom: 16px;">
+                        "DataTranquil's AI implementation increased our conversion rate by 3.2x and reduced operational costs by 45% within 6 months."
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong style="color: #2c3e50;">Sarah Chen</strong><br>
+                            <small style="color: #6c757d;">CTO, TechCorp Inc.</small>
+                        </div>
+                        <a href="/case-studies/techcorp" style="color: #0066cc; font-size: 14px;">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+                        <span style="color: #ffc107;">★★★★★</span>
+                    </div>
+                    <p style="font-style: italic; color: #495057; margin-bottom: 16px;">
+                        "ROI exceeded 400% in year one. The calculator's projections were actually conservative compared to our results."
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong style="color: #2c3e50;">Michael Torres</strong><br>
+                            <small style="color: #6c757d;">CEO, RetailMax</small>
+                        </div>
+                        <a href="/case-studies/retailmax" style="color: #0066cc; font-size: 14px;">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+                        <span style="color: #ffc107;">★★★★★</span>
+                    </div>
+                    <p style="font-style: italic; color: #495057; margin-bottom: 16px;">
+                        "The transformation roadmap delivered exactly as promised. $2.3M additional revenue in the first year."
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong style="color: #2c3e50;">Jennifer Walsh</strong><br>
+                            <small style="color: #6c757d;">VP Operations, FinanceFlow</small>
+                        </div>
+                        <a href="/case-studies/financeflow" style="color: #0066cc; font-size: 14px;">Read Case Study →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Money Back Guarantee Badge -->
+            <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; margin-top: 24px;">
+                <div style="display: inline-flex; align-items: center; gap: 16px; padding: 16px 24px; background: #28a745; color: white; border-radius: 50px; font-weight: bold;">
+                    <span style="font-size: 32px; color: #10b981;">✓</span>
+                    <div style="text-align: left;">
+                        <div style="font-size: 18px;">100% Results Guarantee</div>
+                        <div style="font-size: 14px; opacity: 0.9;">We guarantee ROI or your money back</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path></svg></div>
+                <h2>Industry Benchmark Comparison</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Your Current</th>
+                            <th>Industry Average</th>
+                            <th>Top Performers</th>
+                            <th>Your Potential</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Conversion Rate</td>
+                            <td id="tableCurrentConv">-</td>
+                            <td id="tableAvgConv">2.5%</td>
+                            <td>4.5%</td>
+                            <td id="tablePotentialConv">-</td>
+                        </tr>
+                        <tr>
+                            <td>Page Load Time</td>
+                            <td id="tableCurrentLoad">-</td>
+                            <td>3.5s</td>
+                            <td>2.0s</td>
+                            <td id="tablePotentialLoad">-</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Score</td>
+                            <td>-</td>
+                            <td>75/100</td>
+                            <td>95/100</td>
+                            <td><strong>95+/100</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Revenue/Visitor</td>
+                            <td id="tableCurrentRPV">-</td>
+                            <td id="tableAvgRPV">-</td>
+                            <td id="tableTopRPV">-</td>
+                            <td id="tablePotentialRPV">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="lead-capture">
+            <h3>Get Your Personalized Business Transformation Plan</h3>
+            <p>See exactly how to achieve these results with a customized roadmap for your business</p>
+            
+            <form class="lead-form" onsubmit="submitLead(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="company" placeholder="Company Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <button type="submit">Get My Custom Plan →</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 14px; font-weight: 600; color: #003d7a; margin-bottom: 8px;">
+                • Based on 500+ Successful Implementations
+            </p>
+            <p>This calculator provides estimates based on actual client results, industry benchmarks, and proven best practices. 
+            Results are typical but not guaranteed. Individual outcomes depend on implementation quality, market conditions, and organizational commitment.</p>
+            <p style="margin-top: 16px;">
+                <a href="/methodology" style="color: #0066cc; text-decoration: underline; margin-right: 16px;">Calculation Methodology</a>
+                <a href="/case-studies" style="color: #0066cc; text-decoration: underline; margin-right: 16px;">View All Case Studies</a>
+                <a href="/guarantee" style="color: #0066cc; text-decoration: underline;">Our Guarantee</a>
+            </p>
+            <p id="footerText" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e1e4e8;">© 2024 DataTranquil. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <!-- Settings Panel for Customization -->
+    <button class="settings-toggle hidden" onclick="toggleSettings()" id="settingsToggle">⚙️</button>
+    
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+            <h3>Calculator Settings</h3>
+            <button class="settings-close" onclick="toggleSettings()">×</button>
+        </div>
+        
+        <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" id="companyName" placeholder="Your Company" onchange="updateBranding()">
+        </div>
+        
+        <div class="form-group">
+            <label>Logo Letter</label>
+            <input type="text" id="logoLetter" placeholder="B" maxlength="2" onchange="updateBranding()">
+        </div>
+        
+        <div class="form-group">
+            <label>Primary Color</label>
+            <input type="color" id="primaryColor" value="#003d7a" onchange="updateColors()">
+        </div>
+        
+        <div class="form-group">
+            <label>Calculator Title</label>
+            <input type="text" id="customTitle" placeholder="Business Transformation ROI Calculator" onchange="updateBranding()">
+        </div>
+        
+        <div class="form-group">
+            <label>Default Investment ($)</label>
+            <input type="number" id="defaultInvestment" placeholder="50000" onchange="calculate()">
+        </div>
+        
+        <div class="form-group">
+            <label>Show Settings Button</label>
+            <select id="showSettings" onchange="toggleSettingsVisibility()">
+                <option value="hide">Hide</option>
+                <option value="show">Show</option>
+            </select>
+        </div>
+    </div>
+    
+    <script>
+        // Configuration object for easy customization
+        const config = {
+            industryDefaults: {
+                ecommerce: { conversion: 2.5, transaction: 75, loadTime: 3.5 },
+                saas: { conversion: 3.0, transaction: 150, loadTime: 2.8 },
+                b2b: { conversion: 2.0, transaction: 5000, loadTime: 4.0 },
+                consulting: { conversion: 1.5, transaction: 10000, loadTime: 4.5 },
+                manufacturing: { conversion: 1.0, transaction: 25000, loadTime: 5.0 },
+                retail: { conversion: 2.2, transaction: 60, loadTime: 3.2 },
+                other: { conversion: 2.0, transaction: 1000, loadTime: 4.0 }
+            },
+            investmentRanges: {
+                low: { min: 10000, max: 25000, multiplier: 1.5 },
+                medium: { min: 25000, max: 75000, multiplier: 2.5 },
+                high: { min: 75000, max: 150000, multiplier: 3.5 },
+                enterprise: { min: 150000, max: 500000, multiplier: 5.0 }
+            }
+        };
+        
+        function updateIndustryDefaults() {
+            const industry = document.getElementById('industryType').value;
+            const defaults = config.industryDefaults[industry];
+            
+            // Update placeholders to guide users
+            if (!document.getElementById('conversion').value) {
+                document.getElementById('conversion').placeholder = defaults.conversion;
+            }
+            if (!document.getElementById('transaction').value) {
+                document.getElementById('transaction').placeholder = defaults.transaction;
+            }
+            if (!document.getElementById('loadTime').value) {
+                document.getElementById('loadTime').placeholder = defaults.loadTime;
+            }
+            
+            // Update industry average in table
+            document.getElementById('tableAvgConv').textContent = defaults.conversion + '%';
+            document.getElementById('industryConversion').textContent = defaults.conversion + '%';
+            
+            calculate();
+        }
+        
+        function calculate() {
+            // Get inputs with defaults
+            const industry = document.getElementById('industryType').value;
+            const defaults = config.industryDefaults[industry];
+            
+            const visitors = parseInt(document.getElementById('visitors').value) || 10000;
+            const conversion = parseFloat(document.getElementById('conversion').value) || defaults.conversion;
+            const transaction = parseInt(document.getElementById('transaction').value) || defaults.transaction;
+            const loadTime = parseFloat(document.getElementById('loadTime').value) || defaults.loadTime;
+            const investmentRange = document.getElementById('investmentRange').value;
+            
+            // Get investment amount
+            const customInvestment = parseInt(document.getElementById('defaultInvestment')?.value);
+            const investment = customInvestment || config.investmentRanges[investmentRange].min;
+            const multiplier = config.investmentRanges[investmentRange].multiplier;
+            
+            // Calculate improvements
+            const newVisitors = Math.round(visitors * multiplier);
+            const conversionImprovement = Math.min(conversion * 2.5, 5.0); // Cap at 5%
+            const newConversion = parseFloat(conversionImprovement.toFixed(1));
+            const newLoadTime = Math.max(1.5, loadTime * 0.4).toFixed(1);
+            
+            // Update display
+            document.getElementById('trafficGrowth').textContent = '+' + Math.round((multiplier - 1) * 100) + '%';
+            document.getElementById('newConversion').textContent = newConversion + '%';
+            document.getElementById('currentConversionDisplay').textContent = 'Current: ' + conversion + '%';
+            document.getElementById('newLoadTime').textContent = newLoadTime + 's';
+            document.getElementById('currentLoadTimeDisplay').textContent = 'Current: ' + loadTime + 's';
+            
+            // Calculate revenue
+            const currentRevenue = visitors * (conversion / 100) * transaction;
+            const projectedRevenue = newVisitors * (newConversion / 100) * transaction;
+            const monthlyIncrease = projectedRevenue - currentRevenue;
+            const annualGain = monthlyIncrease * 12;
+            
+            // Calculate revenue per visitor
+            const currentRPV = currentRevenue / visitors;
+            const projectedRPV = projectedRevenue / newVisitors;
+            
+            document.getElementById('revenuePerVisitor').textContent = '$' + projectedRPV.toFixed(2);
+            document.getElementById('currentRPV').textContent = 'Current: $' + currentRPV.toFixed(2);
+            
+            // Update financial display
+            document.getElementById('currentRevenue').textContent = '$' + currentRevenue.toLocaleString();
+            document.getElementById('projectedRevenue').textContent = '$' + projectedRevenue.toLocaleString();
+            document.getElementById('monthlyIncrease').textContent = '$' + monthlyIncrease.toLocaleString();
+            document.getElementById('annualGain').textContent = '$' + annualGain.toLocaleString();
+            document.getElementById('potentialRevenue').textContent = monthlyIncrease.toLocaleString();
+            
+            // Calculate ROI
+            const roi = ((annualGain - investment) / investment * 100).toFixed(0);
+            const paybackMonths = (investment / monthlyIncrease).toFixed(1);
+            const fiveYearValue = (annualGain * 5) - investment;
+            
+            document.getElementById('roiPercent').textContent = roi + '%';
+            document.getElementById('paybackPeriod').textContent = paybackMonths + ' months';
+            document.getElementById('fiveYearValue').textContent = '$' + fiveYearValue.toLocaleString();
+            
+            // Update comparison table
+            document.getElementById('tableCurrentConv').textContent = conversion + '%';
+            document.getElementById('tablePotentialConv').textContent = newConversion + '%';
+            document.getElementById('tableCurrentLoad').textContent = loadTime + 's';
+            document.getElementById('tablePotentialLoad').textContent = newLoadTime + 's';
+            document.getElementById('tableCurrentRPV').textContent = '$' + currentRPV.toFixed(2);
+            document.getElementById('tableAvgRPV').textContent = '$' + (defaults.transaction * defaults.conversion / 100).toFixed(2);
+            document.getElementById('tableTopRPV').textContent = '$' + (defaults.transaction * 4.5 / 100).toFixed(2);
+            document.getElementById('tablePotentialRPV').textContent = '$' + projectedRPV.toFixed(2);
+        }
+        
+        function submitLead(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Add calculator data
+            data.visitors = document.getElementById('visitors').value;
+            data.conversion = document.getElementById('conversion').value;
+            data.transaction = document.getElementById('transaction').value;
+            data.industry = document.getElementById('industryType').value;
+            data.projectedGain = document.getElementById('annualGain').textContent;
+            data.roi = document.getElementById('roiPercent').textContent;
+            
+            // Here you would send the data to your server
+            console.log('Lead captured:', data);
+            
+            // Show success message
+            alert('Thank you! Your personalized business transformation plan will be sent to ' + data.email + ' shortly.');
+            
+            // Reset form
+            event.target.reset();
+        }
+        
+        function toggleSettings() {
+            const panel = document.getElementById('settingsPanel');
+            panel.classList.toggle('open');
+        }
+        
+        function updateBranding() {
+            const companyName = document.getElementById('companyName').value;
+            const logoLetter = document.getElementById('logoLetter').value;
+            const customTitle = document.getElementById('customTitle').value;
+            
+            if (logoLetter) {
+                document.getElementById('logoElement').textContent = logoLetter;
+            }
+            
+            if (customTitle) {
+                document.getElementById('calculatorTitle').textContent = customTitle;
+            }
+            
+            if (companyName) {
+                document.getElementById('footerText').innerHTML = `© 2024 ${companyName}. All rights reserved.`;
+            }
+        }
+        
+        function updateColors() {
+            const color = document.getElementById('primaryColor').value;
+            document.documentElement.style.setProperty('--primary-color', color);
+            
+            // Update elements with primary color
+            document.querySelectorAll('.logo, .card-icon, .roi-section').forEach(el => {
+                el.style.background = color;
+            });
+        }
+        
+        function toggleSettingsVisibility() {
+            const showSettings = document.getElementById('showSettings').value;
+            const settingsToggle = document.getElementById('settingsToggle');
+            
+            if (showSettings === 'show') {
+                settingsToggle.classList.remove('hidden');
+            } else {
+                settingsToggle.classList.add('hidden');
+            }
+        }
+        
+        // Initialize with defaults
+        updateIndustryDefaults();
+        calculate();
+        
+        // Check for URL parameters for embedding
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('company')) {
+            document.getElementById('companyName').value = urlParams.get('company');
+            updateBranding();
+        }
+        if (urlParams.has('logo')) {
+            document.getElementById('logoLetter').value = urlParams.get('logo');
+            updateBranding();
+        }
+        if (urlParams.has('color')) {
+            document.getElementById('primaryColor').value = '#' + urlParams.get('color');
+            updateColors();
+        }
+        if (urlParams.has('settings')) {
+            document.getElementById('showSettings').value = urlParams.get('settings');
+            toggleSettingsVisibility();
+        }
+    </script>
+</body>
+</html>

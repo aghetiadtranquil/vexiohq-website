@@ -40,3 +40,8 @@ pids/
 
 # TypeScript
 *.tsbuildinfo
+
+# Development tools - not for deployment
+resources/Tmux-Orchestrator/
+.tmux-orchestrator/
+.agents/

@@ -16,6 +16,14 @@ const icons = {
       <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
     </svg>
   ),
+  dashboard: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="3" width="7" height="7" />
+      <rect x="14" y="3" width="7" height="7" />
+      <rect x="14" y="14" width="7" height="7" />
+      <rect x="3" y="14" width="7" height="7" />
+    </svg>
+  ),
   // Modern icons for menu items
   blog: (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -383,10 +391,33 @@ const menuData = {
 export default function StableMegaMenu() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState<string>('');
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
   const menuRefs = useRef<{[key: string]: HTMLDivElement | null}>({});
   const buttonRefs = useRef<{[key: string]: HTMLButtonElement | null}>({});
+
+  // Check authentication status
+  useEffect(() => {
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        try {
+          const user = JSON.parse(storedUser);
+          setIsLoggedIn(true);
+          setUserName(user.name || user.email);
+        } catch {
+          setIsLoggedIn(false);
+        }
+      }
+    };
+    
+    checkAuth();
+    // Re-check on focus
+    window.addEventListener('focus', checkAuth);
+    return () => window.removeEventListener('focus', checkAuth);
+  }, []);
 
   // #COMPLETION_DRIVE_IMPL: Assuming standard WCAG keyboard navigation patterns
   const handleKeyDown = useCallback((e: KeyboardEvent, menuKey: string) => {
@@ -503,20 +534,19 @@ export default function StableMegaMenu() {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{overflow: 'visible'}}>
+          <div className="flex justify-between items-center h-16" style={{overflow: 'visible'}}>
           {/* Logo */}
           <div className="flex items-center">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
-              aria-label="DataTranquil home"
-            >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg" aria-hidden="true">DT</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">DataTranquil</span>
-            </Link>
+            <a href="/" className="block">
+              <img 
+                src="/images/dt-logo-navbar-proper.png" 
+                alt="DataTranquil" 
+                width="111"
+                height="40"
+                className="block h-10"
+              />
+            </a>
           </div>
 
           {/* Main Navigation */}
@@ -525,6 +555,7 @@ export default function StableMegaMenu() {
               <div 
                 key={key}
                 className="relative"
+                style={{position: 'relative'}}
                 onMouseEnter={() => handleMouseEnter(key)}
                 onMouseLeave={handleMouseLeave}
                 onFocus={() => handleFocus(key)}
@@ -553,12 +584,23 @@ export default function StableMegaMenu() {
                   <div 
                     ref={(el) => { menuRefs.current[key] = el; }}
                     id={`menu-${key}`}
-                    className="absolute top-full left-0 mt-1 bg-white shadow-xl border-t-4 border-blue-600 rounded-b-lg" 
-                    style={{minWidth: '600px'}}
+                    className="absolute bg-white shadow-xl border-t-4 border-blue-600 rounded-b-lg" 
+                    style={{
+                      top: '100%',
+                      left: '0',
+                      marginTop: '4px',
+                      minWidth: '600px', 
+                      zIndex: 99999,
+                      backgroundColor: '#ffffff',
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1,
+                      position: 'absolute'
+                    }}
                     role="menu"
                     aria-labelledby={`menu-button-${key}`}
                   >
-                    <div className="p-6">
+                    <div className="p-6" style={{backgroundColor: '#ffffff'}}>
                       <div className="grid grid-cols-3 gap-8">
                         {menu.columns.map((column, idx) => (
                           <div key={idx} role="group" aria-labelledby={`menu-section-${key}-${idx}`}>
@@ -677,26 +719,53 @@ export default function StableMegaMenu() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <Link 
-              href="/portal/login" 
-              className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 transition-all"
-              aria-label="Login to portal"
-            >
-              <span aria-hidden="true">{icons.user}</span>
-              Login
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-gray-700 hover:text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-3 py-2 transition-all"
-            >
-              Contact
-            </Link>
-            <Link 
-              href="/get-started" 
-              className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all"
-            >
-              Get Started →
-            </Link>
+            {isLoggedIn ? (
+              <>
+                <Link 
+                  href="/tools/calculator" 
+                  className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 transition-all"
+                  aria-label="ROI Calculator"
+                >
+                  <span aria-hidden="true">{icons.calculator}</span>
+                  Calculator
+                </Link>
+                <Link 
+                  href="/tools/dashboard" 
+                  className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 transition-all"
+                  aria-label="Dashboard"
+                >
+                  <span aria-hidden="true">{icons.dashboard}</span>
+                  Dashboard
+                </Link>
+                <div className="flex items-center gap-2 px-3 py-2 bg-blue-50 rounded-lg">
+                  <span aria-hidden="true">{icons.user}</span>
+                  <span className="text-sm font-medium text-gray-900">{userName}</span>
+                </div>
+              </>
+            ) : (
+              <>
+                <Link 
+                  href="/portal/login" 
+                  className="text-gray-700 hover:text-gray-900 font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2 transition-all"
+                  aria-label="Login to portal"
+                >
+                  <span aria-hidden="true">{icons.user}</span>
+                  Login
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="text-gray-700 hover:text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-3 py-2 transition-all"
+                >
+                  Contact
+                </Link>
+                <Link 
+                  href="/get-started" 
+                  className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 transition-all"
+                >
+                  Get Started →
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Comparison - Old vs New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8 px-4">
+        <h1 class="text-3xl font-bold text-center mb-8">DataTranquil Logo Comparison</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- OLD LOGO -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4 text-center text-red-600">CURRENT (OLD) LOGO</h2>
+                
+                <!-- Navigation Bar Context -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Navigation Bar:</h3>
+                    <div class="bg-white border border-gray-200 p-3 rounded flex items-center justify-between">
+                        <img src="/images/dt-logo-navbar.png" alt="Old Logo" class="h-10">
+                        <nav class="flex space-x-4 text-sm">
+                            <span class="text-gray-600">Products</span>
+                            <span class="text-gray-600">Services</span>
+                            <span class="text-gray-600">About</span>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Hero Section Context -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Hero Section:</h3>
+                    <div class="bg-gradient-to-br from-slate-900 to-blue-900 p-8 rounded text-center">
+                        <img src="/images/dt-logo-navbar.png" alt="Old Logo" class="h-16 mx-auto">
+                    </div>
+                </div>
+
+                <!-- Footer Context -->
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Footer:</h3>
+                    <div class="bg-gray-900 p-4 rounded">
+                        <img src="/images/dt-logo-navbar.png" alt="Old Logo" class="h-12">
+                    </div>
+                </div>
+
+                <!-- Issues -->
+                <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded">
+                    <p class="text-sm text-red-600 font-medium">Issues:</p>
+                    <ul class="text-xs text-red-500 mt-1">
+                        <li>• Size: 89x48px (incorrect aspect)</li>
+                        <li>• Hydration errors</li>
+                        <li>• Not displaying properly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NEW LOGO -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4 text-center text-green-600">NEW LOGO</h2>
+                
+                <!-- Navigation Bar Context -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Navigation Bar:</h3>
+                    <div class="bg-white border border-gray-200 p-3 rounded flex items-center justify-between">
+                        <img src="/images/dt-logo-navbar-proper.png" alt="New Logo" class="h-10">
+                        <nav class="flex space-x-4 text-sm">
+                            <span class="text-gray-600">Products</span>
+                            <span class="text-gray-600">Services</span>
+                            <span class="text-gray-600">About</span>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Hero Section Context -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Hero Section:</h3>
+                    <div class="bg-gradient-to-br from-slate-900 to-purple-900 p-8 rounded text-center">
+                        <img src="/images/dt-logo-hero-proper.png" alt="New Logo" class="h-16 mx-auto">
+                    </div>
+                </div>
+
+                <!-- Footer Context -->
+                <div>
+                    <h3 class="text-sm font-medium text-gray-600 mb-2">In Footer:</h3>
+                    <div class="bg-gray-900 p-4 rounded">
+                        <img src="/images/dt-logo-footer-proper.png" alt="New Logo" class="h-12">
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded">
+                    <p class="text-sm text-green-600 font-medium">Benefits:</p>
+                    <ul class="text-xs text-green-500 mt-1">
+                        <li>✓ Proper sizes (111x40, 139x50, 223x80)</li>
+                        <li>✓ Matches website gradient</li>
+                        <li>✓ Professional branding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Direct Comparison -->
+        <div class="mt-8 bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4 text-center">Direct Side-by-Side</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 mb-2">Old Logo</p>
+                    <div class="bg-gray-100 p-8 rounded flex items-center justify-center">
+                        <img src="/images/dt-logo-navbar.png" alt="Old" class="max-h-20">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 mb-2">New Logo</p>
+                    <div class="bg-gray-100 p-8 rounded flex items-center justify-center">
+                        <img src="/images/dt-logo-navbar-proper.png" alt="New" class="max-h-20">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

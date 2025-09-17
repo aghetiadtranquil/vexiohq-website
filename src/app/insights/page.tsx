@@ -2,76 +2,12 @@
 
 import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, User, TrendingUp, Brain, Target, Lightbulb, BarChart3, Globe, BookOpen } from 'lucide-react';
+import { insightArticles } from '@/data/blogArticles';
+import ReadingTime from '@/components/ReadingTime';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
-const featuredArticles = [
-  {
-    id: 'ai-transformation-guide',
-    category: 'AI STRATEGY',
-    title: 'The CEO\'s Guide to AI-Driven Transformation: Beyond the Hype',
-    excerpt: 'How forward-thinking executives are leveraging AI to create sustainable competitive advantages. Our analysis of 200+ enterprise implementations reveals critical success factors and common pitfalls.',
-    author: 'DataTranquil Research Team',
-    readTime: '8 min read',
-    date: 'Jan 15, 2025',
-    tags: ['AI Strategy', 'Digital Transformation', 'Executive Leadership'],
-    image: 'ai-strategy',
-    featured: true
-  },
-  {
-    id: 'real-time-analytics',
-    category: 'DATA ANALYTICS',
-    title: 'Real-Time Analytics: The New Competitive Imperative',
-    excerpt: 'Why milliseconds matter in modern business decision-making and how to build responsive data architectures that drive competitive advantage.',
-    author: 'Dr. Sarah Chen, Head of Analytics',
-    readTime: '5 min read',
-    date: 'Jan 12, 2025',
-    tags: ['Analytics', 'Real-time Data', 'Business Intelligence'],
-    image: 'analytics'
-  },
-  {
-    id: 'human-element-ai',
-    category: 'DIGITAL TRANSFORMATION',
-    title: 'The Human Element in AI Implementation',
-    excerpt: 'Change management strategies that ensure successful AI adoption across enterprise organizations. The critical role of culture in technological transformation.',
-    author: 'Michael Rodriguez, Change Strategy',
-    readTime: '7 min read',
-    date: 'Jan 10, 2025',
-    tags: ['Change Management', 'AI Adoption', 'Organizational Culture'],
-    image: 'transformation'
-  },
-  {
-    id: 'financial-services-ai',
-    category: 'INDUSTRY INSIGHTS',
-    title: 'Financial Services: AI\'s Next Frontier',
-    excerpt: 'How intelligent automation is reshaping risk management, compliance, and customer experience in the financial sector.',
-    author: 'Jennifer Liu, Financial Technology',
-    readTime: '6 min read',
-    date: 'Jan 8, 2025',
-    tags: ['Financial Services', 'RegTech', 'Customer Experience'],
-    image: 'finance'
-  },
-  {
-    id: 'supply-chain-optimization',
-    category: 'OPERATIONAL EXCELLENCE',
-    title: 'Supply Chain Intelligence: Predictive Risk Management',
-    excerpt: 'Advanced analytics and AI-driven insights are revolutionizing supply chain resilience and operational efficiency.',
-    author: 'David Park, Operations Strategy',
-    readTime: '9 min read',
-    date: 'Jan 5, 2025',
-    tags: ['Supply Chain', 'Risk Management', 'Operational Excellence'],
-    image: 'supply-chain'
-  },
-  {
-    id: 'data-governance-framework',
-    category: 'DATA STRATEGY',
-    title: 'Building a Future-Ready Data Governance Framework',
-    excerpt: 'Essential principles and practices for establishing robust data governance that scales with your AI ambitions.',
-    author: 'Dr. Amanda Foster, Data Strategy',
-    readTime: '10 min read',
-    date: 'Jan 3, 2025',
-    tags: ['Data Governance', 'Compliance', 'Data Strategy'],
-    image: 'governance'
-  }
-];
+// #COMPLETION_DRIVE_IMPL: Using centralized insights data
+const featuredArticles = insightArticles;
 
 const categories = [
   { name: 'All Insights', slug: 'all', count: 24 },
@@ -300,29 +236,15 @@ export default function InsightsPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stay Ahead of the Curve
-          </h2>
-          <p className="text-xl text-slate-300 mb-8">
-            Get strategic insights delivered to your inbox. Join 5,000+ executives who rely on our analysis.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="px-4 py-3 rounded-lg border border-slate-600 bg-slate-800 text-white placeholder-slate-400 flex-1"
-            />
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-slate-400 mt-4">
-            Weekly insights • No spam • Unsubscribe anytime
-          </p>
-        </div>
-      </section>
+      <div className="bg-slate-900">
+        <NewsletterSignup 
+          variant="inline"
+          title="Stay Ahead of the Curve"
+          description="Get strategic insights delivered to your inbox. Join 5,000+ executives who rely on our analysis."
+          context="insights_listing"
+          className="bg-slate-900"
+        />
+      </div>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16">

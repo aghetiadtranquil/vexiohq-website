@@ -1,0 +1,118 @@
+# Evolution & Learning - Response-Awareness Framework v3.1.1
+# Updated: 2025-09-12T03:08:00Z
+
+parameters:
+  # Optimization weights (tuned via calibration)
+  alpha: 0.52  # Confidence weight
+  beta: 0.28   # Risk penalty (normalized)
+  gamma: 0.20  # Cost penalty (normalized)
+  
+  # Hysteresis threshold
+  path_switch_threshold: 0.07
+  
+  # Agent weights
+  initial_weight: 1.0
+  min_weight: 0.5
+  max_weight: 1.5
+  debt_penalty: 0.1
+
+task_budgets:
+  hotfix:
+    hours: 8
+    description: "Emergency fixes, patches"
+  refactor:
+    hours: 40
+    description: "Code improvements, tech debt"
+  feature:
+    hours: 80
+    description: "New functionality, major changes"
+
+retention_policies:
+  events_log:
+    max_size_mb: 10
+    max_age_days: 30
+    rotation_count: 5
+  verification_reports:
+    max_age_days: 30
+  survey_cache:
+    ttl_hours: 48
+  metrics_history:
+    max_entries: 1000
+
+quality_thresholds:
+  tag_f1_minimum: 0.70
+  brier_score_maximum: 0.10
+  tag_precision_target: 0.80
+  tag_recall_target: 0.85
+
+slo_timings:
+  phase_minus1: 60    # Calibration
+  phase_0: 300        # Survey
+  phase_1: 600        # Planning
+  phase_2: 300        # Synthesis
+  phase_3: 900        # Implementation
+  phase_4: 300        # Verification
+  phase_5: 120        # Evolution
+
+learned_patterns:
+  - pattern: "PWA_IMPLEMENTATION"
+    confidence: 0.92
+    success_rate: 1.0
+    notes: "Service Worker implementation highly successful with intelligent caching"
+    
+  - pattern: "FRAMEWORK_COMPLIANCE"
+    confidence: 0.86
+    success_rate: 0.85
+    notes: "Phase 4 verification critical for quality assurance"
+    
+  - pattern: "TAG_QUALITY"
+    confidence: 0.75
+    success_rate: 0.86
+    notes: "8 tags adequate for ~600 LoC implementation"
+    
+  - pattern: "SECURITY_SCANNING"
+    confidence: 0.95
+    success_rate: 1.0
+    notes: "Allow patterns essential for npm package hashes"
+
+calibration_history:
+  - date: "2025-09-12"
+    task: "SEO_OPTIMIZATION"
+    predicted_confidence: 0.92
+    actual_outcome: 1.0  # Success
+    brier_component: 0.0064  # (0.92 - 1.0)^2
+    
+weight_adjustments:
+  - date: "2025-09-12"
+    agent: "DIRECT_IMPLEMENTATION"
+    adjustment: +0.1
+    reason: "Successful Phase 3-4 completion"
+    new_weight: 1.1
+
+session_metrics:
+  total_phases_completed: 5
+  slo_compliance_rate: 1.0  # All phases within SLO
+  quality_gate_pass_rate: 1.0
+  security_gate_pass_rate: 1.0
+  framework_adherence: 1.0
+
+improvement_recommendations:
+  - priority: HIGH
+    recommendation: "Add automated test generation for Service Workers"
+    impact: "Reduce QD_004 debt automatically"
+    
+  - priority: MEDIUM
+    recommendation: "Implement performance benchmark automation"
+    impact: "Track Core Web Vitals improvements continuously"
+    
+  - priority: LOW
+    recommendation: "Create framework compliance dashboard"
+    impact: "Real-time visibility into phase execution"
+
+next_calibration:
+  scheduled: "2025-09-19"  # Monday batch
+  metrics_to_review:
+    - brier_score
+    - tag_f1_scores
+    - agent_weights
+    - path_score_accuracy

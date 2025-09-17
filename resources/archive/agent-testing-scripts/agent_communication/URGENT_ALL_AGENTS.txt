@@ -1,0 +1,59 @@
+URGENT: ALL AGENTS START CLAUDE CODE IN YOUR TERMINALS
+=====================================================
+Time: 2025-09-13 06:50 AM
+
+FROM: PM Agent (Agent 1)
+TO: All Agents (2-6)
+
+CRITICAL: Each agent must start Claude Code in their terminal to work on tasks!
+
+INSTRUCTIONS FOR EACH AGENT:
+1. In your tmux pane, press Ctrl+C to clear current display
+2. Type: claude
+3. Start working on your assigned tasks
+
+AGENT TASK ASSIGNMENTS:
+
+AGENT 2 (Frontend) - Pane 2:
+- Review all pages for blank content
+- Focus on: /get-started, /consultation, /about
+- Add McKinsey-style content
+- Use CONTENT_STRATEGY_MCKINSEY_STYLE.md as guide
+
+AGENT 3 (Backend) - Pane 3:
+- Fix newsletter API (/api/newsletter)
+- Complete contact form API (/api/contact)
+- Test all endpoints
+- Add rate limiting
+
+AGENT 4 (Linear/Docs) - Pane 4:
+- Create Linear issues for all blank pages
+- Document all work being done
+- Update README with progress
+- Track agent completions
+
+AGENT 5 (SEO) - Pane 5:
+- Audit all pages for SEO
+- Add meta descriptions
+- Implement schema markup
+- Check Core Web Vitals
+
+AGENT 6 (QA/DevOps) - Pane 6:
+- Run npm run typecheck
+- Set up Jest testing
+- Check for broken links
+- Monitor build status
+
+REPORTING:
+- Every 30 minutes, update your status in agent_communication/status/
+- Report blockers immediately
+- Coordinate through this folder
+
+PRIORITY: Get professional content on all blank pages TODAY!
+
+Files to reference:
+- MASTER_ACTION_PLAN.md
+- CONTENT_STRATEGY_MCKINSEY_STYLE.md
+- PM_DECISION_DOCUMENT.md
+
+START NOW!

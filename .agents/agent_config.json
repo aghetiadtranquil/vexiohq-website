@@ -1,0 +1,75 @@
+{
+  "project": "comapny-website",
+  "agent_count": 5,
+  "bypass_permissions": true,
+  "auto_approve_all": true,
+  "agents": [
+    {
+      "id": 1,
+      "name": "PM/Architect Agent",
+      "role": "Strategic Leader",
+      "responsibilities": [
+        "Review all code changes for architectural consistency",
+        "Coordinate between other agents",
+        "Manage Linear tasks and project planning",
+        "Make architectural decisions",
+        "Ensure code quality standards",
+        "Review and approve major changes"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Frontend Development Agent",
+      "role": "Builder",
+      "responsibilities": [
+        "Implement React/Next.js components",
+        "Handle UI/UX development",
+        "Manage Tailwind CSS styling",
+        "Work on new features"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Content & SEO Verification Agent",
+      "role": "Quality Guardian",
+      "responsibilities": [
+        "Verify all content for accuracy and quality",
+        "Review SEO implementations",
+        "Check meta tags, schemas, structured data",
+        "Validate blog posts and marketing content",
+        "Ensure brand consistency",
+        "Monitor engagement metrics"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Testing & Quality Agent",
+      "role": "Quality Enforcer",
+      "responsibilities": [
+        "Run automated tests",
+        "Check TypeScript compliance",
+        "Verify accessibility standards",
+        "Validate builds before deployment",
+        "Monitor performance metrics"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "DevOps & Integration Agent",
+      "role": "Operations",
+      "responsibilities": [
+        "Handle deployments",
+        "Manage Docker/infrastructure",
+        "Monitor Linear integration",
+        "Handle API/backend services",
+        "Manage CI/CD pipeline"
+      ]
+    }
+  ],
+  "orchestrator": {
+    "name": "Claude (You)",
+    "role": "Master Orchestrator",
+    "bypass_all_permissions": true,
+    "auto_execute": true
+  }
+}

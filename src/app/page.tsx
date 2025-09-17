@@ -1,10 +1,43 @@
-'use client';
-
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { SchemaMarkup, organizationSchema, serviceSchema } from '@/components/SchemaMarkup';
+
+export const metadata: Metadata = {
+  title: "AI Consulting San Francisco | DataTranquil - Strategic AI Advisory",
+  description: "Leading AI consulting firm in San Francisco. Transform your business with strategic AI implementation, machine learning solutions, and data analytics. Trusted by Fortune 500 companies.",
+  keywords: "AI consulting San Francisco, strategic AI advisory, AI transformation consulting, machine learning consultants bay area, enterprise AI implementation, data analytics consulting, AI strategy consulting",
+  openGraph: {
+    title: "DataTranquil - #1 AI Consulting Firm in San Francisco",
+    description: "Transform your business with San Francisco's leading AI consulting firm. Strategic AI advisory, implementation, and transformation services.",
+    images: [
+      {
+        url: "https://datatranquil.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DataTranquil - AI Consulting San Francisco",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DataTranquil - Strategic AI Advisory San Francisco",
+    description: "Leading AI consulting and transformation services in the Bay Area",
+    images: ["https://datatranquil.com/twitter-image.jpg"],
+  },
+};
 
 export default function HomePage() {
+  const mainServiceSchema = serviceSchema({
+    name: "AI Consulting Services",
+    description: "Strategic AI advisory and implementation services for enterprise transformation",
+    serviceType: "Technology Consulting",
+    areaServed: "San Francisco Bay Area"
+  });
+
   return (
     <div className="min-h-screen">
+      <SchemaMarkup data={organizationSchema} />
+      <SchemaMarkup data={mainServiceSchema} />
       {/* Simple Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden pt-16">
         {/* Animated Background Elements */}

@@ -1,0 +1,15 @@
+{
+  "session_id": "2025-09-13-website-enhancement",
+  "started_at": "2025-09-13T07:15:00Z",
+  "task_type": "feature",
+  "budget_hours": 80,
+  "current_phase": -1,
+  "phases_completed": [],
+  "agents": {
+    "frontend": { "weight": 1.0, "status": "active" },
+    "backend": { "weight": 1.0, "status": "active" },
+    "linear": { "weight": 1.0, "status": "active" },
+    "seo": { "weight": 1.0, "status": "active" },
+    "qa": { "weight": 1.0, "status": "active" }
+  }
+}
