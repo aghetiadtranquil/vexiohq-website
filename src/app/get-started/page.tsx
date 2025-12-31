@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Rocket, Users, Zap, Shield, Calendar, CreditCard, Building2, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Get Started with AI - Free 30-Day Trial | DataTranquil',
+  title: 'Get Started with AI - Free 30-Day Trial | VexioHQ',
   description: 'Start your AI transformation with a free 30-day trial. Quick 3-step onboarding, dedicated success manager, and custom implementation plan. Deploy AI in weeks, not months. No credit card required.',
-  keywords: 'get started with AI, AI free trial, enterprise AI trial, sign up, DataTranquil onboarding, start free trial, AI implementation, AI deployment, quick start AI, AI POC',
+  keywords: 'get started with AI, AI free trial, enterprise AI trial, sign up, VexioHQ onboarding, start free trial, AI implementation, AI deployment, quick start AI, AI POC',
   openGraph: {
     title: 'Get Started with Enterprise AI - Free 30-Day Trial',
     description: 'Start your AI transformation today. Quick onboarding, dedicated support, and proven ROI in 30 days. No credit card required.',
-    url: 'https://datatranquil.com/get-started',
+    url: 'https://vexiohq.com/get-started',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://datatranquil.com/get-started',
+    canonical: 'https://vexiohq.com/get-started',
   },
 };
 
@@ -28,7 +28,7 @@ export default function GetStarted() {
               Start Your AI Journey Today
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of companies transforming their business with DataTranquil's AI platform. 
+              Join thousands of companies transforming their business with VexioHQ's AI platform. 
               Get started in minutes with our 30-day free trial.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function GetStarted() {
               {/* Testimonial */}
               <div className="bg-blue-50 p-6 rounded-xl">
                 <p className="text-gray-700 italic mb-4">
-                  "DataTranquil transformed our data operations. The onboarding was seamless, 
+                  "VexioHQ transformed our data operations. The onboarding was seamless, 
                   and we saw ROI within the first month."
                 </p>
                 <div className="flex items-center gap-3">

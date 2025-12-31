@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { TrendingUp, ShoppingCart, Users, Cpu, Package, BarChart3, Clock, DollarSign, Award, ArrowRight, CheckCircle, AlertTriangle, Target, Zap, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How a Fortune 500 Retailer Achieved 47% Revenue Growth with AI | DataTranquil Case Study',
+  title: 'How a Fortune 500 Retailer Achieved 47% Revenue Growth with AI | VexioHQ Case Study',
   description: 'Detailed case study on enterprise AI transformation delivering $2.3B incremental revenue through personalization, supply chain optimization, and predictive analytics.',
   keywords: 'retail AI case study, enterprise AI transformation, AI ROI, retail personalization, supply chain AI',
 };
@@ -86,7 +86,7 @@ export default function RetailTransformationCaseStudy() {
             <div className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed mb-6">
                 Facing intense competition from digital-native retailers and changing consumer behaviors, 
-                this Fortune 500 retailer partnered with DataTranquil to execute one of the most ambitious 
+                this Fortune 500 retailer partnered with VexioHQ to execute one of the most ambitious 
                 AI transformations in retail history. The result: <strong>$2.3 billion in incremental revenue</strong>, 
                 <strong>31% reduction in operational costs</strong>, and emergence as an industry leader in AI-powered retail.
               </p>
@@ -591,7 +591,7 @@ export default function RetailTransformationCaseStudy() {
             <div className="mt-8 p-6 bg-blue-50 rounded-xl">
               <p className="text-lg font-semibold text-blue-900 mb-2">Critical Success Factor:</p>
               <p className="text-blue-800">
-                "The combination of executive commitment, employee engagement, and DataTranquil's expertise 
+                "The combination of executive commitment, employee engagement, and VexioHQ's expertise 
                 created unstoppable momentum. This wasn't just a technology project—it was a complete 
                 business transformation."
                 <span className="block mt-2 text-sm italic">— Chief Digital Officer</span>
@@ -766,7 +766,7 @@ export default function RetailTransformationCaseStudy() {
         <section className="mb-16">
           <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-2xl p-8">
             <blockquote className="text-xl font-medium text-gray-800 mb-4">
-              "DataTranquil didn't just implement AI—they transformed our entire business. 
+              "VexioHQ didn't just implement AI—they transformed our entire business. 
               In 18 months, we went from industry laggard to leader. The $2.3B in new revenue 
               speaks for itself, but the real value is in our newfound ability to innovate at 
               the speed of thought. This partnership saved our company."

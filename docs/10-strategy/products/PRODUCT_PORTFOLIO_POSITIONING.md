@@ -1,4 +1,4 @@
-# 🚀 DataTranquil Product Portfolio Positioning
+# 🚀 VexioHQ Product Portfolio Positioning
 *How to Present Your Active Product Development*
 
 **Current Products in Development:**

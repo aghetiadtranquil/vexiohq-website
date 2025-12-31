@@ -1,5 +1,5 @@
 
-DataTranquil (B2B AI consulting site): ABM-friendly, “unknown → known” safely
+VexioHQ (B2B AI consulting site): ABM-friendly, “unknown → known” safely
 
 A) Signals & enrichment (account-level, not person-level)
 	•	First-party anon id as above.
@@ -64,7 +64,7 @@ Day 3–4
 
 Day 5–6
 	•	/api/identify + identities table; hash email (SHA-256).
-	•	Build views: v_activation, v_retention (MoneyTrail) and v_abm_pipeline (DataTranquil).
+	•	Build views: v_activation, v_retention (MoneyTrail) and v_abm_pipeline (VexioHQ).
 
 Day 7–9
 	•	CAPI worker: Meta + Google Enhanced Conversions (feature-flagged by consent).
@@ -74,7 +74,7 @@ Day 10–11
 	•	Reverse-IP enrichment microservice (B2B only), writes accounts & account_pageviews.
 
 Day 12–13
-	•	Dashboards: Activation, Retention, Revenue (MoneyTrail); ABM Funnel & Source Attribution (DataTranquil).
+	•	Dashboards: Activation, Retention, Revenue (MoneyTrail); ABM Funnel & Source Attribution (VexioHQ).
 	•	Backfill historical ≥30 days if available.
 
 Day 14
@@ -94,7 +94,7 @@ What you ship first (TL;DR)
 	•	Anon id + consent-gated /api/track
 	•	Identify on signup/lead with SHA-256 email hash
 	•	Server-side CAPI queue with consent checks
-	•	Activation/Retention (MoneyTrail) and ABM/MQL (DataTranquil) dashboards
+	•	Activation/Retention (MoneyTrail) and ABM/MQL (VexioHQ) dashboards
 	•	Reverse-IP → account (B2B only), never person
 
 ⸻

@@ -1,4 +1,4 @@
-# DataTranquil Website Enhancement Master Plan
+# VexioHQ Website Enhancement Master Plan
 **Date:** September 13, 2025  
 **Status:** Website Running on http://localhost:3002  
 **Framework:** Response-Awareness Framework v3.1.1 Active

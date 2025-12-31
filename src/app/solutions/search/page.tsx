@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Search, ArrowRight, Brain, Zap, BarChart3, Shield, Users, TrendingUp, Database, FileSearch, Globe, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Search Solutions | DataTranquil',
+  title: 'AI-Powered Search Solutions | VexioHQ',
   description: 'Transform your enterprise search with AI. Semantic search, natural language processing, and intelligent information retrieval for better business decisions.',
   keywords: 'AI search, semantic search, enterprise search, NLP search, intelligent search, search solutions',
   openGraph: {

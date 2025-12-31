@@ -5,18 +5,18 @@ export default function FAQSchema() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is DataTranquil?",
+        "name": "What is VexioHQ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "DataTranquil is a strategic AI advisory firm specializing in enterprise transformation through intelligent automation, advanced analytics, and AI implementation. We partner with executive teams to unlock transformative value and drive sustainable growth."
+          "text": "VexioHQ is a strategic AI advisory firm specializing in enterprise transformation through intelligent automation, advanced analytics, and AI implementation. We partner with executive teams to unlock transformative value and drive sustainable growth."
         }
       },
       {
         "@type": "Question",
-        "name": "What services does DataTranquil offer?",
+        "name": "What services does VexioHQ offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "DataTranquil offers three core services: 1) AI Strategy & Implementation - helping enterprises develop and deploy AI solutions, 2) Data & Analytics Excellence - transforming raw data into strategic assets, and 3) Digital Transformation - end-to-end transformation programs with process optimization."
+          "text": "VexioHQ offers three core services: 1) AI Strategy & Implementation - helping enterprises develop and deploy AI solutions, 2) Data & Analytics Excellence - transforming raw data into strategic assets, and 3) Digital Transformation - end-to-end transformation programs with process optimization."
         }
       },
       {
@@ -24,23 +24,23 @@ export default function FAQSchema() {
         "name": "What is MoneyTrail?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MoneyTrail is DataTranquil's flagship AI-powered expense management platform. It demonstrates the transformative power of intelligent automation with 90% processing time reduction, 99.7% OCR accuracy, and an average of $2.4M annual savings per client."
+          "text": "VexioExpense (formerly MoneyTrail) is VexioHQ's AI-powered expense management platform currently in development. It aims to streamline expense tracking and reporting with intelligent automation."
         }
       },
       {
         "@type": "Question",
-        "name": "How can I contact DataTranquil?",
+        "name": "How can I contact VexioHQ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can contact DataTranquil via email at support@datatranquil.com or by phone at (415) 255-5501. Our team is available Monday through Friday, 9AM-6PM PST, and we typically respond to emails within 24 hours."
+          "text": "You can contact VexioHQ via email at team@vexiohq.com or by phone at (415) 390-5748. Our team is available Monday through Friday, 9AM-6PM PST, and we typically respond to emails within 24 hours."
         }
       },
       {
         "@type": "Question",
-        "name": "What industries does DataTranquil serve?",
+        "name": "What industries does VexioHQ serve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "DataTranquil serves forward-thinking organizations across various industries, with particular expertise in financial services, healthcare, retail, and technology sectors. We've analyzed over 500M data points and deployed 150+ AI models for enterprises globally."
+          "text": "VexioHQ serves organizations across various industries including financial services, healthcare, retail, and technology sectors. We build AI-powered software products and provide consulting services."
         }
       }
     ]

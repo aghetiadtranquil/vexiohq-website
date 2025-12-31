@@ -11,7 +11,7 @@ export default function AIReadinessChecklistPage() {
     {
       icon: CheckCircle,
       title: "Enterprise-Tested Framework",
-      description: "Based on 150+ successful AI implementations across Fortune 500 companies"
+      description: "Based on our experience delivering 70+ successful AI projects"
     },
     {
       icon: TrendingUp,
@@ -92,16 +92,16 @@ export default function AIReadinessChecklistPage() {
               
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-700">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">150+</div>
-                  <div className="text-sm text-slate-400">Implementations</div>
+                  <div className="text-2xl font-bold text-blue-400">70+</div>
+                  <div className="text-sm text-slate-400">Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">312%</div>
-                  <div className="text-sm text-slate-400">Average ROI</div>
+                  <div className="text-2xl font-bold text-blue-400">4</div>
+                  <div className="text-sm text-slate-400">AI Products</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">87%</div>
-                  <div className="text-sm text-slate-400">Success Rate</div>
+                  <div className="text-2xl font-bold text-blue-400">SF</div>
+                  <div className="text-sm text-slate-400">Based in SF</div>
                 </div>
               </div>
             </div>
@@ -190,20 +190,16 @@ export default function AIReadinessChecklistPage() {
           {/* Trust Indicators */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-slate-900">50+</div>
-              <div className="text-slate-600">Fortune 500 Clients</div>
+              <div className="text-3xl font-bold text-slate-900">70+</div>
+              <div className="text-slate-600">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900">$2.4B+</div>
-              <div className="text-slate-600">In AI ROI Generated</div>
+              <div className="text-3xl font-bold text-slate-900">4</div>
+              <div className="text-slate-600">AI Products</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900">99.7%</div>
-              <div className="text-slate-600">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-slate-900">36K+</div>
-              <div className="text-slate-600">Implementation Hours</div>
+              <div className="text-3xl font-bold text-slate-900">SF</div>
+              <div className="text-slate-600">Based in San Francisco</div>
             </div>
           </div>
         </div>
@@ -307,7 +303,7 @@ export default function AIReadinessChecklistPage() {
             Ready to Assess Your AI Readiness?
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            Join 5,000+ executives who have used this checklist to successfully launch their AI initiatives. Download now and get immediate insights into your organization's AI potential.
+            Download now and get immediate insights into your organization's AI potential.
           </p>
           
           <div className="space-y-6">
@@ -329,12 +325,12 @@ export default function AIReadinessChecklistPage() {
           <div className="mt-12 pt-8 border-t border-blue-500">
             <p className="text-blue-200 text-sm">
               Questions? Contact our AI specialists at{' '}
-              <a href="mailto:ai-experts@datatranquil.com" className="text-white underline hover:no-underline">
-                ai-experts@datatranquil.com
+              <a href="mailto:ai-experts@vexiohq.com" className="text-white underline hover:no-underline">
+                ai-experts@vexiohq.com
               </a>
               {' '}or{' '}
-              <a href="tel:415-255-5501" className="text-white underline hover:no-underline">
-                415-255-5501
+              <a href="tel:415-390-5748" className="text-white underline hover:no-underline">
+                415-390-5748
               </a>
             </p>
           </div>

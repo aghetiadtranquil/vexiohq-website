@@ -1,4 +1,4 @@
-# 📚 DataTranquil Documentation Master Index
+# 📚 VexioHQ Documentation Master Index
 *Your Complete Guide to All Strategy Documents*
 
 **Last Updated**: January 2025  
@@ -182,7 +182,7 @@
 ### ❌ Claims to Remove/Avoid:
 - "99.7% success rate"
 - "$2.4B value created"
-- "150+ enterprise clients" (unless true for DataTranquil)
+- "150+ enterprise clients" (unless true for VexioHQ)
 - "#1 AI consulting firm"
 - "Our team" (if solo)
 

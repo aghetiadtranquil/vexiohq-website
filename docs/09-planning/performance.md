@@ -1,5 +1,5 @@
 # Performance Optimization Plan - Phase 1 Analysis
-*DataTranquil Company Website - Response Awareness Framework*
+*VexioHQ Company Website - Response Awareness Framework*
 
 ## Executive Summary
 

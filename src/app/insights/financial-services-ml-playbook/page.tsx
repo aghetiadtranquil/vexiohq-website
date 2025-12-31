@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { TrendingUp, Shield, DollarSign, Brain, BarChart3, Lock, Users, Zap, AlertTriangle, Target, Award, Clock, ArrowRight, CheckCircle, CreditCard, Building2, LineChart } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Financial Services ML Playbook: From Compliance to Competitive Advantage | DataTranquil',
+  title: 'Financial Services ML Playbook: From Compliance to Competitive Advantage | VexioHQ',
   description: 'How leading banks and financial institutions are achieving 73% fraud reduction and 3.2x ROI through strategic ML implementation. Based on 200+ deployments.',
   keywords: 'financial services AI, banking ML, fintech AI, fraud detection ML, risk management AI, regulatory compliance AI',
 };

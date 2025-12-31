@@ -27,44 +27,44 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://datatranquil.com'),
+  metadataBase: new URL('https://vexiohq.com'),
   title: {
-    default: "AI Consulting San Francisco | DataTranquil - Strategic AI Advisory",
-    template: "%s | DataTranquil AI Consulting"
+    default: "AI Consulting San Francisco | VexioHQ - Strategic AI Advisory",
+    template: "%s | VexioHQ AI Consulting"
   },
   description: "Top AI consulting firm in San Francisco. Transform your business with strategic AI implementation, machine learning solutions, and data analytics. Trusted by Fortune 500.",
   keywords: "AI consulting San Francisco, strategic AI advisory, AI transformation consulting, machine learning consultants bay area, enterprise AI implementation, data analytics consulting, AI strategy consulting, machine learning implementation",
-  authors: [{ name: "DataTranquil", url: "https://datatranquil.com" }],
-  creator: "DataTranquil",
-  publisher: "DataTranquil",
+  authors: [{ name: "VexioHQ", url: "https://vexiohq.com" }],
+  creator: "VexioHQ",
+  publisher: "VexioHQ",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "DataTranquil - #1 AI Consulting Firm in San Francisco",
+    title: "VexioHQ - #1 AI Consulting Firm in San Francisco",
     description: "Transform your business with San Francisco's leading AI consulting firm. Strategic AI advisory, implementation, and transformation services.",
-    url: "https://datatranquil.com",
-    siteName: "DataTranquil",
+    url: "https://vexiohq.com",
+    siteName: "VexioHQ",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://datatranquil.com/og-image.jpg",
+        url: "https://vexiohq.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "DataTranquil - AI Consulting San Francisco",
+        alt: "VexioHQ - AI Consulting San Francisco",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DataTranquil - Strategic AI Advisory San Francisco",
+    title: "VexioHQ - Strategic AI Advisory San Francisco",
     description: "Leading AI consulting and transformation services in the Bay Area",
-    site: "@datatranquil",
-    creator: "@datatranquil",
-    images: ["https://datatranquil.com/twitter-image.jpg"],
+    site: "@vexiohq",
+    creator: "@vexiohq",
+    images: ["https://vexiohq.com/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
     yahoo: "yahoo-verification-code",
   },
   alternates: {
-    canonical: "https://datatranquil.com",
+    canonical: "https://vexiohq.com",
     languages: {
-      'en-US': 'https://datatranquil.com',
+      'en-US': 'https://vexiohq.com',
     },
   },
   category: 'technology',
@@ -94,21 +94,21 @@ export const metadata: Metadata = {
 const jsonLdOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "DataTranquil",
-  "alternateName": "DataTranquil Strategic AI Advisory",
-  "url": "https://datatranquil.com",
-  "logo": "https://datatranquil.com/logo.png",
+  "name": "VexioHQ",
+  "alternateName": "VexioHQ Strategic AI Advisory",
+  "url": "https://vexiohq.com",
+  "logo": "https://vexiohq.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-415-255-5501",
+    "telephone": "+1-415-390-5748",
     "contactType": "sales",
-    "email": "support@datatranquil.com",
+    "email": "team@vexiohq.com",
     "areaServed": ["US", "San Francisco", "Bay Area", "Silicon Valley"],
     "availableLanguage": "English"
   },
   "sameAs": [
-    "https://linkedin.com/company/datatranquil",
-    "https://twitter.com/datatranquil"
+    "https://linkedin.com/company/vexiohq",
+    "https://twitter.com/vexiohq"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -132,14 +132,14 @@ const jsonLdOrganization = {
 const jsonLdWebSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://datatranquil.com",
-  "name": "DataTranquil",
+  "url": "https://vexiohq.com",
+  "name": "VexioHQ",
   "description": "Strategic AI Advisory and Consulting Services",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://datatranquil.com/search?q={search_term_string}"
+      "urlTemplate": "https://vexiohq.com/search?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }
@@ -151,7 +151,7 @@ const jsonLdService = {
   "name": "AI Consulting Services",
   "provider": {
     "@type": "Organization",
-    "name": "DataTranquil"
+    "name": "VexioHQ"
   },
   "areaServed": [
     {
@@ -175,62 +175,62 @@ const jsonLdService = {
     "itemListElement": [
       {
         "@type": "Service",
-        "@id": "https://datatranquil.com/services/strategic-ai-advisory",
+        "@id": "https://vexiohq.com/services/strategic-ai-advisory",
         "name": "Strategic AI Advisory",
         "description": "C-suite AI strategy consulting and roadmap development for enterprise transformation",
         "serviceType": "Strategic Consulting",
         "provider": {
           "@type": "Organization",
-          "name": "DataTranquil"
+          "name": "VexioHQ"
         },
         "potentialAction": {
           "@type": "BuyAction",
-          "target": "https://datatranquil.com/contact"
+          "target": "https://vexiohq.com/contact"
         }
       },
       {
         "@type": "Service",
-        "@id": "https://datatranquil.com/services/ai-implementation",
+        "@id": "https://vexiohq.com/services/ai-implementation",
         "name": "AI Implementation",
         "description": "End-to-end AI solution deployment and integration with existing systems",
         "serviceType": "Implementation Services",
         "provider": {
           "@type": "Organization",
-          "name": "DataTranquil"
+          "name": "VexioHQ"
         },
         "potentialAction": {
           "@type": "BuyAction",
-          "target": "https://datatranquil.com/contact"
+          "target": "https://vexiohq.com/contact"
         }
       },
       {
         "@type": "Service",
-        "@id": "https://datatranquil.com/services/machine-learning",
+        "@id": "https://vexiohq.com/services/machine-learning",
         "name": "Machine Learning Consulting",
         "description": "Custom ML model development and optimization for business outcomes",
         "serviceType": "Technical Consulting",
         "provider": {
           "@type": "Organization",
-          "name": "DataTranquil"
+          "name": "VexioHQ"
         },
         "potentialAction": {
           "@type": "BuyAction",
-          "target": "https://datatranquil.com/contact"
+          "target": "https://vexiohq.com/contact"
         }
       },
       {
         "@type": "Service",
-        "@id": "https://datatranquil.com/services/data-analytics",
+        "@id": "https://vexiohq.com/services/data-analytics",
         "name": "Data Analytics Transformation",
         "description": "Enterprise data strategy and analytics implementation for informed decision making",
         "serviceType": "Data Services",
         "provider": {
           "@type": "Organization",
-          "name": "DataTranquil"
+          "name": "VexioHQ"
         },
         "potentialAction": {
           "@type": "BuyAction",
-          "target": "https://datatranquil.com/contact"
+          "target": "https://vexiohq.com/contact"
         }
       }
     ]
@@ -260,7 +260,7 @@ const jsonLdFAQ = {
     },
     {
       "@type": "Question",
-      "name": "What industries does DataTranquil serve?",
+      "name": "What industries does VexioHQ serve?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "We serve various industries including finance, healthcare, retail, manufacturing, technology, and professional services. Our AI solutions are tailored to each industry's specific needs and regulatory requirements."
@@ -281,13 +281,13 @@ const jsonLdFAQ = {
 const jsonLdLocalBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://datatranquil.com/#localbusiness",
-  "name": "DataTranquil",
-  "alternateName": "DataTranquil AI Consulting San Francisco",
+  "@id": "https://vexiohq.com/#localbusiness",
+  "name": "VexioHQ",
+  "alternateName": "VexioHQ AI Consulting San Francisco",
   "description": "Premier AI consulting firm in San Francisco specializing in enterprise AI transformation",
-  "url": "https://datatranquil.com",
-  "telephone": "+1-415-255-5501",
-  "email": "support@datatranquil.com",
+  "url": "https://vexiohq.com",
+  "telephone": "+1-415-390-5748",
+  "email": "team@vexiohq.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Francisco",
@@ -324,7 +324,7 @@ const jsonLdLocalBusiness = {
         "@type": "Person",
         "name": "Sarah Johnson"
       },
-      "reviewBody": "DataTranquil transformed our business with their AI implementation. ROI exceeded expectations within 6 months."
+      "reviewBody": "VexioHQ transformed our business with their AI implementation. ROI exceeded expectations within 6 months."
     }
   ],
   "knowsAbout": [
@@ -351,7 +351,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" itemScope itemType="https://schema.org/WebPage">
       <head>
-        <link rel="canonical" href="https://datatranquil.com" />
+        <link rel="canonical" href="https://vexiohq.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#0070f3" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -457,7 +457,7 @@ export default function RootLayout({
                 // Configure GA4
                 gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
                   page_path: window.location.pathname,
-                  cookie_domain: 'datatranquil.com',
+                  cookie_domain: 'vexiohq.com',
                   cookie_flags: 'SameSite=None;Secure'
                 });
               `}

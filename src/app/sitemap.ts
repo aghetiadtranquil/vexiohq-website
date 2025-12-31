@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://datatranquil.com'
+  const baseUrl = 'https://vexiohq.com'
   const currentDate = new Date()
   
   // Static pages with their specific priorities and change frequencies
@@ -360,7 +360,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 export const metadata = {
   alternates: {
     types: {
-      'application/rss+xml': `https://datatranquil.com/feed.xml`,
+      'application/rss+xml': `https://vexiohq.com/feed.xml`,
     },
   },
 }

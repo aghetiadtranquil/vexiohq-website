@@ -1,4 +1,4 @@
-# DataTranquil - Enterprise AI Consulting Platform
+# VexioHQ - Enterprise AI Consulting Platform
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2.32-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
@@ -6,7 +6,7 @@
 
 ## 🚀 Overview
 
-DataTranquil is a premium AI and data consulting firm specializing in enterprise AI transformation. Our platform rivals top-tier consulting firms like McKinsey, BCG, and Bain in the technology consulting space. Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and scalability.
+VexioHQ is a premium AI and data consulting firm specializing in enterprise AI transformation. Our platform rivals top-tier consulting firms like McKinsey, BCG, and Bain in the technology consulting space. Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance and scalability.
 
 ## 🌟 Current Status
 
@@ -95,7 +95,7 @@ comapny-website/
 
 ```bash
 # Clone repository
-git clone https://github.com/DataTranquil/comapny-website.git
+git clone https://github.com/VexioHQ/comapny-website.git
 cd comapny-website
 
 # Install dependencies
@@ -178,7 +178,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3002
 
 ```bash
 # Build image
-docker build -t datatranquil-website .
+docker build -t vexiohq-website .
 
 # Run container
 docker-compose up -d
@@ -239,9 +239,9 @@ Automatic deployment on `main` branch push
 - [Deployment Guide](./deployment/DEPLOYMENT_GUIDE.md)
 - [Component Docs](./docs/COMPONENTS_DOCUMENTATION.md)
 
-## 🏢 About DataTranquil
+## 🏢 About VexioHQ
 
-**DataTranquil** is a leading AI consulting firm helping Fortune 500 companies navigate digital transformation through:
+**VexioHQ** is a leading AI consulting firm helping Fortune 500 companies navigate digital transformation through:
 - Strategic AI implementation
 - Data-driven decision making
 - Autonomous AI systems
@@ -249,15 +249,15 @@ Automatic deployment on `main` branch push
 
 ## 📞 Contact
 
-- **Website**: [datatranquil.com](https://datatranquil.com)
-- **Email**: support@datatranquil.com
+- **Website**: [vexiohq.com](https://vexiohq.com)
+- **Email**: hello@vexiohq.com
 - **Phone**: +1 (415) 255-5501
 - **Location**: San Francisco, CA
 
 ## 📄 License
 
-© 2025 DataTranquil. All rights reserved. Proprietary and confidential.
+© 2025 VexioHQ. All rights reserved. Proprietary and confidential.
 
 ---
 
-Built with ❤️ by the DataTranquil Team
+Built with ❤️ by the VexioHQ Team

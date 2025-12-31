@@ -65,7 +65,7 @@
 
 ### Implementation
 - ✅ Canonical URL in metadata alternates
-- ✅ Base URL: https://datatranquil.com
+- ✅ Base URL: https://vexiohq.com
 - ✅ Trailing slash consistency enabled in next.config.js
 - ✅ Helper function `generateCanonicalUrl()` in seo-metadata.ts
 
@@ -90,7 +90,7 @@
 - ✅ twitter:card (summary_large_image)
 - ✅ twitter:title
 - ✅ twitter:description
-- ✅ twitter:site (@datatranquil)
+- ✅ twitter:site (@vexiohq)
 - ✅ twitter:creator
 - ✅ twitter:image
 

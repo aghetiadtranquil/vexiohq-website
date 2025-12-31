@@ -1,25 +1,17 @@
 export default function TrustIndicators() {
   return (
-    <div className="grid md:grid-cols-5 gap-8 mt-16 pt-16 border-t border-slate-200">
+    <div className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-slate-200">
       <div className="text-center">
-        <div className="text-3xl font-bold text-slate-900 mb-2">36K+</div>
-        <div className="text-slate-600">Hours Enterprise AI Experience</div>
+        <div className="text-3xl font-bold text-slate-900 mb-2">70+</div>
+        <div className="text-slate-600">Projects Delivered</div>
       </div>
       <div className="text-center">
-        <div className="text-3xl font-bold text-slate-900 mb-2">99.7%</div>
-        <div className="text-slate-600">Client Satisfaction Rate</div>
+        <div className="text-3xl font-bold text-slate-900 mb-2">4</div>
+        <div className="text-slate-600">AI Products</div>
       </div>
       <div className="text-center">
-        <div className="text-3xl font-bold text-slate-900 mb-2">40%</div>
-        <div className="text-slate-600">Average Cost Reduction</div>
-      </div>
-      <div className="text-center">
-        <div className="text-3xl font-bold text-slate-900 mb-2">$2.4M</div>
-        <div className="text-slate-600">Annual Savings per Client</div>
-      </div>
-      <div className="text-center">
-        <div className="text-3xl font-bold text-slate-900 mb-2">60x</div>
-        <div className="text-slate-600">Query Performance Gain</div>
+        <div className="text-3xl font-bold text-slate-900 mb-2">SF</div>
+        <div className="text-slate-600">Based in San Francisco</div>
       </div>
     </div>
   );

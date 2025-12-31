@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | DataTranquil',
-  description: 'DataTranquil Cookie Policy - Learn about how we use cookies and similar technologies on our website.',
+  title: 'Cookie Policy | VexioHQ',
+  description: 'VexioHQ Cookie Policy - Learn about how we use cookies and similar technologies on our website.',
 };
 
 export default function CookiePolicy() {
@@ -25,7 +25,7 @@ export default function CookiePolicy() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">2. How We Use Cookies</h2>
-            <p>DataTranquil uses cookies and similar technologies for the following purposes:</p>
+            <p>VexioHQ uses cookies and similar technologies for the following purposes:</p>
             <ul className="list-disc pl-6 mt-4">
               <li><strong>Essential Operations:</strong> To provide core website functionality</li>
               <li><strong>Performance Analysis:</strong> To understand how visitors use our site</li>
@@ -205,9 +205,9 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold mb-4">8. Contact Us</h2>
             <p>If you have questions about our use of cookies, please contact us at:</p>
             <div className="bg-gray-50 p-4 rounded-lg mt-4">
-              <p><strong>DataTranquil Privacy Team</strong></p>
-              <p>Email: privacy@datatranquil.com</p>
-              <p>Phone: +1-415-255-5501</p>
+              <p><strong>VexioHQ Privacy Team</strong></p>
+              <p>Email: privacy@vexiohq.com</p>
+              <p>Phone: +1-415-390-5748</p>
               <p>Address: San Francisco, CA, USA</p>
             </div>
           </section>

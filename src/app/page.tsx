@@ -3,26 +3,26 @@ import type { Metadata } from 'next';
 import { SchemaMarkup, organizationSchema, serviceSchema } from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: "AI Consulting San Francisco | DataTranquil - Strategic AI Advisory",
+  title: "AI Consulting San Francisco | VexioHQ - Strategic AI Advisory",
   description: "Leading AI consulting firm in San Francisco. Transform your business with strategic AI implementation, machine learning solutions, and data analytics. Trusted by Fortune 500 companies.",
   keywords: "AI consulting San Francisco, strategic AI advisory, AI transformation consulting, machine learning consultants bay area, enterprise AI implementation, data analytics consulting, AI strategy consulting",
   openGraph: {
-    title: "DataTranquil - #1 AI Consulting Firm in San Francisco",
+    title: "VexioHQ - #1 AI Consulting Firm in San Francisco",
     description: "Transform your business with San Francisco's leading AI consulting firm. Strategic AI advisory, implementation, and transformation services.",
     images: [
       {
-        url: "https://datatranquil.com/og-image.jpg",
+        url: "https://vexiohq.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "DataTranquil - AI Consulting San Francisco",
+        alt: "VexioHQ - AI Consulting San Francisco",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DataTranquil - Strategic AI Advisory San Francisco",
+    title: "VexioHQ - Strategic AI Advisory San Francisco",
     description: "Leading AI consulting and transformation services in the Bay Area",
-    images: ["https://datatranquil.com/twitter-image.jpg"],
+    images: ["https://vexiohq.com/twitter-image.jpg"],
   },
 };
 
@@ -69,8 +69,8 @@ export default function HomePage() {
 
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto">
-              Leading AI consulting firm with 36,000+ hours of enterprise experience. 
-              From Oracle BI to Agentic AI, we deliver measurable ROI.
+              AI-powered software and consulting to help businesses work smarter,
+              sell better, and grow faster.
             </p>
 
             {/* CTA Buttons */}
@@ -90,22 +90,14 @@ export default function HomePage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">36K+</div>
-                <div className="text-blue-200">Hours Experience</div>
+                <div className="text-4xl font-bold text-white mb-2">70+</div>
+                <div className="text-blue-200">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">150+</div>
-                <div className="text-blue-200">AI Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">99.7%</div>
-                <div className="text-blue-200">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">$2.4M</div>
-                <div className="text-blue-200">Avg. Savings</div>
+                <div className="text-4xl font-bold text-white mb-2">4</div>
+                <div className="text-blue-200">AI Products</div>
               </div>
             </div>
           </div>
@@ -219,7 +211,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 150+ companies that have revolutionized their operations with our AI solutions
+            Let us help transform your business with proven AI solutions
           </p>
           <Link 
             href="/contact"

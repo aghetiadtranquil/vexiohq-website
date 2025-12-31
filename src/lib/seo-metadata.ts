@@ -44,10 +44,10 @@ interface SEOMetadataProps {
 }
 
 const DEFAULT_METADATA: Partial<Metadata> = {
-  metadataBase: new URL('https://datatranquil.com'),
+  metadataBase: new URL('https://vexiohq.com'),
   title: {
-    template: '%s | DataTranquil AI Consulting',
-    default: 'DataTranquil - Strategic AI Advisory & Consulting',
+    template: '%s | VexioHQ AI Consulting',
+    default: 'VexioHQ - Strategic AI Advisory & Consulting',
   },
   description: 'Leading AI consulting firm in San Francisco. Transform your business with strategic AI implementation, machine learning solutions, and data analytics.',
   keywords: [
@@ -60,37 +60,37 @@ const DEFAULT_METADATA: Partial<Metadata> = {
     'San Francisco',
     'Bay Area'
   ],
-  authors: [{ name: 'DataTranquil', url: 'https://datatranquil.com' }],
-  creator: 'DataTranquil',
-  publisher: 'DataTranquil',
+  authors: [{ name: 'VexioHQ', url: 'https://vexiohq.com' }],
+  creator: 'VexioHQ',
+  publisher: 'VexioHQ',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: 'DataTranquil - Strategic AI Advisory & Consulting',
+    title: 'VexioHQ - Strategic AI Advisory & Consulting',
     description: 'Transform your business with San Francisco\'s leading AI consulting firm.',
-    url: 'https://datatranquil.com',
-    siteName: 'DataTranquil',
+    url: 'https://vexiohq.com',
+    siteName: 'VexioHQ',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://datatranquil.com/og-image.jpg',
+        url: 'https://vexiohq.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'DataTranquil - AI Consulting',
+        alt: 'VexioHQ - AI Consulting',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DataTranquil - Strategic AI Advisory',
+    title: 'VexioHQ - Strategic AI Advisory',
     description: 'Leading AI consulting and transformation services',
-    site: '@datatranquil',
-    creator: '@datatranquil',
-    images: ['https://datatranquil.com/twitter-image.jpg'],
+    site: '@vexiohq',
+    creator: '@vexiohq',
+    images: ['https://vexiohq.com/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -109,9 +109,9 @@ const DEFAULT_METADATA: Partial<Metadata> = {
     yahoo: 'yahoo-verification-code',
   },
   alternates: {
-    canonical: 'https://datatranquil.com',
+    canonical: 'https://vexiohq.com',
     languages: {
-      'en-US': 'https://datatranquil.com',
+      'en-US': 'https://vexiohq.com',
     },
   },
 }
@@ -131,7 +131,7 @@ export function generateSEOMetadata({
   modifiedTime,
   tags = []
 }: SEOMetadataProps): Metadata {
-  const url = canonical || 'https://datatranquil.com'
+  const url = canonical || 'https://vexiohq.com'
   
   const metadata: Metadata = {
     ...DEFAULT_METADATA,
@@ -174,7 +174,7 @@ export function generateBlogMetadata({
   title,
   description,
   slug,
-  author = 'DataTranquil Team',
+  author = 'VexioHQ Team',
   publishedTime,
   modifiedTime,
   tags = [],
@@ -189,7 +189,7 @@ export function generateBlogMetadata({
   tags?: string[]
   image?: string
 }): Metadata {
-  const url = `https://datatranquil.com/blog/${slug}`
+  const url = `https://vexiohq.com/blog/${slug}`
   
   return generateSEOMetadata({
     title,
@@ -230,7 +230,7 @@ export function generateProductMetadata({
   category?: string
   image?: string
 }): Metadata {
-  const url = `https://datatranquil.com/products/${slug}`
+  const url = `https://vexiohq.com/products/${slug}`
   
   return generateSEOMetadata({
     title: `${name} - AI Solutions`,
@@ -259,7 +259,7 @@ export function generateLandingPageMetadata({
   keywords?: string[]
   path?: string
 }): Metadata {
-  const url = path ? `https://datatranquil.com${path}` : 'https://datatranquil.com'
+  const url = path ? `https://vexiohq.com${path}` : 'https://vexiohq.com'
   
   return generateSEOMetadata({
     title,
@@ -279,7 +279,7 @@ export function generateLandingPageMetadata({
 
 // Generate hreflang tags for international SEO
 export function generateHreflangTags(currentPath: string, locales: string[] = ['en-US']) {
-  const baseUrl = 'https://datatranquil.com'
+  const baseUrl = 'https://vexiohq.com'
   
   return locales.reduce((acc, locale) => {
     const localePath = locale === 'en-US' ? '' : `/${locale.toLowerCase()}`
@@ -290,7 +290,7 @@ export function generateHreflangTags(currentPath: string, locales: string[] = ['
 
 // Generate canonical URL
 export function generateCanonicalUrl(path: string): string {
-  const baseUrl = 'https://datatranquil.com'
+  const baseUrl = 'https://vexiohq.com'
   // Ensure trailing slash for consistency
   const formattedPath = path.endsWith('/') ? path : `${path}/`
   return `${baseUrl}${formattedPath}`
@@ -308,14 +308,14 @@ export function validateMetaDescription(description: string): string {
   
   if (cleanDescription.length < 120) {
     // Add call-to-action if too short
-    return `${cleanDescription} Learn more with DataTranquil's AI consulting services.`
+    return `${cleanDescription} Learn more with VexioHQ's AI consulting services.`
   }
   
   return cleanDescription
 }
 
 // Generate title tag with proper length
-export function generateTitleTag(title: string, suffix = 'DataTranquil'): string {
+export function generateTitleTag(title: string, suffix = 'VexioHQ'): string {
   const separator = ' | '
   const maxLength = 60
   

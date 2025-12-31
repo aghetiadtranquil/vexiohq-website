@@ -19,12 +19,12 @@ const icons = {
 
 export const metadata: Metadata = {
   title: 'Enterprise AI Transformation Services | Fortune 500 AI Strategy - Vantage AI',
-  description: 'Transform your enterprise with AI. Proven methodology for Fortune 500 companies. 312% average ROI. From strategy to implementation in 12 weeks. Get started today.',
+  description: 'Transform your enterprise with AI. Proven methodology. 70+ projects delivered. From strategy to implementation. Get started today.',
   keywords: 'enterprise AI transformation, enterprise AI, AI transformation, digital transformation, Fortune 500 AI, enterprise artificial intelligence, AI strategy enterprise, corporate AI implementation',
   openGraph: {
     title: 'Enterprise AI Transformation - Fortune 500 Proven Methodology',
-    description: 'Transform your enterprise with AI. 312% average ROI. Trusted by Fortune 500 companies.',
-    url: 'https://datatranquil.com/enterprise-ai-transformation',
+    description: 'Transform your enterprise with AI. 70+ projects delivered. San Francisco based.',
+    url: 'https://vexiohq.com/enterprise-ai-transformation',
     type: 'website',
     images: [{
       url: '/images/enterprise-ai-transformation.jpg',
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Enterprise AI Transformation - Vantage AI',
-    description: 'Transform your Fortune 500 company with AI. Proven methodology. 312% ROI.',
+    description: 'Transform your company with AI. Proven methodology. 70+ projects delivered.',
     images: ['/images/enterprise-ai-transformation.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/enterprise-ai-transformation'
+    canonical: 'https://vexiohq.com/enterprise-ai-transformation'
   }
 }
 
@@ -51,7 +51,7 @@ const structuredData = {
   "provider": {
     "@type": "Organization",
     "name": "Vantage AI",
-    "url": "https://datatranquil.com"
+    "url": "https://vexiohq.com"
   },
   "description": "Comprehensive enterprise AI transformation services for Fortune 500 companies. From strategy to implementation.",
   "serviceType": "Enterprise AI Transformation",
@@ -162,7 +162,7 @@ export default function EnterpriseAITransformationPage() {
                 Enterprise AI Transformation That Delivers Results
               </h1>
               <p className="text-xl md:text-2xl text-slate-300 mb-8">
-                Join Fortune 500 leaders who've achieved 312% average ROI through strategic AI transformation. We turn AI potential into enterprise value in just 12 weeks.
+                Transform your enterprise with proven AI strategies. We've delivered 70+ successful AI projects across multiple industries.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -177,20 +177,16 @@ export default function EnterpriseAITransformationPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-white">312%</p>
-                  <p className="text-sm text-slate-400">Average ROI</p>
+                  <p className="text-3xl font-bold text-white">70+</p>
+                  <p className="text-sm text-slate-400">Projects Delivered</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-white">12 Weeks</p>
-                  <p className="text-sm text-slate-400">To Value</p>
+                  <p className="text-3xl font-bold text-white">4</p>
+                  <p className="text-sm text-slate-400">AI Products</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-white">99.7%</p>
-                  <p className="text-sm text-slate-400">Success Rate</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-white">150+</p>
-                  <p className="text-sm text-slate-400">Enterprises</p>
+                  <p className="text-3xl font-bold text-white">SF</p>
+                  <p className="text-sm text-slate-400">Based in San Francisco</p>
                 </div>
               </div>
             </div>

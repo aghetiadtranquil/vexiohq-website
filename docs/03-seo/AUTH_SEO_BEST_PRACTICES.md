@@ -106,7 +106,7 @@ Disallow: /_next/auth/
 ```tsx
 // REQUIRED for all auth pages
 export const metadata: Metadata = {
-  title: 'Sign In | DataTranquil',
+  title: 'Sign In | VexioHQ',
   robots: {
     index: false,
     follow: false,
@@ -309,7 +309,7 @@ API (Blocked):
 
 ## 10. Final Recommendations
 
-### For DataTranquil's Architecture:
+### For VexioHQ's Architecture:
 
 1. **Keep Clerk** if it's working (SEO impact is minimal)
 2. **Consider NextAuth.js** for better performance

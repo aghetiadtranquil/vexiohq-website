@@ -1,7 +1,7 @@
 # Image Optimization Implementation Guide
 
 ## Overview
-This guide documents the enhanced image optimization system implemented for the DataTranquil website, focusing on performance improvements through modern formats (WebP/AVIF), responsive images, and intelligent lazy loading.
+This guide documents the enhanced image optimization system implemented for the VexioHQ website, focusing on performance improvements through modern formats (WebP/AVIF), responsive images, and intelligent lazy loading.
 
 ## Components
 

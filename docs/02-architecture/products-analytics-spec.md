@@ -1,11 +1,11 @@
-# DataTranquil Analytics Platform
+# VexioHQ Analytics Platform
 ## Comprehensive Product Specification Document v2.0
 
 ---
 
 ## Executive Summary
 
-The DataTranquil Analytics Platform is an enterprise-grade, AI-powered analytics solution that transforms raw data into actionable insights in real-time. Built for modern enterprises demanding speed, accuracy, and scalability, our platform combines advanced machine learning with intuitive visualization to deliver 10x faster insights with 95% prediction accuracy.
+The VexioHQ Analytics Platform is an enterprise-grade, AI-powered analytics solution that transforms raw data into actionable insights in real-time. Built for modern enterprises demanding speed, accuracy, and scalability, our platform combines advanced machine learning with intuitive visualization to deliver 10x faster insights with 95% prediction accuracy.
 
 ---
 
@@ -535,7 +535,7 @@ The DataTranquil Analytics Platform is an enterprise-grade, AI-powered analytics
 
 ### 10.4 Competitive Comparison
 
-| Feature | DataTranquil | Competitor A | Competitor B | Competitor C |
+| Feature | VexioHQ | Competitor A | Competitor B | Competitor C |
 |---------|-------------|--------------|--------------|--------------|
 | Real-time Processing | ✅ < 100ms | ❌ 1-5 min | ⚠️ 30 sec | ❌ Batch only |
 | ML Models | 100+ | 20 | 50 | 10 |
@@ -612,9 +612,9 @@ The DataTranquil Analytics Platform is an enterprise-grade, AI-powered analytics
 4. Success metrics tracking
 
 ### Contact Information
-- **Sales:** sales@datatranquil.com
-- **Support:** support@datatranquil.com
-- **Website:** datatranquil.com/products/analytics
+- **Sales:** sales@vexiohq.com
+- **Support:** hello@vexiohq.com
+- **Website:** vexiohq.com/products/analytics
 - **Phone:** 1-800-DATA-TRQ
 
 ---

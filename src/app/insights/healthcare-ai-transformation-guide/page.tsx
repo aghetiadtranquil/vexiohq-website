@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Heart, Brain, Activity, Shield, Users, TrendingUp, Award, AlertCircle, Target, Zap, Clock, DollarSign, Download, ArrowRight, CheckCircle, Stethoscope, Pill, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare AI Transformation: The $360B Opportunity | DataTranquil Research',
+  title: 'Healthcare AI Transformation: The $360B Opportunity | VexioHQ Research',
   description: 'Comprehensive guide to AI transformation in healthcare. Based on analysis of 450+ health systems achieving 42% better patient outcomes and $360B in potential savings.',
   keywords: 'healthcare AI transformation, medical AI, clinical AI, healthcare digital transformation, AI in medicine, hospital AI implementation',
 };

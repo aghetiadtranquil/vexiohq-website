@@ -1,6 +1,6 @@
 # SEO Enhancement Plan: Multi-Path Implementation Strategy
 
-**Project**: DataTranquil Company Website  
+**Project**: VexioHQ Company Website  
 **Context**: Excellent SEO foundation (92/100), broken blog posts, missing alt text, need industry landing pages  
 **Planning Phase**: Response-Awareness Framework Phase 1  
 **Date**: 2025-01-11  
@@ -37,7 +37,7 @@ We have identified three viable strategic paths, each with distinct advantages a
 **Strategy Focus:**
 - Fix existing blog post syntax errors immediately
 - Create industry-specific landing pages (Healthcare AI, Finance AI, Manufacturing AI)
-- Develop competitor comparison pages (DataTranquil vs McKinsey, vs Accenture)
+- Develop competitor comparison pages (VexioHQ vs McKinsey, vs Accenture)
 - Build comprehensive content hubs with topic clustering
 
 **Advantages:**
@@ -181,7 +181,7 @@ After analyzing all paths, we recommend a **3-phase hybrid approach** that maxim
   - `/ai-consulting-finance/` - Target "financial AI consulting" (1,400 searches/month)
   - `/ai-consulting-manufacturing/` - Target "manufacturing AI solutions" (890 searches/month)
 - Develop competitor comparison pages:
-  - `/datatranquil-vs-mckinsey/` - Target branded comparison searches
+  - `/vexiohq-vs-mckinsey/` - Target branded comparison searches
   - `/ai-consulting-alternatives/` - Target "alternative to [competitor]" searches
 
 **Week 5-6 Actions:**

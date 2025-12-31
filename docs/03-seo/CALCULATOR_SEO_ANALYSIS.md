@@ -19,7 +19,7 @@ export const metadata: Metadata = calculatorMetadata
 ```
 
 ### Current Meta Tags:
-- **Title**: "Business Transformation ROI Calculator | DataTranquil"
+- **Title**: "Business Transformation ROI Calculator | VexioHQ"
 - **Description**: "Calculate your potential ROI from digital transformation initiatives. Get personalized insights for your industry."
 - **Keywords**: ROI calculator, digital transformation, business value
 - **Open Graph**: Full implementation with images
@@ -39,7 +39,7 @@ export const metadata: Metadata = calculatorMetadata
 #### Marketing Benefits:
 - **Lead Generation**: Users must sign in (email capture)
 - **Top of Funnel**: Attracts prospects early in journey
-- **Brand Authority**: Positions DataTranquil as thought leader
+- **Brand Authority**: Positions VexioHQ as thought leader
 - **Social Sharing**: Calculators get shared frequently
 
 ### Recommended Implementation:
@@ -48,7 +48,7 @@ export const metadata: Metadata = calculatorMetadata
 ```typescript
 // Show teaser to crawlers, full calculator to authenticated users
 export const metadata: Metadata = {
-  title: 'Business Transformation ROI Calculator | DataTranquil',
+  title: 'Business Transformation ROI Calculator | VexioHQ',
   description: 'Free calculator to estimate ROI from digital transformation...',
   robots: {
     index: true,      // ✅ INDEX

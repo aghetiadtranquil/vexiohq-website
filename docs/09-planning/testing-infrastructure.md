@@ -1,6 +1,6 @@
 # Testing Infrastructure Implementation Plan - Phase 1
 
-**Project Context**: DataTranquil company website (Next.js 14 + TypeScript)  
+**Project Context**: VexioHQ company website (Next.js 14 + TypeScript)  
 **Current State**: No automated testing, basic linting, active CI/CD deployment  
 **Framework**: Response-Awareness Testing Planner
 

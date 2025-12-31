@@ -1,7 +1,7 @@
-# Google Analytics 4 (GA4) Setup Guide for DataTranquil
+# Google Analytics 4 (GA4) Setup Guide for VexioHQ
 
 ## 📊 Overview
-This guide covers the complete setup and configuration of Google Analytics 4 for the DataTranquil website, including tracking implementation, conversion setup, and best practices.
+This guide covers the complete setup and configuration of Google Analytics 4 for the VexioHQ website, including tracking implementation, conversion setup, and best practices.
 
 ---
 
@@ -12,7 +12,7 @@ This guide covers the complete setup and configuration of Google Analytics 4 for
 2. Click **Admin** (gear icon)
 3. Click **Create Property**
 4. Enter property details:
-   - Property name: `DataTranquil Website`
+   - Property name: `VexioHQ Website`
    - Time zone: `(GMT-08:00) Pacific Time`
    - Currency: `USD`
 5. Select business details:
@@ -22,8 +22,8 @@ This guide covers the complete setup and configuration of Google Analytics 4 for
 ### Step 2: Set Up Data Stream
 1. Choose platform: **Web**
 2. Enter website details:
-   - Website URL: `https://datatranquil.com`
-   - Stream name: `DataTranquil Main Site`
+   - Website URL: `https://vexiohq.com`
+   - Stream name: `VexioHQ Main Site`
 3. Enable Enhanced Measurement (all options)
 4. Copy your **Measurement ID** (G-XXXXXXXXXX)
 
@@ -261,7 +261,7 @@ If tracking multiple domains:
 ```javascript
 gtag('config', 'GA_MEASUREMENT_ID', {
   'linker': {
-    'domains': ['datatranquil.com', 'app.datatranquil.com']
+    'domains': ['vexiohq.com', 'app.vexiohq.com']
   }
 });
 ```
@@ -435,7 +435,7 @@ console.log(window.dataLayer);
 
 For GA4 implementation help:
 - Google Analytics Support: [support.google.com/analytics](https://support.google.com/analytics)
-- DataTranquil Tech Team: tech@datatranquil.com
+- VexioHQ Tech Team: tech@vexiohq.com
 - Documentation: [Internal Wiki Link]
 
 ---

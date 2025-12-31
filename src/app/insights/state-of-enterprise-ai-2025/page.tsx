@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { TrendingUp, Globe, DollarSign, Shield, Brain, ArrowUp, ArrowDown, ChevronRight, Download, AlertCircle, CheckCircle2, Target, Sparkles, Rocket, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'State of Enterprise AI 2025: The $644B Transformation | DataTranquil Research',
+  title: 'State of Enterprise AI 2025: The $644B Transformation | VexioHQ Research',
   description: 'Comprehensive analysis of enterprise AI adoption in 2025. Market size, spending patterns, success metrics, and strategic implications for C-suite leaders.',
   keywords: 'enterprise AI 2025, AI market size, generative AI spending, corporate AI adoption, AI transformation report',
 };

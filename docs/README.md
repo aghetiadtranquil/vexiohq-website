@@ -1,7 +1,7 @@
-# DataTranquil Website Documentation
+# VexioHQ Website Documentation
 
 ## Overview
-This documentation covers the comprehensive improvements made to the DataTranquil company website, including build fixes, performance optimizations, accessibility enhancements, and the Response-Awareness Framework used for implementation.
+This documentation covers the comprehensive improvements made to the VexioHQ company website, including build fixes, performance optimizations, accessibility enhancements, and the Response-Awareness Framework used for implementation.
 
 ## Documentation Structure
 

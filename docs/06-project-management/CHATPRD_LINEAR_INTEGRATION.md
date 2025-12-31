@@ -1,7 +1,7 @@
 # ChatPRD + Linear Integration Setup Guide
 
 ## Prerequisites ✅
-- ✅ Linear admin access (You have admin access as atul@datatranquil.com)
+- ✅ Linear admin access (You have admin access as atul@vexiohq.com)
 - ⚠️ ChatPRD Organization account (not personal account)
 - ⚠️ Admin permissions in ChatPRD
 
@@ -15,7 +15,7 @@
 ### Step 2: Connect Linear
 1. Click **"Connect Linear"** button
 2. You'll be redirected to Linear's authorization page
-3. Log in with your Linear credentials (atul@datatranquil.com)
+3. Log in with your Linear credentials (atul@vexiohq.com)
 4. Review the permissions ChatPRD is requesting:
    - Read and write access to issues
    - Read access to workspace information
@@ -27,7 +27,7 @@
 2. Confirm you see:
    - Your workspace name: **Datatranquil**
    - Status: **"Connected"**
-   - Connected account: atul@datatranquil.com
+   - Connected account: atul@vexiohq.com
 
 ## How ChatPRD Works with Linear
 
@@ -118,7 +118,7 @@ Workspace: Datatranquil
 Teams: 
   - Datatranquil (Main)
   - Project Shells
-Admin: atul@datatranquil.com
+Admin: atul@vexiohq.com
 Integration Status: Ready to connect
 ```
 

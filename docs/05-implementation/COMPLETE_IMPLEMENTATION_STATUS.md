@@ -1,4 +1,4 @@
-# DataTranquil Website - Complete Implementation Status
+# VexioHQ Website - Complete Implementation Status
 
 ## 🎯 Executive Summary
 Full-featured enterprise website with 65+ pages, complete analytics integration, GDPR compliance, and production-ready deployment configuration.
@@ -245,7 +245,7 @@ GA_API_SECRET=your-secret-here
 NEXT_PUBLIC_ENABLE_ANALYTICS=true
 
 # Site Config
-NEXT_PUBLIC_SITE_URL=https://datatranquil.com
+NEXT_PUBLIC_SITE_URL=https://vexiohq.com
 
 # Clerk Auth (existing)
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...

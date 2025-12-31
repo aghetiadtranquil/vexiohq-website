@@ -387,7 +387,7 @@ const keyMetrics = {
 
 ## Conclusion
 
-For B2B SaaS targeting enterprises (like DataTranquil):
+For B2B SaaS targeting enterprises (like VexioHQ):
 - **GATED is optimal** for high-value tools
 - Maximizes lead quality
 - Enables sales team engagement

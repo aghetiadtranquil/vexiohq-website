@@ -1,4 +1,4 @@
-# 🔬 DataTranquil Research Intelligence Tools
+# 🔬 VexioHQ Research Intelligence Tools
 *Positioning Internal Tools as Innovation Showcase*
 
 **Internal Tools Portfolio:**
@@ -252,7 +252,7 @@ intelligence.
 **"The Only Consultancy with Real-Time AI Intelligence Infrastructure"**
 
 ### Comparison Matrix:
-| Capability | Traditional Consultants | DataTranquil |
+| Capability | Traditional Consultants | VexioHQ |
 |-----------|------------------------|--------------|
 | Research Method | Manual, periodic | Automated, continuous |
 | Sources Monitored | 10-50 | 10,000+ |

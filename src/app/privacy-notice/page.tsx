@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Notice | DataTranquil',
-  description: 'DataTranquil Privacy Notice - Learn how we collect, use, and protect your personal information in compliance with GDPR and other privacy regulations.',
+  title: 'Privacy Notice | VexioHQ',
+  description: 'VexioHQ Privacy Notice - Learn how we collect, use, and protect your personal information in compliance with GDPR and other privacy regulations.',
 };
 
 export default function PrivacyNotice() {
@@ -17,9 +17,9 @@ export default function PrivacyNotice() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p>
-              DataTranquil ("we," "our," or "us") is committed to protecting your privacy. This Privacy Notice 
+              VexioHQ ("we," "our," or "us") is committed to protecting your privacy. This Privacy Notice 
               explains how we collect, use, disclose, and safeguard your information when you visit our website 
-              datatranquil.com and use our services.
+              vexiohq.com and use our services.
             </p>
           </section>
 
@@ -142,9 +142,9 @@ export default function PrivacyNotice() {
             <h2 className="text-2xl font-semibold mb-4">12. Contact Us</h2>
             <p>For privacy-related questions or to exercise your rights, contact us at:</p>
             <div className="bg-gray-50 p-4 rounded-lg mt-4">
-              <p><strong>DataTranquil Privacy Team</strong></p>
-              <p>Email: privacy@datatranquil.com</p>
-              <p>Phone: +1-415-255-5501</p>
+              <p><strong>VexioHQ Privacy Team</strong></p>
+              <p>Email: privacy@vexiohq.com</p>
+              <p>Phone: +1-415-390-5748</p>
               <p>Address: San Francisco, CA, USA</p>
             </div>
           </section>

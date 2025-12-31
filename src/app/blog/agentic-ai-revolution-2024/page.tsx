@@ -11,21 +11,21 @@ export default function AgenticAIRevolutionPost() {
     "description": "Discover how autonomous AI agents are transforming enterprise operations, from decision-making to complex workflow automation.",
     "author": {
       "@type": "Organization",
-      "name": "DataTranquil"
+      "name": "VexioHQ"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "DataTranquil",
+      "name": "VexioHQ",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://datatranquil.com/logo.png"
+        "url": "https://vexiohq.com/logo.png"
       }
     },
     "datePublished": "2024-12-15",
     "dateModified": "2024-12-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://datatranquil.com/blog/agentic-ai-revolution-2024"
+      "@id": "https://vexiohq.com/blog/agentic-ai-revolution-2024"
     }
   };
 
@@ -72,7 +72,7 @@ export default function AgenticAIRevolutionPost() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-slate-200 rounded-full mr-4"></div>
                   <div>
-                    <p className="font-semibold text-slate-900">DataTranquil Team</p>
+                    <p className="font-semibold text-slate-900">VexioHQ Team</p>
                     <p className="text-sm text-slate-500">Enterprise AI Experts</p>
                   </div>
                 </div>
@@ -293,9 +293,9 @@ export default function AgenticAIRevolutionPost() {
 
             {/* Author Bio */}
             <div className="mt-12 p-8 bg-slate-50 rounded-xl">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">About DataTranquil</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-4">About VexioHQ</h3>
               <p className="text-slate-600 mb-4">
-                DataTranquil brings 36,000+ hours of enterprise technology experience, from Oracle 
+                VexioHQ brings 36,000+ hours of enterprise technology experience, from Oracle 
                 BI implementations to cutting-edge AI systems. We've helped Fortune 500 companies 
                 across industries transform their operations with practical, results-driven approaches.
               </p>

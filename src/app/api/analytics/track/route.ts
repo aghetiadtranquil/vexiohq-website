@@ -124,7 +124,8 @@ export async function POST(request: NextRequest) {
 }
 
 // Predefined event templates for common tracking scenarios
-export const EventTemplates = {
+// NOTE: This is not exported from the route file to avoid Next.js build errors
+const EventTemplates = {
   // Lead generation from backend
   generateLead: (value: number, leadType: string) => ({
     name: 'generate_lead',
@@ -192,7 +193,9 @@ export const EventTemplates = {
 };
 
 // Helper function to track events from other API routes
-export async function trackServerEvent(
+// NOTE: This is not exported from the route file to avoid Next.js build errors
+// If you need this function in other files, move it to a separate utility file
+async function trackServerEvent(
   eventName: string, 
   parameters: Record<string, any>,
   clientId?: string,

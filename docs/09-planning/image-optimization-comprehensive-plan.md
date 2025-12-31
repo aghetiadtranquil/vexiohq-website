@@ -1,9 +1,9 @@
 # Image Optimization Comprehensive Plan
-*DataTranquil Website SEO Enhancement Project*
+*VexioHQ Website SEO Enhancement Project*
 
 ## Executive Summary
 
-The DataTranquil website has a strong SEO foundation but faces critical image asset gaps that are blocking social sharing effectiveness and negatively impacting Core Web Vitals. This plan explores multiple implementation paths for addressing these issues while establishing a scalable image optimization strategy.
+The VexioHQ website has a strong SEO foundation but faces critical image asset gaps that are blocking social sharing effectiveness and negatively impacting Core Web Vitals. This plan explores multiple implementation paths for addressing these issues while establishing a scalable image optimization strategy.
 
 ## Current State Analysis
 

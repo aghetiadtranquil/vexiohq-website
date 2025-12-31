@@ -180,7 +180,7 @@ export default function LeadCapture({
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setErrors({ submit: 'Sorry, there was an error. Please try again or contact support@datatranquil.com' });
+      setErrors({ submit: 'Sorry, there was an error. Please try again or contact hello@vexiohq.com' });
     } finally {
       setIsSubmitting(false);
     }
@@ -490,7 +490,7 @@ export default function LeadCapture({
                 Submit the form to receive your free resource via email
               </div>
               <p className="text-xs text-slate-500 mt-4 text-center">
-                By submitting this form, you agree to receive communications from DataTranquil. 
+                By submitting this form, you agree to receive communications from VexioHQ. 
                 We respect your privacy and will never share your information.
               </p>
               <p className="text-xs text-slate-400 mt-2 text-center">

@@ -15,8 +15,8 @@ Linear integration is **ONLY** available for ChatPRD Teams, not individual accou
    - Look for "Create Team" or "Teams" in the navigation
    - Click on "Create New Team"
    - Enter team details:
-     - Team Name: **DataTranquil**
-     - Team URL: datatranquil.chatprd.ai (or similar)
+     - Team Name: **VexioHQ**
+     - Team URL: vexiohq.chatprd.ai (or similar)
 
 3. **Choose Team Plan**
    - Select a team plan (may have free trial)
@@ -29,13 +29,13 @@ Linear integration is **ONLY** available for ChatPRD Teams, not individual accou
 4. **Invite Team Members**
    - Add team members by email
    - Suggested invites:
-     - atul@datatranquil.com (you)
+     - atul@vexiohq.com (you)
      - Other developers/PMs in your team
 
 ### Option 2: Join Existing Team
 
 1. **Check with your organization**
-   - Ask if DataTranquil already has a ChatPRD team
+   - Ask if VexioHQ already has a ChatPRD team
    - Request invite from team admin
 
 2. **Accept Team Invitation**
@@ -58,7 +58,7 @@ Linear integration is **ONLY** available for ChatPRD Teams, not individual accou
 ### 3. Connect Linear
 - Click "Connect Linear" 
 - Authorize with your Linear account
-- Select DataTranquil workspace
+- Select VexioHQ workspace
 
 ## Team Account Benefits
 
@@ -131,7 +131,7 @@ Most team plans offer:
 - Live Chat: Available in app
 
 **Mention your needs:**
-- Company: DataTranquil
+- Company: VexioHQ
 - Purpose: Linear integration for product management
 - Team size: [Your team size]
 
@@ -164,4 +164,4 @@ If team account isn't feasible:
 ---
 
 **Ready to create your team account?** 
-Go to: https://chatprd.ai → Create Team → DataTranquil 🚀
+Go to: https://chatprd.ai → Create Team → VexioHQ 🚀

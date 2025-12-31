@@ -445,8 +445,8 @@ export default function JsonLd({ data, id = 'json-ld', strategy = 'afterInteract
 export const createOrganizationSchema = (data: Partial<OrganizationSchema>): OrganizationSchema => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'DataTranquil',
-  url: 'https://datatranquil.com',
+  name: 'VexioHQ',
+  url: 'https://vexiohq.com',
   ...data
 })
 
@@ -457,16 +457,16 @@ export const createArticleSchema = (data: Partial<ArticleSchema>): ArticleSchema
   datePublished: new Date().toISOString(),
   author: {
     '@type': 'Organization',
-    name: 'DataTranquil',
-    url: 'https://datatranquil.com'
+    name: 'VexioHQ',
+    url: 'https://vexiohq.com'
   },
   publisher: {
     '@type': 'Organization',
-    name: 'DataTranquil',
-    url: 'https://datatranquil.com',
+    name: 'VexioHQ',
+    url: 'https://vexiohq.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://datatranquil.com/logo.png'
+      url: 'https://vexiohq.com/logo.png'
     }
   },
   ...data
@@ -478,8 +478,8 @@ export const createServiceSchema = (data: Partial<ServiceSchema>): ServiceSchema
   name: '',
   provider: {
     '@type': 'Organization',
-    name: 'DataTranquil',
-    url: 'https://datatranquil.com'
+    name: 'VexioHQ',
+    url: 'https://vexiohq.com'
   },
   ...data
 })
@@ -517,7 +517,7 @@ export const createWebPageSchema = (data: Partial<WebPageSchema>): WebPageSchema
 export const createLocalBusinessSchema = (data: Partial<LocalBusinessSchema>): LocalBusinessSchema => ({
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'DataTranquil',
+  name: 'VexioHQ',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'San Francisco',
@@ -541,7 +541,7 @@ export const createEventSchema = (data: Partial<EventSchema>): EventSchema => ({
   startDate: new Date().toISOString(),
   location: {
     '@type': 'Place',
-    name: 'DataTranquil Office',
+    name: 'VexioHQ Office',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'San Francisco',
@@ -558,8 +558,8 @@ export const createCourseSchema = (data: Partial<CourseSchema>): CourseSchema =>
   name: '',
   provider: {
     '@type': 'Organization',
-    name: 'DataTranquil',
-    url: 'https://datatranquil.com'
+    name: 'VexioHQ',
+    url: 'https://vexiohq.com'
   },
   ...data
 })

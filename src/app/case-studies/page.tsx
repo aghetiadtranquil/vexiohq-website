@@ -34,7 +34,7 @@ const caseStudies = [
       cost: { metric: '$650M', description: 'Annual cost savings from inventory optimization' },
       efficiency: { metric: '73%', description: 'Reduction in manual forecasting time' },
       satisfaction: { metric: '+28 NPS', description: 'Customer satisfaction improvement' },
-      roi: { metric: '312%', description: 'ROI achieved in first year' }
+      roi: { metric: 'Strong', description: 'ROI achieved in first year' }
     },
     insights: [
       'Cross-functional data integration was critical - combining POS, weather, social trends',
@@ -43,7 +43,7 @@ const caseStudies = [
     ],
     timeline: '18 months from pilot to full deployment',
     testimonial: {
-      quote: 'DataTranquil didn\'t just give us AI - they transformed how we think about inventory. The results exceeded even our most optimistic projections.',
+      quote: 'VexioHQ didn\'t just give us AI - they transformed how we think about inventory. The results exceeded even our most optimistic projections.',
       author: 'Chief Supply Chain Officer',
       company: 'Fortune 500 Retailer'
     }
@@ -162,7 +162,7 @@ const caseStudies = [
       revenue: { metric: '35%', description: 'Overall equipment effectiveness improvement' },
       cost: { metric: '$127M', description: 'Annual savings from reduced downtime' },
       efficiency: { metric: '50%', description: 'Reduction in unplanned downtime' },
-      satisfaction: { metric: '99.7%', description: 'Quality rate achieved' },
+      satisfaction: { metric: 'High', description: 'Quality rate achieved' },
       roi: { metric: '247%', description: 'First-year return on investment' }
     },
     insights: [
@@ -212,26 +212,18 @@ export default function CaseStudiesPage() {
       {/* Key Metrics Bar */}
       <section className="bg-white border-b border-gray-200 sticky top-16 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">$2.4B+</div>
-              <div className="text-sm text-gray-600 mt-1">Value Created</div>
+              <div className="text-3xl font-bold text-blue-600">70+</div>
+              <div className="text-sm text-gray-600 mt-1">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">150+</div>
-              <div className="text-sm text-gray-600 mt-1">Enterprises Transformed</div>
+              <div className="text-3xl font-bold text-blue-600">4</div>
+              <div className="text-sm text-gray-600 mt-1">AI Products</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">312%</div>
-              <div className="text-sm text-gray-600 mt-1">Average ROI</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">18 mo</div>
-              <div className="text-sm text-gray-600 mt-1">Avg. Time to Value</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">99.7%</div>
-              <div className="text-sm text-gray-600 mt-1">Success Rate</div>
+              <div className="text-3xl font-bold text-blue-600">SF</div>
+              <div className="text-sm text-gray-600 mt-1">Based in San Francisco</div>
             </div>
           </div>
         </div>
@@ -480,10 +472,10 @@ export default function CaseStudiesPage() {
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The Bottom Line</h2>
             <p className="text-lg text-gray-700 mb-6">
-              Our case studies demonstrate a consistent pattern: organizations that embrace AI transformation 
-              with the right strategy, technology, and implementation partner achieve extraordinary results. 
-              The average ROI of 312% and value creation exceeding $2.4B across our client base speaks to 
-              the transformative power of well-executed AI initiatives.
+              Our case studies demonstrate a consistent pattern: organizations that embrace AI transformation
+              with the right strategy, technology, and implementation partner achieve extraordinary results.
+              With 70+ projects delivered, we've seen the transformative power of well-executed AI initiatives
+              across multiple industries.
             </p>
             <p className="text-lg text-gray-700 mb-8">
               The question isn't whether to implement AI, but how quickly you can mobilize to capture 

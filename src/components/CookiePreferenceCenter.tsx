@@ -76,7 +76,7 @@ export default function CookiePreferenceCenter() {
               <div className="flex-1 mr-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Privacy Preference Center</h3>
                 <p className="text-sm text-gray-700">
-                  DataTranquil and our trusted partners use cookies and similar technologies to access and use your data 
+                  VexioHQ and our trusted partners use cookies and similar technologies to access and use your data 
                   for the purposes listed below. Please provide your consent for cookie usage on this website. 
                   Enable one or more of the cookie types listed below, and then save your preferences. 
                   <a href="/cookie-notice" className="text-blue-600 hover:underline ml-1">Cookie Notice</a>
@@ -132,7 +132,7 @@ export default function CookiePreferenceCenter() {
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-6">
               <p className="text-sm text-gray-600 mb-6">
-                DataTranquil and our trusted partners use cookies and similar technologies to access and use your data 
+                VexioHQ and our trusted partners use cookies and similar technologies to access and use your data 
                 for the purposes listed below. Please provide your consent for cookie usage on this website. 
                 Enable one or more of the cookie types listed below, and then save your preferences.
                 <a href="/cookie-notice" className="text-blue-600 hover:underline ml-1">Cookie Notice</a>

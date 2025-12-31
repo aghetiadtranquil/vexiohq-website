@@ -18,13 +18,13 @@ export function SchemaMarkup({ data }: SchemaMarkupProps) {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "DataTranquil",
-  "url": "https://datatranquil.com",
-  "logo": "https://datatranquil.com/logo.png",
+  "name": "VexioHQ",
+  "url": "https://vexiohq.com",
+  "logo": "https://vexiohq.com/logo.png",
   "description": "Enterprise AI transformation and consulting services",
   "sameAs": [
-    "https://twitter.com/datatranquil",
-    "https://linkedin.com/company/datatranquil"
+    "https://twitter.com/vexiohq",
+    "https://linkedin.com/company/vexiohq"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -47,7 +47,7 @@ export const serviceSchema = (service: {
   "description": service.description,
   "provider": {
     "@type": "Organization",
-    "name": service.provider || "DataTranquil"
+    "name": service.provider || "VexioHQ"
   },
   "serviceType": service.serviceType || "AI Consulting",
   "areaServed": service.areaServed || "Global"
@@ -70,7 +70,7 @@ export const productSchema = (product: {
   "image": product.image,
   "brand": {
     "@type": "Brand",
-    "name": product.brand || "DataTranquil"
+    "name": product.brand || "VexioHQ"
   },
   "offers": product.offers ? {
     "@type": "Offer",
@@ -99,10 +99,10 @@ export const articleSchema = (article: {
   "dateModified": article.dateModified || article.datePublished,
   "publisher": {
     "@type": "Organization",
-    "name": "DataTranquil",
+    "name": "VexioHQ",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://datatranquil.com/logo.png"
+      "url": "https://vexiohq.com/logo.png"
     }
   },
   "image": article.image

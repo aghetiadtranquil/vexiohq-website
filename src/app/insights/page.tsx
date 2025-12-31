@@ -31,7 +31,7 @@ export default function InsightsPage() {
                   <span className="text-white font-bold text-lg">DT</span>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-slate-900">DataTranquil</div>
+                  <div className="text-xl font-bold text-slate-900">VexioHQ</div>
                   <div className="text-xs text-slate-500 -mt-1">Strategic AI Advisory</div>
                 </div>
               </Link>
@@ -46,7 +46,7 @@ export default function InsightsPage() {
 
             <div className="flex items-center space-x-4">
               <Link 
-                href="https://moneytrail.datatranquil.com"
+                href="https://moneytrail.vexiohq.com"
                 className="px-5 py-2 text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors font-medium"
               >
                 MoneyTrail Platform
@@ -240,7 +240,7 @@ export default function InsightsPage() {
         <NewsletterSignup 
           variant="inline"
           title="Stay Ahead of the Curve"
-          description="Get strategic insights delivered to your inbox. Join 5,000+ executives who rely on our analysis."
+          description="Get strategic insights delivered to your inbox."
           context="insights_listing"
           className="bg-slate-900"
         />
@@ -256,7 +256,7 @@ export default function InsightsPage() {
                   <span className="text-white font-bold text-lg">DT</span>
                 </div>
                 <div>
-                  <div className="text-xl font-bold">DataTranquil</div>
+                  <div className="text-xl font-bold">VexioHQ</div>
                   <div className="text-sm text-slate-400">Strategic AI Advisory</div>
                 </div>
               </Link>
@@ -279,7 +279,7 @@ export default function InsightsPage() {
             <div>
               <h3 className="font-bold mb-6 text-white">Solutions</h3>
               <ul className="space-y-3 text-sm text-slate-400">
-                <li><Link href="https://moneytrail.datatranquil.com" className="hover:text-white transition-colors">MoneyTrail Platform</Link></li>
+                <li><Link href="https://moneytrail.vexiohq.com" className="hover:text-white transition-colors">MoneyTrail Platform</Link></li>
                 <li><Link href="/#solutions" className="hover:text-white transition-colors">Strategic Intelligence</Link></li>
                 <li><Link href="/#solutions" className="hover:text-white transition-colors">Workforce Analytics</Link></li>
                 <li><Link href="/#contact" className="hover:text-white transition-colors">Custom Solutions</Link></li>
@@ -290,7 +290,7 @@ export default function InsightsPage() {
           <div className="border-t border-slate-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-sm text-slate-400 mb-4 md:mb-0">
-                &copy; 2025 DataTranquil Strategic AI Advisory. All rights reserved.
+                &copy; 2025 VexioHQ Strategic AI Advisory. All rights reserved.
               </div>
               <div className="flex space-x-6 text-sm text-slate-400">
                 <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

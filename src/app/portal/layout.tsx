@@ -3,10 +3,10 @@ import { Metadata } from 'next'
 // Portal pages should NEVER be indexed by search engines
 export const metadata: Metadata = {
   title: {
-    template: '%s | DataTranquil Portal',
-    default: 'Portal | DataTranquil'
+    template: '%s | VexioHQ Portal',
+    default: 'Portal | VexioHQ'
   },
-  description: 'Access your DataTranquil portal to manage AI projects and analytics',
+  description: 'Access your VexioHQ portal to manage AI projects and analytics',
   robots: {
     index: false,
     follow: false,

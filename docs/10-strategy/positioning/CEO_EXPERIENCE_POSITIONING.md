@@ -26,7 +26,7 @@ But: CEO Experience CAN inform Company Capabilities
 
 ### Option 1: "Leadership Experience" Approach
 **How to Say It:**
-> "Led by a CEO with 30 years in enterprise technology, DataTranquil brings deep industry insights to every engagement."
+> "Led by a CEO with 30 years in enterprise technology, VexioHQ brings deep industry insights to every engagement."
 
 **Why It Works:**
 - Clearly attributes experience to CEO, not company
@@ -44,7 +44,7 @@ But: CEO Experience CAN inform Company Capabilities
 
 ### Option 3: "Career Journey" Narrative
 **How to Say It:**
-> "Before founding DataTranquil in 2010, our CEO spent 15 years as a senior consultant at Accenture and IBM, working with Fortune 500 companies on digital transformation initiatives."
+> "Before founding VexioHQ in 2010, our CEO spent 15 years as a senior consultant at Accenture and IBM, working with Fortune 500 companies on digital transformation initiatives."
 
 **Why It Works:**
 - Tells a story
@@ -89,7 +89,7 @@ But: CEO Experience CAN inform Company Capabilities
 ```
 [CEO Name], Founder & CEO
 
-With 30 years in enterprise technology, [Name] founded DataTranquil 
+With 30 years in enterprise technology, [Name] founded VexioHQ 
 in 2010 after recognizing a gap in practical AI implementation for 
 enterprises. 
 
@@ -102,7 +102,7 @@ This diverse experience across consulting, development, and strategy
 roles gives him unique insight into the challenges enterprises face 
 in digital transformation.
 
-Under his leadership, DataTranquil has grown to serve 50+ enterprise 
+Under his leadership, VexioHQ has grown to serve 50+ enterprise 
 clients, delivering 150+ successful AI implementations.
 ```
 
@@ -115,7 +115,7 @@ Technical: Full-stack development, cloud architecture, AI/ML
 Strategic: Digital transformation, change management  
 Industries: Financial services, healthcare, retail, manufacturing
 
-Since founding DataTranquil in 2010, he has focused exclusively on 
+Since founding VexioHQ in 2010, he has focused exclusively on 
 making AI accessible and practical for enterprise clients.
 ```
 
@@ -127,7 +127,7 @@ Over a 30-year career, [CEO Name] has:
 • Managed projects ranging from $500K to $50M
 • Built and scaled teams from 5 to 200+ members
 
-He founded DataTranquil to bring enterprise-grade AI consulting 
+He founded VexioHQ to bring enterprise-grade AI consulting 
 to mid-market companies who need Fortune 500 quality without 
 the Fortune 500 price tag.
 ```
@@ -173,7 +173,7 @@ Measure:
 - Client referral rate
 - Thought leadership metrics
 
-### For DataTranquil (15 years old):
+### For VexioHQ (15 years old):
 **Honest Metrics You Could Use:**
 - "15 years in business" ✅
 - "50+ enterprise clients served" (if true) ✅
@@ -190,7 +190,7 @@ Measure:
 ```
 Industry Experience: 30 years (CEO personal)
          ↓
-Company Experience: 15 years (DataTranquil)  
+Company Experience: 15 years (VexioHQ)  
          ↓
 Team Experience: Average 10+ years per senior member
          ↓
@@ -200,7 +200,7 @@ Technology Experience: 50+ AI/ML frameworks mastered
 ```
 
 ### How to Write This:
-> "DataTranquil combines 15 years of focused AI consulting excellence with leadership that brings 30 years of enterprise technology experience. Our senior team members average 10+ years in their specialties, and collectively we've delivered 150+ successful implementations."
+> "VexioHQ combines 15 years of focused AI consulting excellence with leadership that brings 30 years of enterprise technology experience. Our senior team members average 10+ years in their specialties, and collectively we've delivered 150+ successful implementations."
 
 ---
 
@@ -210,7 +210,7 @@ Technology Experience: 50+ AI/ML frameworks mastered
 ```
 1994-2002: Developer/Technical Lead (Building Foundation)
 2002-2010: Senior Consultant (Enterprise Experience)  
-2010-2025: Founder/CEO DataTranquil (AI Focus)
+2010-2025: Founder/CEO VexioHQ (AI Focus)
 ```
 
 ### Experience Venn Diagram
@@ -231,7 +231,7 @@ Technology Experience: 50+ AI/ML frameworks mastered
 ### About Page - Leadership Section
 > **Experience That Matters**
 > 
-> DataTranquil's leadership brings a unique blend of technical depth and business acumen developed over three decades in enterprise technology.
+> VexioHQ's leadership brings a unique blend of technical depth and business acumen developed over three decades in enterprise technology.
 > 
 > Our CEO's journey from developer to consultant to founder means we understand technology from every angle - how it's built, how it's sold, and most importantly, how it delivers value.
 > 
@@ -243,7 +243,7 @@ Technology Experience: 50+ AI/ML frameworks mastered
 > - Deeper vendor relationships
 
 ### Homepage - Trust Indicators
-> **Why DataTranquil**
+> **Why VexioHQ**
 > - Founded by enterprise technology veterans
 > - 15 years focused exclusively on AI/ML
 > - Leadership with 30+ years industry experience  
@@ -288,7 +288,7 @@ Technology Experience: 50+ AI/ML frameworks mastered
 - [ ] Create detailed CEO LinkedIn profile
 - [ ] Write thought leadership articles
 - [ ] Record video intro explaining background
-- [ ] Develop case studies from DataTranquil work only
+- [ ] Develop case studies from VexioHQ work only
 
 ### Week 4: Test and Refine
 - [ ] A/B test new messaging

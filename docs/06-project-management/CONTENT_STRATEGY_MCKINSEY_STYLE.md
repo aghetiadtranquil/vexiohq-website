@@ -1,4 +1,4 @@
-# McKinsey-Style Content Strategy for DataTranquil
+# McKinsey-Style Content Strategy for VexioHQ
 
 ## 🎯 Content Philosophy
 Following McKinsey, BCG, and Bain's content approach: **Data-driven insights, executive-ready, action-oriented**

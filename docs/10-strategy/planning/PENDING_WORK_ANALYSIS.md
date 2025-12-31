@@ -1,4 +1,4 @@
-# DataTranquil Website - Pending Work Analysis
+# VexioHQ Website - Pending Work Analysis
 
 **Last Updated**: January 2025  
 **Branch**: feature/seo-phase4-verification  

@@ -1,4 +1,4 @@
-# Multi-Agent Execution Plans for DataTranquil Website
+# Multi-Agent Execution Plans for VexioHQ Website
 
 ## 🎯 Plan 1: Feature Development Workflow
 **Scenario**: Adding a new product feature page

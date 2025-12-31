@@ -72,7 +72,7 @@ export const metadata: Metadata = {
 export default function AIImplementationGuide() {
   // #COMPLETION_DRIVE_IMPL: Get current article data and content for components
   const currentArticle = getBlogPost('how-to-implement-ai-in-enterprise');
-  const currentUrl = 'https://datatranquil.com/blog/how-to-implement-ai-in-enterprise';
+  const currentUrl = 'https://vexiohq.com/blog/how-to-implement-ai-in-enterprise';
   const articleContent = `
     Implementing AI in an enterprise environment is no longer a question of "if" but "how" and "when." 
     With 83% of companies claiming AI is a top priority in their business plans, the race to successfully 
@@ -91,7 +91,7 @@ export default function AIImplementationGuide() {
       <ArticleSchema
         title="How to Implement AI in Enterprise: A Step-by-Step Guide"
         description="Learn the proven framework for successfully implementing AI in enterprise environments. Avoid common pitfalls and accelerate your AI transformation."
-        author="DataTranquil Team"
+        author="VexioHQ Team"
         datePublished="2024-03-15"
         dateModified="2024-03-20"
         url={currentUrl}

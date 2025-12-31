@@ -9,26 +9,26 @@ const articleStructuredData = {
   "description": "Comprehensive guide to implementing AI in your enterprise. Learn proven frameworks, best practices, and avoid common pitfalls with our 3000+ hour experience.",
   "author": {
     "@type": "Organization",
-    "name": "DataTranquil",
-    "url": "https://datatranquil.com"
+    "name": "VexioHQ",
+    "url": "https://vexiohq.com"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "DataTranquil",
+    "name": "VexioHQ",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://datatranquil.com/logo.png"
+      "url": "https://vexiohq.com/logo.png"
     }
   },
   "datePublished": "2024-01-15T08:00:00Z",
   "dateModified": "2024-01-15T08:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://datatranquil.com/ai-implementation-strategy-guide"
+    "@id": "https://vexiohq.com/ai-implementation-strategy-guide"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://datatranquil.com/images/ai-implementation-strategy-guide.jpg",
+    "url": "https://vexiohq.com/images/ai-implementation-strategy-guide.jpg",
     "width": 1200,
     "height": 630
   },
@@ -84,7 +84,7 @@ const howToStructuredData = {
   "description": "Step-by-step guide to successfully implementing artificial intelligence in enterprise environments",
   "image": {
     "@type": "ImageObject",
-    "url": "https://datatranquil.com/images/ai-implementation-howto.jpg"
+    "url": "https://vexiohq.com/images/ai-implementation-howto.jpg"
   },
   "totalTime": "P6M",
   "estimatedCost": {
@@ -111,37 +111,37 @@ const howToStructuredData = {
       "@type": "HowToStep",
       "name": "Assessment and Strategy",
       "text": "Conduct comprehensive AI readiness assessment and develop strategic roadmap",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#assessment"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#assessment"
     },
     {
       "@type": "HowToStep",
       "name": "Data Preparation",
       "text": "Clean, organize, and prepare data for AI model training and deployment",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#data-preparation"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#data-preparation"
     },
     {
       "@type": "HowToStep",
       "name": "Model Development",
       "text": "Design, build, and train AI models tailored to specific business use cases",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#model-development"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#model-development"
     },
     {
       "@type": "HowToStep",
       "name": "Testing and Validation",
       "text": "Rigorously test models for accuracy, bias, and performance before deployment",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#testing"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#testing"
     },
     {
       "@type": "HowToStep",
       "name": "Deployment and Integration",
       "text": "Deploy AI solutions and integrate with existing enterprise systems",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#deployment"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#deployment"
     },
     {
       "@type": "HowToStep",
       "name": "Monitoring and Optimization",
       "text": "Monitor performance and continuously optimize for maximum business value",
-      "url": "https://datatranquil.com/ai-implementation-strategy-guide#monitoring"
+      "url": "https://vexiohq.com/ai-implementation-strategy-guide#monitoring"
     }
   ]
 }
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Complete AI Implementation Strategy Guide for Enterprises 2024',
     description: 'Master AI implementation with our comprehensive guide. 3000+ hours of experience condensed into actionable strategies.',
-    url: 'https://datatranquil.com/ai-implementation-strategy-guide',
+    url: 'https://vexiohq.com/ai-implementation-strategy-guide',
     type: 'article',
     images: [{
       url: '/images/ai-implementation-strategy-guide.jpg',
@@ -169,7 +169,7 @@ export const metadata: Metadata = {
     images: ['/images/ai-implementation-strategy-guide.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/ai-implementation-strategy-guide'
+    canonical: 'https://vexiohq.com/ai-implementation-strategy-guide'
   }
 }
 
@@ -206,7 +206,7 @@ export default function AIImplementationStrategyGuidePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Master the art and science of AI implementation with our comprehensive guide. Based on 3,000+ hours of enterprise experience and 150+ successful deployments.
+              Master the art and science of AI implementation with our comprehensive guide. Based on our experience delivering 70+ successful AI projects.
             </p>
             
             <div className="flex flex-wrap items-center gap-6 text-sm">

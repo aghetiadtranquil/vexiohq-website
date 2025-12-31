@@ -16,12 +16,12 @@ const icons = {
 
 export const metadata: Metadata = {
   title: 'AI Consulting Services | Enterprise AI Transformation - Vantage AI',
-  description: 'Transform your enterprise with AI consulting services from Vantage AI. 36,000+ hours experience. 312% average ROI. Fortune 500 trusted. Get your free AI assessment today.',
+  description: 'Transform your enterprise with AI consulting services from VexioHQ. 70+ projects delivered. San Francisco based. Get your free AI assessment today.',
   keywords: 'AI consulting services, AI consulting, artificial intelligence consulting, enterprise AI, AI transformation, AI strategy, machine learning consulting, AI implementation',
   openGraph: {
     title: 'AI Consulting Services - Transform Your Enterprise with AI',
-    description: 'Expert AI consulting services with 36,000+ hours experience. Proven 312% ROI. Fortune 500 trusted.',
-    url: 'https://datatranquil.com/ai-consulting-services',
+    description: 'Expert AI consulting services. 70+ projects delivered. San Francisco based.',
+    url: 'https://vexiohq.com/ai-consulting-services',
     type: 'website',
     images: [{
       url: '/images/ai-consulting-hero.jpg',
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Consulting Services - Vantage AI',
-    description: 'Transform your enterprise with expert AI consulting. 36,000+ hours experience. Proven ROI.',
+    description: 'Transform your enterprise with expert AI consulting. 70+ projects delivered. San Francisco based.',
     images: ['/images/ai-consulting-hero.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/ai-consulting-services'
+    canonical: 'https://vexiohq.com/ai-consulting-services'
   }
 }
 
@@ -46,9 +46,9 @@ const structuredData = {
   "@type": "ProfessionalService",
   "name": "Vantage AI - AI Consulting Services",
   "description": "Enterprise AI consulting services with proven ROI. Transform your business with artificial intelligence.",
-  "url": "https://datatranquil.com/ai-consulting-services",
-  "telephone": "415-255-5501",
-  "email": "support@datatranquil.com",
+  "url": "https://vexiohq.com/ai-consulting-services",
+  "telephone": "415-390-5748",
+  "email": "team@vexiohq.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Francisco",
@@ -152,7 +152,7 @@ export default function AIConsultingServicesPage() {
                 AI Consulting Services That Transform Enterprises
               </h1>
               <p className="text-xl md:text-2xl text-slate-300 mb-8">
-                Leverage 36,000+ hours of AI implementation experience. We've helped Fortune 500 companies achieve 312% average ROI through strategic AI transformation.
+                Transform your business with our proven AI expertise. We've delivered 70+ successful AI projects through strategic AI transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-lg transition-colors">
@@ -166,15 +166,15 @@ export default function AIConsultingServicesPage() {
               <div className="flex flex-wrap gap-6 text-sm">
                 <div className="flex items-center">
                   <svg className="h-5 w-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  <span>99.7% Project Success Rate</span>
+                  <span>70+ Projects Delivered</span>
                 </div>
                 <div className="flex items-center">
                   <svg className="h-5 w-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                  <span>312% Average ROI</span>
+                  <span>4 AI Products</span>
                 </div>
                 <div className="flex items-center">
                   <svg className="h-5 w-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span>Fortune 500 Trusted</span>
+                  <span>San Francisco Based</span>
                 </div>
               </div>
             </div>
@@ -184,22 +184,18 @@ export default function AIConsultingServicesPage() {
         {/* Trust Indicators */}
         <section className="py-12 bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
               <div className="text-center">
-                <p className="text-3xl font-bold text-slate-900">36,000+</p>
-                <p className="text-slate-600">Hours of Experience</p>
+                <p className="text-3xl font-bold text-slate-900">70+</p>
+                <p className="text-slate-600">Projects Delivered</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-slate-900">150+</p>
-                <p className="text-slate-600">AI Projects Delivered</p>
+                <p className="text-3xl font-bold text-slate-900">4</p>
+                <p className="text-slate-600">AI Products</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-slate-900">312%</p>
-                <p className="text-slate-600">Average ROI</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-slate-900">4.9/5</p>
-                <p className="text-slate-600">Client Satisfaction</p>
+                <p className="text-3xl font-bold text-slate-900">SF</p>
+                <p className="text-slate-600">Based in San Francisco</p>
               </div>
             </div>
           </div>
@@ -505,7 +501,7 @@ export default function AIConsultingServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Proven Track Record</h3>
                 <p className="text-slate-600">
-                  150+ successful AI implementations with 99.7% project success rate and 312% average ROI
+                  70+ successful AI projects delivered with measurable business impact
                 </p>
               </div>
 
@@ -515,7 +511,7 @@ export default function AIConsultingServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Enterprise Experience</h3>
                 <p className="text-slate-600">
-                  36,000+ hours working with Fortune 500 companies across industries
+                  Deep expertise working with companies across multiple industries
                 </p>
               </div>
 
@@ -735,10 +731,10 @@ export default function AIConsultingServicesPage() {
 
               <div className="bg-slate-50 rounded-lg p-8">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  What makes Vantage AI different from other AI consultants?
+                  What makes VexioHQ different from other AI consultants?
                 </h3>
                 <p className="text-slate-600">
-                  We combine 36,000+ hours of enterprise experience with cutting-edge AI expertise. Our 99.7% project success rate and 312% average ROI speak to our results-focused approach. We don't just recommend solutions—we implement them and ensure they deliver measurable business value.
+                  We combine deep enterprise experience with cutting-edge AI expertise. Our 70+ successfully delivered projects speak to our results-focused approach. We don't just recommend solutions—we implement them and ensure they deliver measurable business value.
                 </p>
               </div>
 

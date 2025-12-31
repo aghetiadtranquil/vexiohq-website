@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { BookOpen, Download, Clock, ArrowRight, CheckCircle, Lightbulb, Target, Layers, Brain, Zap, Shield, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Complete Guide to Agentic AI Systems | DataTranquil',
+  title: 'Complete Guide to Agentic AI Systems | VexioHQ',
   description: 'Comprehensive guide to understanding, implementing, and scaling agentic AI systems. Learn about autonomous agents, multi-agent systems, and enterprise AI orchestration.',
   keywords: 'agentic AI, autonomous agents, AI agents, multi-agent systems, AI orchestration, enterprise AI, agent framework',
 };

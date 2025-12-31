@@ -1,31 +1,31 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'DataTranquil - Strategic AI Advisory & Digital Transformation Consulting',
-  description: 'Transform your enterprise with DataTranquil\'s AI-powered solutions. Expert consulting in AI strategy, data analytics, and digital transformation. Featured: MoneyTrail intelligent expense management platform.',
+  title: 'VexioHQ - Strategic AI Advisory & Digital Transformation Consulting',
+  description: 'Transform your enterprise with VexioHQ\'s AI-powered solutions. Expert consulting in AI strategy, data analytics, and digital transformation. Featured: MoneyTrail intelligent expense management platform.',
   openGraph: {
-    title: 'DataTranquil - Strategic AI Advisory & Digital Transformation',
-    description: 'Partner with executive teams to unlock transformative value through intelligent automation, advanced analytics, and strategic AI implementation. 500M+ data points analyzed, 150+ AI models deployed.',
-    url: 'https://datatranquil.com',
-    siteName: 'DataTranquil',
+    title: 'VexioHQ - Strategic AI Advisory & Digital Transformation',
+    description: 'Partner with executive teams to unlock transformative value through intelligent automation, advanced analytics, and strategic AI implementation. 70+ projects delivered.',
+    url: 'https://vexiohq.com',
+    siteName: 'VexioHQ',
     type: 'website',
     images: [
       {
-        url: 'https://datatranquil.com/og-image.jpg',
+        url: 'https://vexiohq.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'DataTranquil - Strategic AI Advisory',
+        alt: 'VexioHQ - Strategic AI Advisory',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DataTranquil - Strategic AI Advisory & Digital Transformation',
-    description: 'Transform your enterprise with AI. Expert consulting in AI strategy, data analytics & digital transformation. 99.7% client satisfaction.',
-    images: ['https://datatranquil.com/twitter-image.jpg'],
+    title: 'VexioHQ - Strategic AI Advisory & Digital Transformation',
+    description: 'Transform your enterprise with AI. Expert consulting in AI strategy, data analytics & digital transformation. San Francisco based.',
+    images: ['https://vexiohq.com/twitter-image.jpg'],
   },
   alternates: {
-    canonical: 'https://datatranquil.com',
+    canonical: 'https://vexiohq.com',
   },
   robots: {
     index: true,

@@ -1,4 +1,4 @@
-# DataTranquil Complete Product Portfolio Specifications
+# VexioHQ Complete Product Portfolio Specifications
 ## Comprehensive Feature Documentation v3.0
 
 ---
@@ -1032,19 +1032,19 @@ Edge Computing brings AI and analytics capabilities to the edge of the network, 
 - Full support
 
 ### Contact Sales
-- Email: sales@datatranquil.com
+- Email: sales@vexiohq.com
 - Phone: 1-800-DATA-TRQ
-- Web: datatranquil.com/contact
+- Web: vexiohq.com/contact
 
 ### Resources
-- Documentation: docs.datatranquil.com
-- API Reference: api.datatranquil.com
-- Community: community.datatranquil.com
-- Support: support.datatranquil.com
+- Documentation: docs.vexiohq.com
+- API Reference: api.vexiohq.com
+- Community: community.vexiohq.com
+- Support: support.vexiohq.com
 
 ---
 
 *Document Version: 3.0*
 *Last Updated: December 2024*
 *Classification: Public*
-*© 2024 DataTranquil Inc. All rights reserved.*
+*© 2024 VexioHQ Inc. All rights reserved.*

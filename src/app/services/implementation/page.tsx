@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, FileText, Target } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI Implementation Services | DataTranquil',
+  title: 'AI Implementation Services | VexioHQ',
   description: 'End-to-end AI implementation services. From strategy to deployment, we ensure successful AI adoption with proven methodologies and enterprise-grade solutions.',
   keywords: 'AI implementation, machine learning deployment, MLOps, AI integration, enterprise AI, implementation strategy',
   openGraph: {

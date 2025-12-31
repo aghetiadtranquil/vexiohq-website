@@ -19,7 +19,7 @@ export default function SimpleLoginPage() {
     try {
       // Simple authentication without Clerk
       // For demo purposes - replace with actual auth logic
-      if (email === 'demo@datatranquil.com' && password === 'demo123') {
+      if (email === 'demo@vexiohq.com' && password === 'demo123') {
         // Store simple auth token
         localStorage.setItem('auth_token', 'demo_token_' + Date.now());
         localStorage.setItem('user_email', email);
@@ -27,7 +27,7 @@ export default function SimpleLoginPage() {
         // Redirect to dashboard
         router.push('/tools/calculator');
       } else {
-        setError('Invalid email or password. Try demo@datatranquil.com / demo123');
+        setError('Invalid email or password. Try demo@vexiohq.com / demo123');
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
@@ -46,14 +46,14 @@ export default function SimpleLoginPage() {
               <span className="text-white font-bold text-xl">DT</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              DataTranquil
+              VexioHQ
             </span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">Customer Portal</h2>
           <p className="mt-2 text-gray-600">Simple login (Non-Clerk version)</p>
           <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
             <p className="text-sm text-yellow-800">
-              Demo credentials: demo@datatranquil.com / demo123
+              Demo credentials: demo@vexiohq.com / demo123
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function SimpleLoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                placeholder="demo@datatranquil.com"
+                placeholder="demo@vexiohq.com"
               />
             </div>
 

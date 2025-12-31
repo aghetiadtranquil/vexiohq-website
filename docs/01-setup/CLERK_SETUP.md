@@ -209,7 +209,7 @@ Set up webhooks for:
 - Advanced security
 - Custom domains
 
-## Why Clerk is Perfect for DataTranquil
+## Why Clerk is Perfect for VexioHQ
 
 1. **Professional appearance** - Enterprise-grade auth UI
 2. **Quick implementation** - Launch today, not next month

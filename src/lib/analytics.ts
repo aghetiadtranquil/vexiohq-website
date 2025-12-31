@@ -688,3 +688,120 @@ if (typeof window !== 'undefined') {
     analytics.initialize();
   });
 }
+
+// Server-side tracking utilities for API routes
+import crypto from 'crypto';
+
+const GA_MEASUREMENT_PROTOCOL_URL = 'https://www.google-analytics.com/mp/collect';
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX';
+const GA_API_SECRET = process.env.GA_API_SECRET || 'your-api-secret';
+
+interface ServerGAEvent {
+  name: string;
+  params?: Record<string, any>;
+}
+
+interface ServerTrackingRequest {
+  client_id?: string;
+  user_id?: string;
+  events: ServerGAEvent[];
+  user_properties?: Record<string, any>;
+  timestamp_micros?: string;
+}
+
+// Server-side tracking function
+async function sendServerEventToGA(data: ServerTrackingRequest) {
+  const url = `${GA_MEASUREMENT_PROTOCOL_URL}?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${GA_API_SECRET}`;
+  
+  const payload = {
+    client_id: data.client_id || crypto.randomUUID(),
+    user_id: data.user_id,
+    timestamp_micros: data.timestamp_micros || (Date.now() * 1000).toString(),
+    user_properties: data.user_properties,
+    events: data.events.map(event => ({
+      name: event.name,
+      params: {
+        ...event.params,
+        session_id: Date.now().toString(),
+        engagement_time_msec: '100',
+      }
+    }))
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload)
+    });
+
+    // GA4 MP returns 204 No Content on success
+    return response.status === 204;
+  } catch (error) {
+    console.error('Failed to send event to GA4:', error);
+    return false;
+  }
+}
+
+// Helper function to track events from server-side/API routes
+export async function trackServerEvent(
+  eventName: string, 
+  parameters: Record<string, any>,
+  clientId?: string,
+  userId?: string
+) {
+  const trackingData: ServerTrackingRequest = {
+    client_id: clientId || crypto.randomUUID(),
+    user_id: userId,
+    events: [{
+      name: eventName,
+      params: parameters
+    }]
+  };
+
+  return await sendServerEventToGA(trackingData);
+}
+
+// Predefined server event templates
+export const ServerEventTemplates = {
+  // Lead generation from backend
+  generateLead: (value: number, leadType: string) => ({
+    name: 'generate_lead',
+    params: {
+      value: value,
+      currency: 'USD',
+      lead_type: leadType
+    }
+  }),
+
+  // Sign up tracking
+  signUp: (method: string) => ({
+    name: 'sign_up',
+    params: {
+      method: method
+    }
+  }),
+
+  // API usage tracking
+  apiUsage: (endpoint: string, method: string, responseTime: number) => ({
+    name: 'api_call',
+    params: {
+      api_endpoint: endpoint,
+      api_method: method,
+      response_time_ms: responseTime
+    }
+  }),
+
+  // Error tracking
+  error: (errorMessage: string, errorCode: string, errorLocation: string) => ({
+    name: 'exception',
+    params: {
+      description: errorMessage,
+      error_code: errorCode,
+      error_location: errorLocation,
+      fatal: false
+    }
+  })
+};

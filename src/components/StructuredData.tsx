@@ -20,18 +20,18 @@ export function OrganizationSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "DataTranquil",
-    "alternateName": "DataTranquil Strategic AI Advisory",
-    "url": "https://datatranquil.com",
-    "logo": "https://datatranquil.com/logo.png",
+    "name": "VexioHQ",
+    "alternateName": "VexioHQ Strategic AI Advisory",
+    "url": "https://vexiohq.com",
+    "logo": "https://vexiohq.com/logo.png",
     "sameAs": [
-      "https://twitter.com/datatranquil",
-      "https://linkedin.com/company/datatranquil",
-      "https://github.com/datatranquil"
+      "https://twitter.com/vexiohq",
+      "https://linkedin.com/company/vexiohq",
+      "https://github.com/vexiohq"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-415-255-5501",
+      "telephone": "+1-415-390-5748",
       "contactType": "sales",
       "areaServed": ["US", "CA", "GB", "EU"],
       "availableLanguage": "English"
@@ -45,7 +45,7 @@ export function OrganizationSchema() {
     },
     "founder": {
       "@type": "Person",
-      "name": "DataTranquil Team"
+      "name": "VexioHQ Team"
     },
     "foundingDate": "2020",
     "numberOfEmployees": {
@@ -80,8 +80,8 @@ interface ProductSchemaProps {
 export function ProductSchema({
   name,
   description,
-  image = "https://datatranquil.com/og-image.jpg",
-  brand = "DataTranquil",
+  image = "https://vexiohq.com/og-image.jpg",
+  brand = "VexioHQ",
   offers,
   aggregateRating
 }: ProductSchemaProps) {
@@ -98,7 +98,7 @@ export function ProductSchema({
     ...(offers && {
       "offers": {
         "@type": "Offer",
-        "url": "https://datatranquil.com/pricing",
+        "url": "https://vexiohq.com/pricing",
         "priceCurrency": offers.priceCurrency || "USD",
         "price": offers.price || "Contact for pricing",
         "availability": offers.availability || "https://schema.org/InStock"
@@ -135,7 +135,7 @@ interface ServiceSchemaProps {
 export function ServiceSchema({
   name,
   description,
-  provider = "DataTranquil",
+  provider = "VexioHQ",
   serviceType,
   areaServed = ["US", "CA", "GB", "EU"],
   hasOfferCatalog
@@ -190,10 +190,10 @@ interface ArticleSchemaProps {
 export function ArticleSchema({
   title,
   description,
-  author = "DataTranquil Team",
+  author = "VexioHQ Team",
   datePublished,
   dateModified,
-  image = "https://datatranquil.com/og-image.jpg",
+  image = "https://vexiohq.com/og-image.jpg",
   url,
   wordCount,
   keywords = []
@@ -206,7 +206,7 @@ export function ArticleSchema({
     "author": {
       "@type": "Person",
       "name": author,
-      "url": "https://datatranquil.com/about"
+      "url": "https://vexiohq.com/about"
     },
     "datePublished": datePublished,
     "dateModified": dateModified || datePublished,
@@ -214,10 +214,10 @@ export function ArticleSchema({
     "url": url,
     "publisher": {
       "@type": "Organization",
-      "name": "DataTranquil",
+      "name": "VexioHQ",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://datatranquil.com/logo.png"
+        "url": "https://vexiohq.com/logo.png"
       }
     },
     "mainEntityOfPage": {
@@ -288,11 +288,11 @@ export function LocalBusinessSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "DataTranquil AI Consulting",
-    "image": "https://datatranquil.com/og-image.jpg",
-    "@id": "https://datatranquil.com",
-    "url": "https://datatranquil.com",
-    "telephone": "+1-415-255-5501",
+    "name": "VexioHQ AI Consulting",
+    "image": "https://vexiohq.com/og-image.jpg",
+    "@id": "https://vexiohq.com",
+    "url": "https://vexiohq.com",
+    "telephone": "+1-415-390-5748",
     "priceRange": "$$$$",
     "address": {
       "@type": "PostalAddress",
@@ -320,8 +320,8 @@ export function LocalBusinessSchema() {
       "closes": "18:00"
     },
     "sameAs": [
-      "https://twitter.com/datatranquil",
-      "https://linkedin.com/company/datatranquil"
+      "https://twitter.com/vexiohq",
+      "https://linkedin.com/company/vexiohq"
     ]
   }
   
@@ -333,13 +333,13 @@ export function WebSiteSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "DataTranquil",
-    "url": "https://datatranquil.com",
+    "name": "VexioHQ",
+    "url": "https://vexiohq.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://datatranquil.com/search?q={search_term_string}"
+        "urlTemplate": "https://vexiohq.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -409,7 +409,7 @@ interface CourseSchemaProps {
 export function CourseSchema({
   name,
   description,
-  provider = "DataTranquil",
+  provider = "VexioHQ",
   url
 }: CourseSchemaProps) {
   const data = {
@@ -420,7 +420,7 @@ export function CourseSchema({
     "provider": {
       "@type": "Organization",
       "name": provider,
-      "sameAs": "https://datatranquil.com"
+      "sameAs": "https://vexiohq.com"
     },
     "url": url
   }
@@ -466,8 +466,8 @@ export function EventSchema({
     },
     "organizer": {
       "@type": "Organization",
-      "name": "DataTranquil",
-      "url": "https://datatranquil.com"
+      "name": "VexioHQ",
+      "url": "https://vexiohq.com"
     },
     "eventAttendanceMode": isOnline ? 
       "https://schema.org/OnlineEventAttendanceMode" : 

@@ -16,9 +16,9 @@ function generateToken(email: string): string {
 
 // Demo user credentials
 const DEMO_USERS = [
-  { email: 'demo@datatranquil.com', password: 'demo123' },
-  { email: 'admin@datatranquil.com', password: 'admin123' },
-  { email: 'test@datatranquil.com', password: 'test123' }
+  { email: 'demo@vexiohq.com', password: 'demo123' },
+  { email: 'admin@vexiohq.com', password: 'admin123' },
+  { email: 'test@vexiohq.com', password: 'test123' }
 ];
 
 export async function POST(request: NextRequest) {

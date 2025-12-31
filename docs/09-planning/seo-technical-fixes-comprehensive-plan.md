@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This plan addresses 5 critical SEO technical issues identified in the DataTranquil website audit. Each issue has been analyzed with multiple implementation paths to ensure optimal search visibility while maintaining existing SEO foundations.
+This plan addresses 5 critical SEO technical issues identified in the VexioHQ website audit. Each issue has been analyzed with multiple implementation paths to ensure optimal search visibility while maintaining existing SEO foundations.
 
 **Current SEO State**: Excellent foundation (schema markup, sitemap, robots.txt) with critical gaps requiring immediate attention.
 
@@ -28,11 +28,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const featuredServices = await getFeaturedServices();
   
   return {
-    title: `AI Consulting San Francisco | ${latestInsights[0]?.title} | DataTranquil`,
+    title: `AI Consulting San Francisco | ${latestInsights[0]?.title} | VexioHQ`,
     description: `Leading AI consulting firm featuring ${featuredServices.map(s => s.name).join(', ')}. ${latestInsights[0]?.excerpt}`,
     keywords: `ai consulting, ${featuredServices.map(s => s.keywords).join(', ')}, san francisco`,
     openGraph: {
-      title: `DataTranquil - ${latestInsights[0]?.title}`,
+      title: `VexioHQ - ${latestInsights[0]?.title}`,
       description: `Transform your business with latest insights: ${latestInsights[0]?.excerpt}`,
     }
   }
@@ -52,15 +52,15 @@ export async function generateMetadata(): Promise<Metadata> {
 // Metadata variants for testing
 const metadataVariants = {
   'conversion-focused': {
-    title: "AI Consulting San Francisco | 300% ROI Guaranteed | DataTranquil",
+    title: "AI Consulting San Francisco | 300% ROI Guaranteed | VexioHQ",
     description: "Join 150+ companies achieving 300-500% ROI with our AI transformation services. Free consultation with SF's top AI consultants."
   },
   'authority-focused': {
-    title: "DataTranquil | Premier AI Consulting Firm San Francisco | 36K+ Hours Experience",
+    title: "VexioHQ | Premier AI Consulting Firm San Francisco | 36K+ Hours Experience",
     description: "Leading AI consulting firm in San Francisco. 36,000+ hours enterprise experience, 99.7% success rate. Trusted by Fortune 500."
   },
   'solution-focused': {
-    title: "Enterprise AI Implementation | Machine Learning Consulting SF | DataTranquil",
+    title: "Enterprise AI Implementation | Machine Learning Consulting SF | VexioHQ",
     description: "End-to-end AI solutions for enterprise. From strategy to deployment, we deliver measurable business outcomes."
   }
 }
@@ -85,12 +85,12 @@ function getSeasonalMetadata(): Metadata {
   const seasonalContent = {
     Q1: {
       focus: "AI Strategy Planning",
-      title: "2025 AI Strategy Planning | San Francisco AI Consulting | DataTranquil",
+      title: "2025 AI Strategy Planning | San Francisco AI Consulting | VexioHQ",
       description: "Start 2025 with strategic AI implementation. Q1 planning sessions available."
     },
     Q2: {
       focus: "Implementation & Deployment",
-      title: "AI Implementation Services | Q2 2025 Deployment | DataTranquil SF",
+      title: "AI Implementation Services | Q2 2025 Deployment | VexioHQ SF",
       description: "Accelerate your AI transformation. Q2 implementation services now booking."
     }
     // ... Q3, Q4 variants
@@ -283,7 +283,7 @@ export function BreadcrumbSchema({ breadcrumbs }: { breadcrumbs: Array<{href: st
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://datatranquil.com${item.href}`
+      "item": `https://vexiohq.com${item.href}`
     }))
   };
 
@@ -423,7 +423,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found | DataTranquil AI Consulting',
+  title: '404 - Page Not Found | VexioHQ AI Consulting',
   description: 'The page you\'re looking for doesn\'t exist. Find AI consulting resources and services.',
   robots: { index: false, follow: true }
 };

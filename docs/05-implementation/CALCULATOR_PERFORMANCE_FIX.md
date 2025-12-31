@@ -47,9 +47,9 @@ import { BreadcrumbSchema } from '@/components/StructuredData'
 // Add after line 111:
 <BreadcrumbSchema 
   items={[
-    { name: 'Home', url: 'https://datatranquil.com' },
-    { name: 'Tools', url: 'https://datatranquil.com/tools' },
-    { name: 'ROI Calculator', url: 'https://datatranquil.com/tools/calculator' }
+    { name: 'Home', url: 'https://vexiohq.com' },
+    { name: 'Tools', url: 'https://vexiohq.com/tools' },
+    { name: 'ROI Calculator', url: 'https://vexiohq.com/tools/calculator' }
   ]} 
 />
 ```

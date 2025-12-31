@@ -104,7 +104,7 @@ export default function NewsletterSignup({
 
     } catch (error) {
       console.error('Newsletter subscription error:', error);
-      setError('Something went wrong. Please try again or contact support@datatranquil.com');
+      setError('Something went wrong. Please try again or contact hello@vexiohq.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -260,7 +260,7 @@ export default function NewsletterSignup({
         )}
 
         <p className="text-blue-200 text-sm mt-6">
-          Join 5,000+ executives who rely on our insights • No spam • Unsubscribe anytime
+          Get AI insights delivered to your inbox • No spam • Unsubscribe anytime
         </p>
       </div>
     </section>

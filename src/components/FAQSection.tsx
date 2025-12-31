@@ -100,7 +100,7 @@ export const AI_CONSULTING_FAQS: FAQItem[] = [
     answer: "AI implementation timelines vary based on project scope and complexity. Simple AI solutions can be deployed in 2-3 months, while enterprise-wide AI transformations typically take 6-18 months. We provide detailed project timelines during our initial consultation."
   },
   {
-    question: "What industries does DataTranquil serve?",
+    question: "What industries does VexioHQ serve?",
     answer: "We serve various industries including finance, healthcare, retail, manufacturing, technology, and professional services. Our AI solutions are tailored to each industry's specific needs and regulatory requirements."
   },
   {

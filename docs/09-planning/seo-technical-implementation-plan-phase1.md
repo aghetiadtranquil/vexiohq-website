@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-This Phase 1 planning document provides comprehensive analysis and multiple implementation paths for addressing critical SEO technical gaps in the DataTranquil website. The current site has excellent foundational SEO infrastructure but requires strategic enhancements in metadata optimization, breadcrumb navigation, and internal linking architecture.
+This Phase 1 planning document provides comprehensive analysis and multiple implementation paths for addressing critical SEO technical gaps in the VexioHQ website. The current site has excellent foundational SEO infrastructure but requires strategic enhancements in metadata optimization, breadcrumb navigation, and internal linking architecture.
 
 **Current SEO State Analysis**:
 - ✅ Strong schema markup foundation (Organization, Service, FAQ, LocalBusiness)
@@ -70,18 +70,18 @@ export async function generateMetadata(): Promise<Metadata> {
   ].join(', ');
   
   return {
-    title: `${currentCampaign?.titlePrefix || 'AI Consulting San Francisco'} | DataTranquil - ${latestInsights[0]?.title}`,
+    title: `${currentCampaign?.titlePrefix || 'AI Consulting San Francisco'} | VexioHQ - ${latestInsights[0]?.title}`,
     description: `${currentCampaign?.descPrefix || 'Leading AI consulting firm'} featuring ${topServices[0]?.name}. Latest insight: ${latestInsights[0]?.excerpt}`,
     keywords: dynamicKeywords,
     openGraph: {
-      title: `DataTranquil - ${latestInsights[0]?.title}`,
+      title: `VexioHQ - ${latestInsights[0]?.title}`,
       description: `Transform your business with latest insights: ${latestInsights[0]?.excerpt}`,
       images: [
         {
-          url: latestInsights[0]?.ogImage || 'https://datatranquil.com/og-image.jpg',
+          url: latestInsights[0]?.ogImage || 'https://vexiohq.com/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: `${latestInsights[0]?.title} - DataTranquil AI Consulting`
+          alt: `${latestInsights[0]?.title} - VexioHQ AI Consulting`
         }
       ]
     }
@@ -118,7 +118,7 @@ interface MetadataVariant {
 const metadataVariants: MetadataVariant[] = [
   {
     id: 'conversion-focused',
-    title: "AI Consulting San Francisco | 300% ROI Guaranteed | DataTranquil",
+    title: "AI Consulting San Francisco | 300% ROI Guaranteed | VexioHQ",
     description: "Join 150+ companies achieving 300-500% ROI with our AI transformation services. Free consultation with SF's top AI consultants. Guaranteed results.",
     focusKeywords: ['ROI', 'guaranteed', 'results', 'consultation'],
     conversionElements: ['300% ROI', 'Guaranteed', 'Free consultation'],
@@ -126,7 +126,7 @@ const metadataVariants: MetadataVariant[] = [
   },
   {
     id: 'authority-focused', 
-    title: "DataTranquil | Premier AI Consulting Firm San Francisco | 36K+ Hours Experience",
+    title: "VexioHQ | Premier AI Consulting Firm San Francisco | 36K+ Hours Experience",
     description: "Leading AI consulting firm in San Francisco. 36,000+ hours enterprise experience, 99.7% success rate. Trusted by Fortune 500 companies.",
     focusKeywords: ['premier', 'experience', 'enterprise', 'Fortune 500'],
     conversionElements: ['36K+ Hours', '99.7% success', 'Fortune 500'],
@@ -134,7 +134,7 @@ const metadataVariants: MetadataVariant[] = [
   },
   {
     id: 'solution-focused',
-    title: "Enterprise AI Implementation | Agentic AI Systems | DataTranquil SF",
+    title: "Enterprise AI Implementation | Agentic AI Systems | VexioHQ SF",
     description: "End-to-end AI solutions for enterprise transformation. Agentic AI, machine learning, and data analytics. Measurable business outcomes.",
     focusKeywords: ['enterprise AI', 'agentic AI', 'implementation', 'transformation'],
     conversionElements: ['End-to-end', 'Agentic AI', 'Measurable outcomes'],
@@ -180,10 +180,10 @@ export const metadata: Metadata = (() => {
       description: variant.description,
       images: [
         {
-          url: "https://datatranquil.com/og-image.jpg",
+          url: "https://vexiohq.com/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: "DataTranquil - AI Consulting San Francisco"
+          alt: "VexioHQ - AI Consulting San Francisco"
         }
       ]
     },
@@ -225,7 +225,7 @@ const seasonalCampaigns: SeasonalCampaign[] = [
   {
     id: 'q1-planning',
     period: { start: '01-01', end: '03-31' },
-    title: "2025 AI Strategy Planning | San Francisco AI Consulting | DataTranquil",
+    title: "2025 AI Strategy Planning | San Francisco AI Consulting | VexioHQ",
     description: "Start 2025 with strategic AI implementation planning. Q1 AI strategy sessions now available. Set your transformation roadmap.",
     keywords: ['2025 AI strategy', 'planning', 'roadmap', 'transformation'],
     campaignFocus: "Strategic Planning & Goal Setting",
@@ -234,7 +234,7 @@ const seasonalCampaigns: SeasonalCampaign[] = [
   {
     id: 'q2-implementation',
     period: { start: '04-01', end: '06-30' },
-    title: "AI Implementation Services | Q2 2025 Deployment | DataTranquil SF",
+    title: "AI Implementation Services | Q2 2025 Deployment | VexioHQ SF",
     description: "Accelerate your AI transformation with Q2 implementation services. Spring deployment cycles now booking. Maximize your year-end goals.",
     keywords: ['AI implementation', 'deployment', 'spring transformation'],
     campaignFocus: "Implementation & Deployment",
@@ -243,7 +243,7 @@ const seasonalCampaigns: SeasonalCampaign[] = [
   {
     id: 'q3-optimization',
     period: { start: '07-01', end: '09-30' },
-    title: "AI System Optimization | Summer 2025 Enhancement | DataTranquil",
+    title: "AI System Optimization | Summer 2025 Enhancement | VexioHQ",
     description: "Optimize your AI systems for peak performance. Summer enhancement projects available. Prepare for Q4 scaling.",
     keywords: ['AI optimization', 'enhancement', 'performance', 'scaling'],
     campaignFocus: "Optimization & Enhancement",
@@ -252,7 +252,7 @@ const seasonalCampaigns: SeasonalCampaign[] = [
   {
     id: 'q4-scaling',
     period: { start: '10-01', end: '12-31' },
-    title: "Enterprise AI Scaling | Q4 2025 Growth Strategy | DataTranquil SF",  
+    title: "Enterprise AI Scaling | Q4 2025 Growth Strategy | VexioHQ SF",  
     description: "Scale your AI initiatives for maximum ROI. Q4 growth strategies and 2026 planning. End the year with competitive advantage.",
     keywords: ['AI scaling', 'growth strategy', '2026 planning', 'competitive advantage'],
     campaignFocus: "Scaling & Growth Strategy",
@@ -277,16 +277,16 @@ export function getSeasonalMetadata(): Metadata {
   return {
     title: activeCampaign.title,
     description: activeCampaign.description,
-    keywords: [...activeCampaign.keywords, 'ai consulting san francisco', 'datatranquil'].join(', '),
+    keywords: [...activeCampaign.keywords, 'ai consulting san francisco', 'vexiohq'].join(', '),
     openGraph: {
       title: activeCampaign.title,
       description: activeCampaign.description,
       images: [
         {
-          url: `https://datatranquil.com/og-${activeCampaign.id}.jpg`, // Campaign-specific images
+          url: `https://vexiohq.com/og-${activeCampaign.id}.jpg`, // Campaign-specific images
           width: 1200,
           height: 630,
-          alt: `${activeCampaign.campaignFocus} - DataTranquil AI Consulting`
+          alt: `${activeCampaign.campaignFocus} - VexioHQ AI Consulting`
         }
       ]
     }
@@ -414,7 +414,7 @@ export default function AutoBreadcrumbs() {
             <Link 
               href="/" 
               className="text-blue-600 hover:text-blue-800 font-medium"
-              title="DataTranquil AI Consulting Home"
+              title="VexioHQ AI Consulting Home"
             >
               Home
             </Link>
@@ -451,10 +451,10 @@ export default function AutoBreadcrumbs() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(createBreadcrumbSchema([
-            { name: 'Home', url: 'https://datatranquil.com' },
+            { name: 'Home', url: 'https://vexiohq.com' },
             ...optimizedBreadcrumbs.map(item => ({
               name: item.seoTitle || item.label,
-              url: `https://datatranquil.com${item.href}`
+              url: `https://vexiohq.com${item.href}`
             }))
           ]))
         }}
@@ -632,8 +632,8 @@ export default function HierarchicalBreadcrumbs() {
               "name": item.label,
               "item": {
                 "@type": "WebPage",
-                "@id": `https://datatranquil.com${item.href}`,
-                "url": `https://datatranquil.com${item.href}`,
+                "@id": `https://vexiohq.com${item.href}`,
+                "url": `https://vexiohq.com${item.href}`,
                 "description": item.description,
                 "keywords": item.seoKeywords?.join(', ')
               }
@@ -797,8 +797,8 @@ function OptimizedBreadcrumbs({ config }: HybridBreadcrumbProps) {
                 "name": item.seoTitle || item.label,
                 "item": {
                   "@type": "WebPage",
-                  "@id": `https://datatranquil.com${item.href}`,
-                  "url": `https://datatranquil.com${item.href}`,
+                  "@id": `https://vexiohq.com${item.href}`,
+                  "url": `https://vexiohq.com${item.href}`,
                   "name": item.seoTitle || item.label
                 }
               }))

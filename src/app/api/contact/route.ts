@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { trackServerEvent } from '@/app/api/analytics/track/route';
+import { trackServerEvent } from '@/lib/analytics';
 
 // Rate limiting configuration
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute

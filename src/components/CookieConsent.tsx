@@ -134,7 +134,7 @@ export default function CookieConsent() {
             <div className="md:flex md:items-start md:justify-between">
               <div className="mb-4 md:mb-0 md:mr-8 flex-1">
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  DataTranquil uses cookies to better understand how visitors use our site, to collect and 
+                  VexioHQ uses cookies to better understand how visitors use our site, to collect and 
                   analyze information on site performance and usage, and for targeted advertising purposes. 
                   <Link href="/cookie-notice" className="text-blue-600 hover:underline ml-1">
                     Cookie Notice
@@ -342,11 +342,4 @@ export default function CookieConsent() {
       )}
     </>
   );
-}
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
 }

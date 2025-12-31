@@ -1,4 +1,4 @@
-# DataTranquil Logo Color Update Requirements
+# VexioHQ Logo Color Update Requirements
 
 ## URGENT: Logo Color Correction Needed
 
@@ -25,7 +25,7 @@ The logo text colors are incorrect. Both "Data" and "Tranquil" appear in dark gr
 - These match the text colors perfectly
 
 #### 3. Files to Update:
-1. Nav_Logo_180_40_small_optimized_DataTranquil.png
+1. Nav_Logo_180_40_small_optimized_VexioHQ.png
 2. Hero_logo_400_1000px_landing_pages.png
 3. Footer_logo_200_50px.png
 4. Apple_Touch_icon_180_180px.png

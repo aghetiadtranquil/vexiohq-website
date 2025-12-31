@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Implementation Strategy - Enterprise Framework & Best Practices',
     description: 'Proven AI implementation strategy used by Fortune 500 companies. 96% success rate. Free guide.',
-    url: 'https://datatranquil.com/ai-implementation-strategy',
+    url: 'https://vexiohq.com/ai-implementation-strategy',
     type: 'website',
     images: [{
       url: '/images/ai-implementation-strategy.jpg',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ['/images/ai-implementation-strategy.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/ai-implementation-strategy'
+    canonical: 'https://vexiohq.com/ai-implementation-strategy'
   }
 }
 
@@ -54,7 +54,7 @@ const structuredData = {
   "provider": {
     "@type": "Organization",
     "name": "Vantage AI",
-    "url": "https://datatranquil.com"
+    "url": "https://vexiohq.com"
   },
   "description": "Comprehensive AI implementation strategy services for enterprises. From planning to successful deployment.",
   "serviceType": "AI Implementation Strategy Consulting",

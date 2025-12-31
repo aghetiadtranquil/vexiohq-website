@@ -145,7 +145,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Agentic AI Platform - Autonomous AI Agents for Enterprise',
     description: 'Transform your enterprise with autonomous AI agents that think, decide, and act independently. Next-gen AI platform.',
-    url: 'https://datatranquil.com/agentic-ai-platform',
+    url: 'https://vexiohq.com/agentic-ai-platform',
     type: 'website',
     images: [{
       url: '/images/agentic-ai-platform.jpg',
@@ -161,7 +161,7 @@ export const metadata: Metadata = {
     images: ['/images/agentic-ai-platform.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/agentic-ai-platform'
+    canonical: 'https://vexiohq.com/agentic-ai-platform'
   }
 }
 
@@ -179,7 +179,7 @@ const structuredData = {
   "provider": {
     "@type": "Organization",
     "name": "Vantage AI",
-    "url": "https://datatranquil.com"
+    "url": "https://vexiohq.com"
   },
   "featureList": [
     "Autonomous decision-making",
@@ -967,18 +967,18 @@ export default function AgenticAIPlatformPage() {
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   {icons.trendingUp}
                 </div>
-                <h3 className="text-4xl font-bold text-slate-900 mb-2">312%</h3>
-                <p className="text-lg font-semibold text-slate-900 mb-1">ROI Average</p>
-                <p className="text-sm text-slate-600">Within first 18 months</p>
+                <h3 className="text-4xl font-bold text-slate-900 mb-2">70+</h3>
+                <p className="text-lg font-semibold text-slate-900 mb-1">Projects Delivered</p>
+                <p className="text-sm text-slate-600">Across multiple industries</p>
               </div>
 
               <div className="text-center">
                 <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   {icons.award}
                 </div>
-                <h3 className="text-4xl font-bold text-slate-900 mb-2">99.7%</h3>
-                <p className="text-lg font-semibold text-slate-900 mb-1">Accuracy Rate</p>
-                <p className="text-sm text-slate-600">In autonomous decision making</p>
+                <h3 className="text-4xl font-bold text-slate-900 mb-2">SF</h3>
+                <p className="text-lg font-semibold text-slate-900 mb-1">Based in SF</p>
+                <p className="text-sm text-slate-600">Silicon Valley expertise</p>
               </div>
             </div>
 
@@ -1084,7 +1084,7 @@ export default function AgenticAIPlatformPage() {
               </Link>
             </div>
             <p className="mt-8 text-purple-200">
-              Join 150+ enterprises already transforming with autonomous AI
+              Transform your business with autonomous AI
             </p>
           </div>
         </section>

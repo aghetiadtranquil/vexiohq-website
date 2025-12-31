@@ -1,7 +1,7 @@
 # Component Documentation
 
 ## Overview
-This document provides detailed documentation for all new components added to the DataTranquil website during the recent development phases.
+This document provides detailed documentation for all new components added to the VexioHQ website during the recent development phases.
 
 ## Component Index
 
@@ -203,7 +203,7 @@ import SocialSharing from '@/components/SocialSharing';
 
 // Basic usage
 <SocialSharing 
-  url="https://datatranquil.com/blog/article"
+  url="https://vexiohq.com/blog/article"
   title="Check out this article"
 />
 
@@ -280,7 +280,7 @@ import ComingSoonTemplate from '@/components/ComingSoonTemplate';
     'Team collaboration',
     'Resource library'
   ]}
-  contactEmail="portal@datatranquil.com"
+  contactEmail="portal@vexiohq.com"
 />
 ```
 
@@ -460,4 +460,4 @@ Components handle these error states:
 
 **Document Version**: 1.0  
 **Last Updated**: December 13, 2024  
-**Author**: DataTranquil Development Team
+**Author**: VexioHQ Development Team

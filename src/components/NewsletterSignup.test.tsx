@@ -102,7 +102,7 @@ describe('NewsletterSignup Component', () => {
     fireEvent.click(button);
     
     await waitFor(() => {
-      expect(screen.getByText('Something went wrong. Please try again or contact support@datatranquil.com')).toBeInTheDocument();
+      expect(screen.getByText('Something went wrong. Please try again or contact hello@vexiohq.com')).toBeInTheDocument();
     });
   });
 
@@ -118,7 +118,7 @@ describe('NewsletterSignup Component', () => {
     fireEvent.click(button);
     
     await waitFor(() => {
-      expect(screen.getByText('Something went wrong. Please try again or contact support@datatranquil.com')).toBeInTheDocument();
+      expect(screen.getByText('Something went wrong. Please try again or contact hello@vexiohq.com')).toBeInTheDocument();
     });
   });
 

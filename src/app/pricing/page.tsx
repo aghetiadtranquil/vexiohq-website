@@ -201,27 +201,19 @@ export default function PricingPage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-12">
-            Join 150+ enterprises achieving 312% average ROI within 18 months. 
-            Every plan includes implementation support and success guarantee.
+            Flexible pricing for businesses of all sizes.
+            Every plan includes implementation support and dedicated account management.
           </p>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-white mb-1">312%</div>
-              <div className="text-sm text-blue-200">Average ROI</div>
+              <div className="text-3xl font-bold text-white mb-1">70+</div>
+              <div className="text-sm text-blue-200">Projects Delivered</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-white mb-1">6 mo</div>
-              <div className="text-sm text-blue-200">Payback Period</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-white mb-1">$2.4M</div>
-              <div className="text-sm text-blue-200">Avg. Annual Savings</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-white mb-1">99.7%</div>
-              <div className="text-sm text-blue-200">Success Rate</div>
+              <div className="text-3xl font-bold text-white mb-1">4</div>
+              <div className="text-sm text-blue-200">AI Products</div>
             </div>
           </div>
         </div>
@@ -233,7 +225,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Calculate Your ROI</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how much you could save with DataTranquil's AI platform
+              See how much you could save with VexioHQ's AI platform
             </p>
           </div>
 
@@ -707,7 +699,7 @@ export default function PricingPage() {
             Ready to Transform with AI?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join 150+ enterprises achieving extraordinary results. 
+            Get started with VexioHQ and transform your business with AI.
             Start your 30-day trial today with no credit card required.
           </p>
           

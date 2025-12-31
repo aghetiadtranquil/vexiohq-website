@@ -1,4 +1,4 @@
-# 🧪 DataTranquil Website End-to-End Test Report
+# 🧪 VexioHQ Website End-to-End Test Report
 **Test Date**: December 2024  
 **Environment**: Development (localhost:3001)  
 **Framework**: Next.js 14.2.5

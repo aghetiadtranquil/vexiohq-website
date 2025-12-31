@@ -1,10 +1,10 @@
 // Google Analytics 4 Implementation
-// This file handles all GA4 tracking for the DataTranquil website
+// This file handles all GA4 tracking for the VexioHQ website
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
   }
 }
 
@@ -32,14 +32,14 @@ export const initGA = () => {
   // Initialize gtag
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() {
-    window.dataLayer.push(arguments);
+    window.dataLayer?.push(arguments);
   };
-  window.gtag('js', new Date());
+  window.gtag?.('js', new Date());
   
   // Configure GA4 with enhanced settings
-  window.gtag('config', GA_TRACKING_ID, {
+  window.gtag?.('config', GA_TRACKING_ID, {
     page_path: window.location.pathname,
-    cookie_domain: 'datatranquil.com',
+    cookie_domain: 'vexiohq.com',
     cookie_flags: 'SameSite=None;Secure',
     allow_google_signals: true,
     allow_ad_personalization_signals: false,
@@ -51,7 +51,7 @@ export const initGA = () => {
 export const pageview = (url: string) => {
   if (!isGAEnabled() || !window.gtag) return;
   
-  window.gtag('config', GA_TRACKING_ID, {
+  window.gtag?.('config', GA_TRACKING_ID, {
     page_path: url,
   });
 };
@@ -66,7 +66,7 @@ export const event = ({ action, category, label, value, parameters = {} }: {
 }) => {
   if (!isGAEnabled() || !window.gtag) return;
   
-  window.gtag('event', action, {
+  window.gtag?.('event', action, {
     event_category: category,
     event_label: label,
     value: value,
@@ -88,7 +88,7 @@ export const trackPurchase = (transactionData: {
 }) => {
   if (!isGAEnabled() || !window.gtag) return;
   
-  window.gtag('event', 'purchase', transactionData);
+  window.gtag?.('event', 'purchase', transactionData);
 };
 
 // Lead Generation Events
@@ -100,7 +100,7 @@ export const trackLead = (leadData: {
 }) => {
   if (!isGAEnabled() || !window.gtag) return;
   
-  window.gtag('event', 'generate_lead', {
+  window.gtag?.('event', 'generate_lead', {
     value: leadData.value || 100,
     currency: leadData.currency || 'USD',
     lead_type: leadData.lead_type,
@@ -108,7 +108,7 @@ export const trackLead = (leadData: {
   });
 };
 
-// Custom Events for DataTranquil
+// Custom Events for VexioHQ
 
 // Track contact form submission
 export const trackContactForm = (formData: {
@@ -141,7 +141,7 @@ export const trackNewsletterSignup = (email?: string) => {
     value: 50
   });
   
-  window.gtag('event', 'sign_up', {
+  window.gtag?.('event', 'sign_up', {
     method: 'newsletter'
   });
 };
@@ -162,7 +162,7 @@ export const trackCalculatorUsage = (calculatorType: string, result?: number) =>
 
 // Track resource downloads
 export const trackDownload = (fileName: string, fileType: string) => {
-  window.gtag('event', 'file_download', {
+  window.gtag?.('event', 'file_download', {
     file_name: fileName,
     file_extension: fileType,
     link_text: fileName
@@ -188,7 +188,7 @@ export const trackScrollDepth = (percentage: number) => {
 
 // Track video engagement
 export const trackVideo = (action: 'play' | 'pause' | 'complete', videoTitle: string, currentTime?: number) => {
-  window.gtag('event', `video_${action}`, {
+  window.gtag?.('event', `video_${action}`, {
     video_title: videoTitle,
     video_current_time: currentTime,
     video_percent: currentTime ? Math.round((currentTime / 100) * 100) : 0
@@ -211,7 +211,7 @@ export const trackCTA = (ctaName: string, ctaLocation: string) => {
 
 // Track search
 export const trackSiteSearch = (searchTerm: string, resultsCount?: number) => {
-  window.gtag('event', 'search', {
+  window.gtag?.('event', 'search', {
     search_term: searchTerm,
     results_count: resultsCount
   });
@@ -232,7 +232,7 @@ export const trackError = (errorMessage: string, errorLocation: string) => {
 
 // Track timing (performance)
 export const trackTiming = (category: string, variable: string, time: number, label?: string) => {
-  window.gtag('event', 'timing_complete', {
+  window.gtag?.('event', 'timing_complete', {
     name: variable,
     value: time,
     event_category: category,
@@ -244,14 +244,14 @@ export const trackTiming = (category: string, variable: string, time: number, la
 export const setUserProperties = (properties: Record<string, any>) => {
   if (!isGAEnabled() || !window.gtag) return;
   
-  window.gtag('set', 'user_properties', properties);
+  window.gtag?.('set', 'user_properties', properties);
 };
 
 // Update consent
 export const updateConsent = (analyticsConsent: boolean, adsConsent: boolean = false) => {
   if (!window.gtag) return;
   
-  window.gtag('consent', 'update', {
+  window.gtag?.('consent', 'update', {
     'analytics_storage': analyticsConsent ? 'granted' : 'denied',
     'ad_storage': adsConsent ? 'granted' : 'denied',
     'ad_user_data': adsConsent ? 'granted' : 'denied',
@@ -264,12 +264,12 @@ export const initConsent = () => {
   if (!window.gtag) {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function gtag() {
-      window.dataLayer.push(arguments);
+      window.dataLayer?.push(arguments);
     };
   }
   
   // Default to denied until user gives consent
-  window.gtag('consent', 'default', {
+  window.gtag?.('consent', 'default', {
     'analytics_storage': 'denied',
     'ad_storage': 'denied',
     'ad_user_data': 'denied',

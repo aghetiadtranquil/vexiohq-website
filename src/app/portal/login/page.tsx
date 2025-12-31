@@ -126,7 +126,7 @@ export default function LoginPage() {
                 <span className="text-white font-bold text-xl">DT</span>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                DataTranquil
+                VexioHQ
               </span>
             </Link>
             <h2 className="text-3xl font-bold text-gray-900">Already Signed In</h2>
@@ -182,7 +182,7 @@ export default function LoginPage() {
               <span className="text-white font-bold text-xl">DT</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              DataTranquil
+              VexioHQ
             </span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">Customer Portal</h2>
@@ -288,7 +288,7 @@ export default function LoginPage() {
           {/* Sign Up Link */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              New to DataTranquil?{' '}
+              New to VexioHQ?{' '}
               <Link href="/portal/register" className="font-medium text-blue-600 hover:text-blue-500">
                 Create an account
               </Link>

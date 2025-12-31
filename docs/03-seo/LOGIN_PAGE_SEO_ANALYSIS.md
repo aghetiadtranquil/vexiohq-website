@@ -26,8 +26,8 @@ Once DEV fixes the runtime error, create a server wrapper or layout:
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sign In | DataTranquil Portal',
-  description: 'Access your DataTranquil account dashboard',
+  title: 'Sign In | VexioHQ Portal',
+  description: 'Access your VexioHQ account dashboard',
   robots: {
     index: false,      // Don't index
     follow: false,     // Don't follow links
@@ -140,7 +140,7 @@ headers: {
 ```tsx
 // Add screen reader only instructions
 <div className="sr-only" aria-live="polite">
-  Welcome to DataTranquil sign in. 
+  Welcome to VexioHQ sign in. 
   Please enter your email and password to continue.
 </div>
 ```

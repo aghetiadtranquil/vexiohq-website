@@ -2,33 +2,33 @@ export default function SchemaMarkup() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "DataTranquil",
-    "alternateName": "DataTranquil Strategic AI Advisory",
-    "url": "https://datatranquil.com",
-    "logo": "https://datatranquil.com/logo.png",
+    "name": "VexioHQ",
+    "alternateName": "VexioHQ Strategic AI Advisory",
+    "url": "https://vexiohq.com",
+    "logo": "https://vexiohq.com/logo.png",
     "contactPoint": [{
       "@type": "ContactPoint",
-      "telephone": "+1-415-255-5501",
+      "telephone": "+1-415-390-5748",
       "contactType": "sales",
-      "email": "support@datatranquil.com",
+      "email": "team@vexiohq.com",
       "areaServed": "US",
       "availableLanguage": ["en"]
     }],
     "sameAs": [
-      "https://www.linkedin.com/company/datatranquil",
-      "https://twitter.com/datatranquil"
+      "https://www.linkedin.com/company/vexiohq",
+      "https://twitter.com/vexiohq"
     ],
-    "description": "DataTranquil is a strategic AI advisory firm specializing in enterprise transformation through intelligent automation, advanced analytics, and AI implementation."
+    "description": "VexioHQ is a strategic AI advisory firm specializing in enterprise transformation through intelligent automation, advanced analytics, and AI implementation."
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "DataTranquil",
-    "url": "https://datatranquil.com",
+    "name": "VexioHQ",
+    "url": "https://vexiohq.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://datatranquil.com/search?q={search_term_string}",
+      "target": "https://vexiohq.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -39,7 +39,7 @@ export default function SchemaMarkup() {
     "serviceType": "AI Consulting and Digital Transformation",
     "provider": {
       "@type": "Organization",
-      "name": "DataTranquil"
+      "name": "VexioHQ"
     },
     "areaServed": {
       "@type": "Country",
@@ -83,7 +83,7 @@ export default function SchemaMarkup() {
     "name": "MoneyTrail",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
-    "url": "https://moneytrail.datatranquil.com",
+    "url": "https://moneytrail.vexiohq.com",
     "description": "AI-powered expense management platform for modern enterprises seeking financial clarity and control",
     "offers": {
       "@type": "Offer",

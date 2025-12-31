@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Shield, Scale, Users, Lock, AlertTriangle, CheckCircle, Eye, Brain, FileText, TrendingUp, Award, Target, Zap, ArrowRight, Download } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Governance Framework: Building Responsible AI at Scale | DataTranquil',
+  title: 'AI Governance Framework: Building Responsible AI at Scale | VexioHQ',
   description: 'Executive briefing on implementing enterprise AI governance. How Fortune 500 companies ensure ethical, compliant, and trustworthy AI deployment.',
   keywords: 'AI governance, responsible AI, AI ethics, AI compliance, enterprise AI governance, AI risk management',
 };

@@ -254,7 +254,7 @@ export default function DocsPage() {
                 <Link href="/contact" className="block text-blue-100 hover:text-white transition-colors">
                   → Contact Support
                 </Link>
-                <Link href="https://github.com/datatranquil" className="block text-blue-100 hover:text-white transition-colors">
+                <Link href="https://github.com/vexiohq" className="block text-blue-100 hover:text-white transition-colors">
                   → GitHub
                 </Link>
               </div>

@@ -1,4 +1,4 @@
-# Performance Optimization Guide for DataTranquil Website
+# Performance Optimization Guide for VexioHQ Website
 
 This guide provides instructions for implementing performance optimizations to achieve 100/100 PageSpeed scores.
 

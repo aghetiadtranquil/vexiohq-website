@@ -10,16 +10,17 @@ export default function SimpleFooter() {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">DT</span>
+                <span className="text-white font-bold text-xl">V</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">DataTranquil</h3>
-                <p className="text-xs text-slate-400">AI Transformation Leaders</p>
+                <h3 className="text-xl font-bold">VexioHQ</h3>
+                <p className="text-xs text-slate-400">AI-Powered Business Solutions</p>
               </div>
             </div>
             <p className="text-slate-400 text-sm">
-              Empowering Fortune 500 companies with next-generation AI solutions.
+              Building AI-powered software that helps businesses work smarter.
             </p>
+            <p className="text-xs text-slate-500 mt-2">A Datatranquil Inc. company</p>
           </div>
 
           {/* Services */}
@@ -47,8 +48,8 @@ export default function SimpleFooter() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li>support@datatranquil.com</li>
-              <li>+1 (415) 255-5501</li>
+              <li>team@vexiohq.com</li>
+              <li>+1 (415) 390-5748</li>
               <li>San Francisco, CA</li>
             </ul>
           </div>
@@ -58,7 +59,7 @@ export default function SimpleFooter() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-slate-400">
-              © 2025 DataTranquil. All rights reserved.
+              © 2025 VexioHQ, a Datatranquil Inc. company. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="/privacy-notice" className="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a>

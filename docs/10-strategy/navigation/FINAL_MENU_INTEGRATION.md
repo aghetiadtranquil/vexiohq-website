@@ -86,7 +86,7 @@ TECHNOLOGY ▼
 ### Full Navigation Structure:
 
 ```
-[DataTranquil Logo]     Products ▼  Solutions ▼  Innovation Lab ▼  Resources ▼  About
+[VexioHQ Logo]     Products ▼  Solutions ▼  Innovation Lab ▼  Resources ▼  About
 
 When hovering "Innovation Lab":
 ┌────────────────────────────────────────────────────────────────────┐

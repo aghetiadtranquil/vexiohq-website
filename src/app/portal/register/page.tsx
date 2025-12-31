@@ -120,11 +120,11 @@ export default function RegisterPage() {
               <span className="text-white font-bold text-xl">DT</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              DataTranquil
+              VexioHQ
             </span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
-          <p className="mt-2 text-gray-600">Join DataTranquil to access AI tools</p>
+          <p className="mt-2 text-gray-600">Join VexioHQ to access AI tools</p>
         </div>
 
         {/* Sign Up Form */}

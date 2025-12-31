@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Login | DataTranquil Portal',
-  description: 'Secure login to your DataTranquil customer portal',
+  title: 'Login | VexioHQ Portal',
+  description: 'Secure login to your VexioHQ customer portal',
   robots: {
     index: false,
     follow: false,

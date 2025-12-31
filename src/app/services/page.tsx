@@ -137,28 +137,24 @@ export default function ServicesPage() {
               Enterprise AI Services
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From strategy to implementation, we deliver end-to-end AI transformation. 
-              36,000+ hours of experience across Fortune 500 enterprises.
+              From strategy to implementation, we deliver end-to-end AI transformation
+              to help your business work smarter and grow faster.
             </p>
           </div>
 
           {/* Quick Stats */}
-          <div className="grid md:grid-cols-4 gap-8 mt-12">
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">150+</div>
-              <div className="text-slate-600">AI Projects Delivered</div>
+              <div className="text-3xl font-bold text-blue-600">70+</div>
+              <div className="text-slate-600">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">40%</div>
-              <div className="text-slate-600">Average Cost Reduction</div>
+              <div className="text-3xl font-bold text-blue-600">4</div>
+              <div className="text-slate-600">AI Products</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">50+</div>
-              <div className="text-slate-600">Enterprise Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">99.7%</div>
-              <div className="text-slate-600">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-blue-600">SF</div>
+              <div className="text-slate-600">Based in San Francisco</div>
             </div>
           </div>
         </div>

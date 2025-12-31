@@ -44,7 +44,7 @@ export default function BusinessTransformationCalculator() {
     },
     {
       question: "Is the calculator really free?",
-      answer: "Yes, the basic calculator is completely free with no hidden costs. Premium features like detailed industry reports are available with a DataTranquil consultation."
+      answer: "Yes, the basic calculator is completely free with no hidden costs. Premium features like detailed industry reports are available with a VexioHQ consultation."
     }
   ]
 

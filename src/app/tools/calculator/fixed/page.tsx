@@ -54,7 +54,7 @@ export default function BusinessTransformationCalculator() {
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">DT</span>
                 </div>
-                <span className="text-xl font-semibold text-gray-900">DataTranquil</span>
+                <span className="text-xl font-semibold text-gray-900">VexioHQ</span>
               </Link>
               <span className="text-gray-400">|</span>
               <h1 className="text-lg font-medium text-gray-900">Business Tools</h1>

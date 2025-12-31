@@ -22,13 +22,13 @@ export default function AIConsultingSanFrancisco() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://datatranquil.com"
+        "item": "https://vexiohq.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "AI Consulting San Francisco",
-        "item": "https://datatranquil.com/ai-consulting-san-francisco"
+        "item": "https://vexiohq.com/ai-consulting-san-francisco"
       }
     ]
   };
@@ -56,7 +56,7 @@ export default function AIConsultingSanFrancisco() {
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 max-w-4xl">
-              Transform your business with San Francisco's leading AI consulting firm. DataTranquil delivers 
+              Transform your business with San Francisco's leading AI consulting firm. VexioHQ delivers 
               enterprise-grade AI solutions that drive measurable ROI, reduce costs by 40%, and accelerate 
               digital transformation for Fortune 500 companies.
             </p>
@@ -78,11 +78,11 @@ export default function AIConsultingSanFrancisco() {
           </div>
         </section>
 
-        {/* Why Choose DataTranquil */}
+        {/* Why Choose VexioHQ */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
-              Why San Francisco Enterprises Choose DataTranquil for AI Consulting
+              Why San Francisco Enterprises Choose VexioHQ for AI Consulting
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -97,22 +97,22 @@ export default function AIConsultingSanFrancisco() {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg>
                 </div>
-                <h3 className="text-4xl font-bold text-slate-900 mb-2">150+</h3>
-                <p className="text-slate-600">AI Projects Delivered</p>
+                <h3 className="text-4xl font-bold text-slate-900 mb-2">70+</h3>
+                <p className="text-slate-600">Projects Delivered</p>
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="h-10 w-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
-                <h3 className="text-4xl font-bold text-slate-900 mb-2">500M+</h3>
-                <p className="text-slate-600">Data Points Analyzed</p>
+                <h3 className="text-4xl font-bold text-slate-900 mb-2">4</h3>
+                <p className="text-slate-600">AI Products</p>
               </div>
               <div className="text-center">
                 <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                 </div>
-                <h3 className="text-4xl font-bold text-slate-900 mb-2">99.7%</h3>
-                <p className="text-slate-600">Client Satisfaction</p>
+                <h3 className="text-4xl font-bold text-slate-900 mb-2">SF</h3>
+                <p className="text-slate-600">Based in San Francisco</p>
               </div>
             </div>
 
@@ -125,8 +125,8 @@ export default function AIConsultingSanFrancisco() {
                 <div>
                   <h4 className="font-semibold text-lg text-slate-900 mb-3">Bay Area AI Expertise</h4>
                   <p className="text-slate-600 mb-4">
-                    Our team includes former executives from Google, Meta, and OpenAI, bringing cutting-edge 
-                    AI knowledge directly from Silicon Valley's innovation hub to your enterprise.
+                    Based in San Francisco, we bring cutting-edge AI knowledge directly from
+                    Silicon Valley's innovation hub to your enterprise.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start">
@@ -560,7 +560,7 @@ export default function AIConsultingSanFrancisco() {
 
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  What makes DataTranquil different from other SF AI consultants?
+                  What makes VexioHQ different from other SF AI consultants?
                 </h3>
                 <p className="text-slate-600">
                   Unlike pure strategy firms or technical consultancies, we combine C-suite advisory with 
@@ -606,14 +606,14 @@ export default function AIConsultingSanFrancisco() {
               Get your free AI readiness assessment today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+14152555501"
+              <a
+                href="tel:+14153905748"
                 className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-bold inline-flex items-center justify-center"
               >
-                Call (415) 255-5501
+                Call (415) 390-5748
               </a>
-              <a 
-                href="mailto:support@datatranquil.com"
+              <a
+                href="mailto:team@vexiohq.com"
                 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-bold"
               >
                 Email Our AI Experts

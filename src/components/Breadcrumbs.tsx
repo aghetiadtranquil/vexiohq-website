@@ -23,7 +23,7 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
   // Generate structured data items with full URLs
   const structuredDataItems = breadcrumbItems.map(item => ({
     name: item.name,
-    url: `https://datatranquil.com${item.url}`
+    url: `https://vexiohq.com${item.url}`
   }))
 
   return (

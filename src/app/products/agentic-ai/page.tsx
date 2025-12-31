@@ -7,7 +7,7 @@ import { Bot, ArrowRight, Sparkles, Brain, Zap, Shield, MessageSquare, Settings,
 
 // Metadata would normally be exported but client components can't export metadata
 // export const metadata: Metadata = {
-//   title: 'Agentic AI Platform - Autonomous AI Agents | DataTranquil',
+//   title: 'Agentic AI Platform - Autonomous AI Agents | VexioHQ',
 //   description: 'Build, deploy, and manage autonomous AI agents that work 24/7. Enterprise-grade platform for intelligent automation and decision-making.',
 // }
 

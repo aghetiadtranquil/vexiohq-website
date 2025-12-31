@@ -143,7 +143,7 @@ This document outlines the critical accessibility improvements implemented as pa
 
 ## Summary
 
-This implementation addresses the highest-impact accessibility improvements for the DataTranquil website:
+This implementation addresses the highest-impact accessibility improvements for the VexioHQ website:
 
 - ✅ **Navigation**: Full keyboard and screen reader support for mega menu
 - ✅ **Forms**: Complete form accessibility with validation and error handling  

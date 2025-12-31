@@ -48,7 +48,7 @@ export default function Consultation() {
             Book Your Free AI Consultation
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Get personalized guidance from our AI experts. Discover how DataTranquil can transform your business.
+            Get personalized guidance from our AI experts. Discover how VexioHQ can transform your business.
           </p>
           
           {/* Value Props */}
@@ -302,9 +302,9 @@ export default function Consultation() {
                     <Phone className="w-5 h-5" />
                     <span className="text-sm">+1 (415) 555-0100</span>
                   </a>
-                  <a href="mailto:hello@datatranquil.com" className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
+                  <a href="mailto:hello@vexiohq.com" className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
                     <MessageSquare className="w-5 h-5" />
-                    <span className="text-sm">hello@datatranquil.com</span>
+                    <span className="text-sm">hello@vexiohq.com</span>
                   </a>
                   <div className="flex items-center gap-3 text-gray-700">
                     <Clock className="w-5 h-5" />
@@ -350,7 +350,7 @@ export default function Consultation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                "DataTranquil's experts understood our industry challenges and provided practical, actionable solutions."
+                "VexioHQ's experts understood our industry challenges and provided practical, actionable solutions."
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gray-200 rounded-full"></div>

@@ -22,7 +22,7 @@ export default function GenAIvsTraditionalMLPage() {
               Understanding the Key Differences and When to Use Each
             </p>
             <div className="mt-6 flex items-center justify-center space-x-4 text-white">
-              <span>By DataTranquil Team</span>
+              <span>By VexioHQ Team</span>
               <span>•</span>
               <span>12 min read</span>
               <span>•</span>
@@ -225,9 +225,9 @@ export default function GenAIvsTraditionalMLPage() {
 
         {/* Author Bio */}
         <div className="bg-gray-50 rounded-lg p-6 mt-12">
-          <h3 className="font-bold text-gray-900 mb-3">About DataTranquil</h3>
+          <h3 className="font-bold text-gray-900 mb-3">About VexioHQ</h3>
           <p className="text-gray-700">
-            DataTranquil is a leading AI consulting firm helping enterprises navigate the complex landscape 
+            VexioHQ is a leading AI consulting firm helping enterprises navigate the complex landscape 
             of artificial intelligence. Our experts specialize in both traditional ML and generative AI 
             implementations, ensuring you choose the right technology for your business needs.
           </p>

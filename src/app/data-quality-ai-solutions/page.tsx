@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Data Quality Solutions - 99.7% Accuracy Guaranteed',
     description: 'Enterprise AI solutions for data quality. Reduce errors by 94% and cleaning costs by 80%.',
-    url: 'https://datatranquil.com/data-quality-ai-solutions',
+    url: 'https://vexiohq.com/data-quality-ai-solutions',
     type: 'website',
     images: [{
       url: '/images/data-quality-ai-solutions.jpg',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     images: ['/images/data-quality-ai-solutions.jpg']
   },
   alternates: {
-    canonical: 'https://datatranquil.com/data-quality-ai-solutions'
+    canonical: 'https://vexiohq.com/data-quality-ai-solutions'
   }
 }
 
@@ -64,7 +64,7 @@ const structuredData = {
   "provider": {
     "@type": "Organization",
     "name": "Vantage AI",
-    "url": "https://datatranquil.com"
+    "url": "https://vexiohq.com"
   },
   "description": "Enterprise AI solutions for data quality management. Achieve 99.7% data accuracy with automated validation, cleansing, and monitoring.",
   "serviceType": "AI Data Quality Management",

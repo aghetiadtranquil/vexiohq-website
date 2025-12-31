@@ -1,7 +1,7 @@
-# DataTranquil Website - Claude Code Development Guidelines
+# VexioHQ Website - Claude Code Development Guidelines
 
 ## 🎯 Project Overview
-DataTranquil is an enterprise AI consulting platform built with Next.js 14, TypeScript, and Tailwind CSS. The website features 65+ pages, 41+ custom components, and comprehensive AI/ML consulting content. This document provides guidelines for AI-assisted development.
+VexioHQ is an enterprise AI consulting platform built with Next.js 14, TypeScript, and Tailwind CSS. The website features 65+ pages, 41+ custom components, and comprehensive AI/ML consulting content. This document provides guidelines for AI-assisted development.
 
 ## Important Context
 - **Default Branch**: Use `main` (not master) for all operations
@@ -44,7 +44,7 @@ git push origin main  # Triggers automatic deployment
 6. Push to trigger deployment
 
 ### Debugging Deployment Issues
-- Check GitHub Actions: https://github.com/DataTranquil/comapny-website/actions
+- Check GitHub Actions: https://github.com/VexioHQ/comapny-website/actions
 - SSH to server to check logs if needed
 - Docker logs: `docker logs company-website`
 

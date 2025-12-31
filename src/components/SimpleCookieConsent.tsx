@@ -41,7 +41,7 @@ export default function SimpleCookieConsent() {
           <div className="mb-4 md:mb-0 md:mr-8 flex-1">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">🍪 Cookie Notice</h3>
             <p className="text-sm text-gray-700 mb-2">
-              DataTranquil uses cookies to better understand how visitors use our site, to collect and 
+              VexioHQ uses cookies to better understand how visitors use our site, to collect and 
               analyze information on site performance and usage, and for targeted advertising purposes.
             </p>
             {showDetails && (

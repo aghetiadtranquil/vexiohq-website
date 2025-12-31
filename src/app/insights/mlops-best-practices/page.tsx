@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Code2, GitBranch, Activity, Database, Shield, Zap, Package, Settings, Monitor, AlertTriangle, CheckCircle, Terminal, Cloud, Cpu, BarChart3, Lock, Users, ArrowRight, Download, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'MLOps Best Practices: Enterprise Guide to Production ML | DataTranquil',
+  title: 'MLOps Best Practices: Enterprise Guide to Production ML | VexioHQ',
   description: 'Comprehensive technical guide to MLOps implementation. CI/CD for ML, model monitoring, versioning, and governance at enterprise scale.',
   keywords: 'MLOps best practices, ML engineering, model deployment, ML monitoring, ML pipelines, enterprise MLOps',
 };

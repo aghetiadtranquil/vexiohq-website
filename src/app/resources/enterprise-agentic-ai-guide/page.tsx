@@ -24,8 +24,8 @@ export default function EnterpriseAgenticAIGuide() {
               </h1>
               
               <p className="text-xl text-slate-300 mb-8">
-                Learn how Fortune 500 companies are achieving 40% cost reduction and 3x productivity 
-                gains with autonomous AI agents. Based on 150+ real implementations.
+                Learn how companies are achieving significant cost reduction and productivity
+                gains with autonomous AI agents. Based on our 70+ project experience.
               </p>
 
               <button
@@ -38,7 +38,7 @@ export default function EnterpriseAgenticAIGuide() {
               <div className="mt-8 flex items-center gap-6 text-slate-300">
                 <div className="flex items-center">
                   <Download className="h-5 w-5 mr-2" />
-                  <span>12,847 Downloads</span>
+                  <span>Free Download</span>
                 </div>
                 <div className="flex items-center">
                   <Users className="h-5 w-5 mr-2" />
@@ -93,8 +93,8 @@ export default function EnterpriseAgenticAIGuide() {
               Why 87% of AI Projects Fail (And How to Be in the 13% That Succeed)
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              This whitepaper reveals the exact framework we used to deliver 150+ successful 
-              AI implementations with 99.7% client satisfaction.
+              This whitepaper reveals the exact framework we use to deliver successful
+              AI implementations with satisfied clients.
             </p>
           </div>
 
@@ -315,25 +315,25 @@ export default function EnterpriseAgenticAIGuide() {
           </h2>
           
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">DataTranquil Team</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-4">VexioHQ Team</h3>
             <p className="text-slate-600 mb-6">
-              With 36,000+ hours of enterprise technology experience, we've guided 50+ Fortune 500 
-              companies through digital transformation. From Oracle BI implementations at Wind River 
-              to AI systems at Sunrun, we bring real-world expertise to every page.
+              With deep enterprise technology experience, we bring real-world expertise
+              to every page. Based in San Francisco, we've delivered 70+ AI projects
+              across multiple industries.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-blue-600">150+</div>
-                <p className="text-slate-600">AI Projects Delivered</p>
+                <div className="text-3xl font-bold text-blue-600">70+</div>
+                <p className="text-slate-600">Projects Delivered</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-600">500M+</div>
-                <p className="text-slate-600">Data Points Processed</p>
+                <div className="text-3xl font-bold text-blue-600">4</div>
+                <p className="text-slate-600">AI Products</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-600">99.7%</div>
-                <p className="text-slate-600">Client Satisfaction</p>
+                <div className="text-3xl font-bold text-blue-600">SF</div>
+                <p className="text-slate-600">Based in San Francisco</p>
               </div>
             </div>
           </div>
@@ -347,7 +347,6 @@ export default function EnterpriseAgenticAIGuide() {
             Get Your Free Copy Now
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 12,847 enterprise leaders who've downloaded this guide. 
             Start your AI transformation with confidence.
           </p>
           

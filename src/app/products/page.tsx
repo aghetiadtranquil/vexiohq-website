@@ -22,13 +22,13 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI Products & Solutions | Enterprise AI Platform - DataTranquil',
-  description: 'Comprehensive AI platform for enterprise transformation. MLOps, Analytics, and Transformation solutions with proven 312% ROI. Trusted by Fortune 500.',
+  title: 'AI Products & Solutions | Enterprise AI Platform - VexioHQ',
+  description: 'Comprehensive AI platform for enterprise transformation. MLOps, Analytics, and Transformation solutions. 70+ projects delivered.',
   keywords: 'AI platform, enterprise AI, MLOps platform, AI analytics, digital transformation, machine learning platform',
   openGraph: {
-    title: 'Enterprise AI Products & Solutions - DataTranquil',
+    title: 'Enterprise AI Products & Solutions - VexioHQ',
     description: 'Transform your enterprise with our comprehensive AI platform. Proven ROI, Fortune 500 trusted.',
-    url: 'https://datatranquil.com/products',
+    url: 'https://vexiohq.com/products',
     type: 'website',
   }
 }
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "DataTranquil AI Platform",
+  "name": "VexioHQ AI Platform",
   "applicationCategory": "BusinessApplication",
   "description": "Enterprise AI platform for digital transformation",
   "offers": {
@@ -106,9 +106,9 @@ export default function ProductsPage() {
         'ROI tracking & optimization'
       ],
       benefits: {
-        roi: '312% average ROI',
-        time: '6-month transformation',
-        adoption: '95% user adoption'
+        roi: 'Proven results',
+        time: 'Fast implementation',
+        adoption: 'High user adoption'
       },
       link: '/products/transformation',
       color: 'from-green-600 to-emerald-600'
@@ -139,10 +139,9 @@ export default function ProductsPage() {
   ]
 
   const stats = [
-    { value: '$4.2M', label: 'Average Annual Savings' },
-    { value: '312%', label: 'Average ROI' },
-    { value: '87%', label: 'Faster Time to Market' },
-    { value: '95%', label: 'User Adoption Rate' }
+    { value: '70+', label: 'Projects Delivered' },
+    { value: '4', label: 'AI Products' },
+    { value: 'SF', label: 'Based in San Francisco' }
   ]
 
   const industries = [
@@ -297,7 +296,7 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              The DataTranquil Value Framework
+              The VexioHQ Value Framework
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our proven methodology delivers measurable business impact across three dimensions
@@ -422,7 +421,7 @@ export default function ProductsPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Join 500+ Enterprises Transforming with AI
+            Transform Your Business with AI
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Start your AI transformation journey today with a free assessment

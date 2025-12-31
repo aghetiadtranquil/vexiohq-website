@@ -1,4 +1,4 @@
-# DataTranquil Project Roadmap 2025
+# VexioHQ Project Roadmap 2025
 
 ## Q1 2025 (January - March)
 
@@ -207,4 +207,4 @@
 
 *Last Updated: January 2025*  
 *Next Review: February 1, 2025*  
-*Owner: DataTranquil Development Team*
+*Owner: VexioHQ Development Team*

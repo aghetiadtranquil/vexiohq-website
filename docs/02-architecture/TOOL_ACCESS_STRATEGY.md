@@ -1,4 +1,4 @@
-# Tool Access Strategy - DataTranquil
+# Tool Access Strategy - VexioHQ
 
 ## Current Implementation
 - **Model**: Gated Content (Registration Required)

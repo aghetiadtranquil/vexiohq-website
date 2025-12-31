@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { TrendingUp, Globe, Building2, DollarSign, Users, Zap, Brain, ArrowUpRight, Download, BookOpen, BarChart3, Target, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'The $15.7 Trillion AI Opportunity: Global Economic Impact Report 2025 | DataTranquil',
+  title: 'The $15.7 Trillion AI Opportunity: Global Economic Impact Report 2025 | VexioHQ',
   description: 'Comprehensive analysis of AI\'s economic impact through 2030. Based on proprietary research across 2,400 enterprises and 14 industries.',
   keywords: 'AI economic impact, artificial intelligence ROI, AI market size, enterprise AI adoption, AI transformation economics',
 };
@@ -603,7 +603,7 @@ export default function AIEconomicImpactReport() {
               <div>
                 <h3 className="font-semibold mb-3">Methodology</h3>
                 <p className="text-gray-700 text-sm mb-4">
-                  This report synthesizes findings from DataTranquil's Global AI Impact Study, 
+                  This report synthesizes findings from VexioHQ's Global AI Impact Study, 
                   conducted between September 2024 and January 2025. Our research team:
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -635,7 +635,7 @@ export default function AIEconomicImpactReport() {
                 <div className="mt-6 p-4 bg-white rounded-lg">
                   <p className="text-xs text-gray-600">
                     For methodology questions or data requests, contact:<br/>
-                    <strong>research@datatranquil.com</strong>
+                    <strong>hello@vexiohq.com</strong>
                   </p>
                 </div>
               </div>

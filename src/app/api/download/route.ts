@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     // Here you would send email
     // await sendEmail({
     //   to: email,
-    //   subject: 'Your DataTranquil Resource is Ready',
+    //   subject: 'Your VexioHQ Resource is Ready',
     //   template: 'resource-download',
     //   data: { downloadUrl, resourceName, expiresIn: '24 hours' }
     // });

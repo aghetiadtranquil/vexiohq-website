@@ -1,4 +1,4 @@
-# 🚀 DataTranquil Comprehensive Menu Strategy
+# 🚀 VexioHQ Comprehensive Menu Strategy
 *Balancing Product Development, Research, and Consulting*
 
 **CEO Profile**: Solo founder actively building products, conducting research, and consulting
@@ -177,7 +177,7 @@ OFFERINGS
 ### Homepage Mega Menu Structure
 
 ```
-[DataTranquil Logo]                    [Products ▼] [Solutions ▼] [Research] [About] [Contact]
+[VexioHQ Logo]                    [Products ▼] [Solutions ▼] [Research] [About] [Contact]
 
 When hovering "Products":
 ┌─────────────────────────────────────────────────────────────┐

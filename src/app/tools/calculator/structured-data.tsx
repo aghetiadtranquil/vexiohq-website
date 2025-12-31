@@ -32,7 +32,7 @@ export function CalculatorStructuredData() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "Business Transformation ROI Calculator",
-          "url": "https://datatranquil.com/tools/calculator",
+          "url": "https://vexiohq.com/tools/calculator",
           "description": "Calculate potential ROI from digital transformation initiatives with industry-specific insights",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Any",
@@ -51,11 +51,11 @@ export function CalculatorStructuredData() {
             "Real-time calculations",
             "Benchmark comparisons"
           ],
-          "screenshot": "https://datatranquil.com/images/tools/calculator-screenshot.jpg",
+          "screenshot": "https://vexiohq.com/images/tools/calculator-screenshot.jpg",
           "creator": {
             "@type": "Organization",
-            "name": "DataTranquil",
-            "url": "https://datatranquil.com"
+            "name": "VexioHQ",
+            "url": "https://vexiohq.com"
           },
           "datePublished": "2024-01-15",
           "dateModified": "2024-03-20",
@@ -76,7 +76,7 @@ export function CalculatorStructuredData() {
           "@type": "HowTo",
           "name": "How to Calculate Digital Transformation ROI",
           "description": "Step-by-step guide to using our ROI calculator for transformation initiatives",
-          "image": "https://datatranquil.com/images/tools/calculator-guide.jpg",
+          "image": "https://vexiohq.com/images/tools/calculator-guide.jpg",
           "totalTime": "PT5M",
           "estimatedCost": {
             "@type": "MonetaryAmount",
@@ -93,36 +93,36 @@ export function CalculatorStructuredData() {
               "@type": "HowToStep",
               "name": "Select Your Industry",
               "text": "Choose your industry from the dropdown to get sector-specific benchmarks",
-              "image": "https://datatranquil.com/images/tools/step1.jpg",
-              "url": "https://datatranquil.com/tools/calculator#step1"
+              "image": "https://vexiohq.com/images/tools/step1.jpg",
+              "url": "https://vexiohq.com/tools/calculator#step1"
             },
             {
               "@type": "HowToStep",
               "name": "Enter Company Details",
               "text": "Provide your company size, annual revenue, and current technology spending",
-              "image": "https://datatranquil.com/images/tools/step2.jpg",
-              "url": "https://datatranquil.com/tools/calculator#step2"
+              "image": "https://vexiohq.com/images/tools/step2.jpg",
+              "url": "https://vexiohq.com/tools/calculator#step2"
             },
             {
               "@type": "HowToStep",
               "name": "Select Transformation Areas",
               "text": "Choose which areas you plan to transform: AI/ML, automation, data analytics, etc.",
-              "image": "https://datatranquil.com/images/tools/step3.jpg",
-              "url": "https://datatranquil.com/tools/calculator#step3"
+              "image": "https://vexiohq.com/images/tools/step3.jpg",
+              "url": "https://vexiohq.com/tools/calculator#step3"
             },
             {
               "@type": "HowToStep",
               "name": "Review Results",
               "text": "Get your personalized ROI projection, timeline, and implementation recommendations",
-              "image": "https://datatranquil.com/images/tools/step4.jpg",
-              "url": "https://datatranquil.com/tools/calculator#results"
+              "image": "https://vexiohq.com/images/tools/step4.jpg",
+              "url": "https://vexiohq.com/tools/calculator#results"
             },
             {
               "@type": "HowToStep",
               "name": "Download Report",
               "text": "Export your results as a PDF report for stakeholder presentations",
-              "image": "https://datatranquil.com/images/tools/step5.jpg",
-              "url": "https://datatranquil.com/tools/calculator#download"
+              "image": "https://vexiohq.com/images/tools/step5.jpg",
+              "url": "https://vexiohq.com/tools/calculator#download"
             }
           ]
         }}
@@ -136,9 +136,9 @@ export function CalculatorBreadcrumbs() {
   return (
     <BreadcrumbSchema
       items={[
-        { name: 'Home', url: 'https://datatranquil.com' },
-        { name: 'Tools', url: 'https://datatranquil.com/tools' },
-        { name: 'ROI Calculator', url: 'https://datatranquil.com/tools/calculator' }
+        { name: 'Home', url: 'https://vexiohq.com' },
+        { name: 'Tools', url: 'https://vexiohq.com/tools' },
+        { name: 'ROI Calculator', url: 'https://vexiohq.com/tools/calculator' }
       ]}
     />
   )
@@ -165,7 +165,7 @@ export function CalculatorFAQ() {
     },
     {
       question: "Is the calculator really free?",
-      answer: "Yes, the basic calculator is completely free with no hidden costs. Premium features like detailed industry reports and custom scenarios are available with a DataTranquil consultation."
+      answer: "Yes, the basic calculator is completely free with no hidden costs. Premium features like detailed industry reports and custom scenarios are available with a VexioHQ consultation."
     },
     {
       question: "How long does a typical transformation take?",

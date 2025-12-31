@@ -10,7 +10,7 @@ export const metadata: Metadata = generateProductMetadata({
   description: 'Build, deploy, and manage autonomous AI agents that work 24/7. Enterprise-grade platform for intelligent automation and decision-making.',
   slug: 'agentic-ai',
   category: 'AI Platform',
-  image: 'https://datatranquil.com/images/products/agentic-ai.jpg'
+  image: 'https://vexiohq.com/images/products/agentic-ai.jpg'
 })
 
 export default function AgenticAIPlatformPage() {
@@ -25,7 +25,7 @@ export default function AgenticAIPlatformPage() {
       <ProductSchema
         name="Agentic AI Platform"
         description="Enterprise-grade platform for building and deploying autonomous AI agents. Features include multi-agent orchestration, tool integration, and real-time monitoring."
-        image="https://datatranquil.com/images/products/agentic-ai.jpg"
+        image="https://vexiohq.com/images/products/agentic-ai.jpg"
         offers={{
           price: "Contact for pricing",
           priceCurrency: "USD",

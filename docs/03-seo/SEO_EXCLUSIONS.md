@@ -17,8 +17,8 @@ Once the Dev team resolves the login page runtime error, implement:
 1. **Metadata**:
 ```typescript
 export const metadata: Metadata = {
-  title: 'Sign In | DataTranquil Portal',
-  description: 'Access your DataTranquil account to manage AI projects and view analytics',
+  title: 'Sign In | VexioHQ Portal',
+  description: 'Access your VexioHQ account to manage AI projects and view analytics',
   robots: {
     index: false,  // Don't index login pages
     follow: false,

@@ -3,7 +3,7 @@ import { generateSEOMetadata } from '@/lib/seo-metadata'
 
 // SEO Metadata for Business Transformation ROI Calculator
 export const calculatorMetadata: Metadata = generateSEOMetadata({
-  title: 'Business Transformation ROI Calculator | DataTranquil',
+  title: 'Business Transformation ROI Calculator | VexioHQ',
   description: 'Calculate your potential ROI from digital transformation initiatives. Get personalized insights for your industry with our free AI-powered ROI calculator.',
   keywords: [
     'ROI calculator',
@@ -23,10 +23,10 @@ export const calculatorMetadata: Metadata = generateSEOMetadata({
     type: 'website',
     images: [
       {
-        url: 'https://datatranquil.com/images/tools/roi-calculator-og.jpg',
+        url: 'https://vexiohq.com/images/tools/roi-calculator-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'DataTranquil Business Transformation ROI Calculator'
+        alt: 'VexioHQ Business Transformation ROI Calculator'
       }
     ]
   },
@@ -34,9 +34,9 @@ export const calculatorMetadata: Metadata = generateSEOMetadata({
     card: 'summary_large_image',
     title: 'Calculate Your Digital Transformation ROI',
     description: 'Free calculator to estimate ROI from digital transformation initiatives. Get industry-specific insights.',
-    images: ['https://datatranquil.com/images/tools/roi-calculator-twitter.jpg']
+    images: ['https://vexiohq.com/images/tools/roi-calculator-twitter.jpg']
   },
-  canonical: 'https://datatranquil.com/tools/calculator',
+  canonical: 'https://vexiohq.com/tools/calculator',
   robots: {
     index: true,
     follow: true,
@@ -45,14 +45,14 @@ export const calculatorMetadata: Metadata = generateSEOMetadata({
     maxVideoPreview: -1
   },
   alternates: {
-    canonical: 'https://datatranquil.com/tools/calculator'
+    canonical: 'https://vexiohq.com/tools/calculator'
   }
 })
 
 // Alternative metadata exports for different variations if needed
 export const alternativeMetadata = {
   // Shorter version for mobile
-  mobileTitle: 'ROI Calculator | DataTranquil',
+  mobileTitle: 'ROI Calculator | VexioHQ',
   
   // Extended description for search results
   extendedDescription: 'Calculate your potential ROI from digital transformation and AI initiatives. Our free calculator provides personalized insights based on your industry, company size, and transformation goals. Get detailed cost-benefit analysis and implementation timelines.',

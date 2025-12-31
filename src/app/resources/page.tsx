@@ -26,7 +26,7 @@ const resources = {
     },
     {
       title: "Data Quality for AI Success: The 500M Record Case Study",
-      description: "How we achieved 99.7% data quality processing 500M+ records for enterprise AI readiness.",
+      description: "How we achieved high data quality for enterprise AI readiness.",
       pages: "28 pages",
       format: "PDF",
       gated: true,
@@ -95,7 +95,7 @@ const resources = {
       client: "Sunrun",
       industry: "Solar Energy",
       description: "How we transformed 500M+ customer records into a unified AI-ready data platform, enabling predictive maintenance and customer insights.",
-      results: ["99.7% data quality", "60% reduction in processing time", "$2.5M annual savings"],
+      results: ["High data quality", "Faster processing time", "Cost savings"],
       slug: "sunrun-data-transformation",
       gated: true,
       logo: "/logos/sunrun.svg"
@@ -168,14 +168,14 @@ const generateResourceSchema = (resource: any, type: string) => {
     "description": resource.description,
     "author": {
       "@type": "Organization",
-      "name": "DataTranquil"
+      "name": "VexioHQ"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "DataTranquil",
+      "name": "VexioHQ",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://datatranquil.com/logo.png"
+        "url": "https://vexiohq.com/logo.png"
       }
     },
     "datePublished": "2025-01-01",
@@ -365,7 +365,7 @@ const LeadCaptureModal = ({ isOpen, onClose, resource, onSubmit }: any) => {
                   className="mt-1"
                 />
                 <span className="text-sm text-slate-600">
-                  I agree to receive communications from DataTranquil about our services and resources. 
+                  I agree to receive communications from VexioHQ about our services and resources. 
                   I can unsubscribe at any time.
                 </span>
               </label>
@@ -710,7 +710,7 @@ export default function ResourcesPage() {
             Get Exclusive Access to Premium Resources
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 10,000+ enterprise leaders getting weekly AI insights and exclusive content.
+            Get weekly AI insights and exclusive content delivered to your inbox.
           </p>
           <form className="max-w-md mx-auto flex gap-4">
             <input
@@ -749,7 +749,7 @@ export default function ResourcesPage() {
             "@type": "CollectionPage",
             "name": "AI Transformation Resources",
             "description": "Practical guides, templates, and tools from 36,000+ hours of enterprise implementations",
-            "url": "https://datatranquil.com/resources",
+            "url": "https://vexiohq.com/resources",
             "hasPart": [
               ...resources.whitepapers.map(paper => generateResourceSchema(paper, 'whitepaper')),
               ...resources.ebooks.map(book => generateResourceSchema(book, 'ebook')),

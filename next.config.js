@@ -17,11 +17,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**.datatranquil.com',
+        hostname: '**.vexiohq.com',
       },
       {
         protocol: 'https', 
-        hostname: 'datatranquil.com',
+        hostname: 'vexiohq.com',
       }
     ],
     // Loader configuration for optimal performance
@@ -49,7 +49,7 @@ const nextConfig = {
     };
     
     // Unique name to prevent module collision
-    config.output.uniqueName = `datatranquil-${buildId || 'dev'}`;
+    config.output.uniqueName = `vexiohq-${buildId || 'dev'}`;
     
     // Remove React aliases that cause issues
     if (config.resolve?.alias) {
