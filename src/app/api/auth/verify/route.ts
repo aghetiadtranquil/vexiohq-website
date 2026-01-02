@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
+// Force dynamic rendering for this route (uses cookies)
+export const dynamic = 'force-dynamic';
+
 function verifyToken(token: string): { valid: boolean; email?: string } {
   try {
     const [header, payload, signature] = token.split('.');
