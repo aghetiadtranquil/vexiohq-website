@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { ClerkProvider } from '@clerk/nextjs';
+// ClerkProvider removed - not used in production
+// import { ClerkProvider } from '@clerk/nextjs';
 import * as gtag from '@/lib/gtag';
 // import CookieConsent from "@/components/CookieConsent";
 // import Footer from "@/components/Footer";
@@ -490,7 +491,7 @@ export default function RootLayout({
             />
           </noscript>
         )}
-        <ClerkProvider>
+        {/* ClerkProvider removed - not used in production */}
           {/* Skip to main content - hidden but accessible */}
           <a 
             href="#main-content" 
@@ -520,7 +521,7 @@ export default function RootLayout({
               This website works best with JavaScript enabled for full interactive features.
             </div>
           </noscript>
-        </ClerkProvider>
+        {/* End of ClerkProvider wrapper removed */}
       </body>
     </html>
   );

@@ -1,5 +1,31 @@
 # VexioHQ Website - Server Deployment Guide
 
+## Current Production Environment
+
+| Item | Value |
+|------|-------|
+| **Server IP** | `72.60.27.165` |
+| **Domain** | `vexiohq.com` |
+| **Server Path** | `/opt/stack/apps/vexiohq-website` |
+| **Container Name** | `vexiohq-website` |
+| **Git Remote (Server)** | `vexiohq` → `https://github.com/aghetiadtranquil/vexiohq-website.git` |
+| **Local Git Remotes** | `origin` → DataTranquil/comapny-website.git, `vexio` → aghetiadtranquil/vexiohq-website.git |
+
+### Quick Deploy Commands
+
+```bash
+# From local machine - push to both remotes
+git push origin main && git push vexio main
+
+# SSH to server and pull + rebuild
+ssh dev@72.60.27.165
+cd /opt/stack/apps/vexiohq-website
+git pull vexiohq main
+docker compose up -d --build
+```
+
+---
+
 ## Prerequisites
 
 - Server with Ubuntu 20.04+ (or similar Linux)

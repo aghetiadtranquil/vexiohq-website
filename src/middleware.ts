@@ -1,36 +1,15 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-// Define public routes that don't require auth
-const isPublicRoute = createRouteMatcher([
-  '/',
-  '/sign-in(.*)',
-  '/sign-up(.*)',
-  '/about(.*)',
-  '/contact(.*)',
-  '/products(.*)',
-  '/services(.*)',
-  '/blog(.*)',
-  '/pricing(.*)',
-  '/careers(.*)',
-  '/legal(.*)',
-  '/terms(.*)',
-  '/privacy-notice(.*)',
-  '/cookie-notice(.*)',
-  '/api/webhooks(.*)',
-])
-
-export default clerkMiddleware(async (auth, request) => {
-  // For non-public routes, protect them
-  if (!isPublicRoute(request)) {
-    await auth.protect()
-  }
-})
+// Simple middleware - Clerk authentication removed
+// All routes are public for now
+export function middleware(request: NextRequest) {
+  return NextResponse.next()
+}
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
+    // Skip Next.js internals and all static files
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Always run for API routes
-    '/(api|trpc)(.*)',
   ],
 }
