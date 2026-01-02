@@ -1,0 +1,123 @@
+2. Comprehensive Terms Page Prompt
+
+  Here's a complete prompt to create the VexioHQ Terms page that covers everything:
+
+  Create a comprehensive Terms & Conditions page for https://vexiohq.com/terms that covers
+  the following for VexioHQ - a B2B/B2C technology company with multiple product verticals
+  (Sales, Marketing, HRM, Expense Management, and future products).
+
+  === PAGE STRUCTURE ===
+
+  1. TERMS OF SERVICE
+     - Acceptance of terms
+     - Eligibility (age 18+, business authorization)
+     - Account registration and responsibilities
+     - Permitted use and prohibited activities
+     - Intellectual property rights
+     - Service modifications and termination
+     - Limitation of liability
+     - Indemnification
+     - Governing law (California/Delaware)
+     - Dispute resolution
+
+  2. PRIVACY POLICY
+     - Information we collect (personal, business, usage data)
+     - How we use information
+     - Data sharing and third parties
+     - Data retention
+     - Security measures
+     - User rights (access, correction, deletion)
+     - Cookies and tracking
+     - International data transfers
+     - Children's privacy (no under 13)
+     - Contact information for privacy concerns
+
+  3. SMS/TEXT MESSAGING TERMS (CRITICAL FOR TWILIO)
+     - Consent to receive SMS
+     - Types of messages (transactional, promotional, alerts)
+     - Message frequency
+     - Standard messaging rates apply
+     - Opt-out instructions (Reply STOP to unsubscribe)
+     - Opt-in confirmation (Reply START/YES to subscribe)
+     - Help instructions (Reply HELP for assistance)
+     - Supported carriers
+     - No guarantee of delivery
+     - Contact for SMS questions
+
+  4. EMAIL COMMUNICATION TERMS
+     - Consent to receive emails
+     - Types of emails (transactional, marketing, updates)
+     - Unsubscribe process
+     - CAN-SPAM compliance
+
+  5. VOICE/PHONE COMMUNICATION TERMS
+     - Consent to receive calls
+     - Call recording disclosure
+     - AI voice agent disclosure
+     - Opt-out of calls
+
+  6. DATA PROCESSING AGREEMENT (for B2B)
+     - GDPR compliance
+     - Data processor responsibilities
+     - Sub-processors
+     - Data breach notification
+
+  7. ACCEPTABLE USE POLICY
+     - Prohibited content
+     - Spam policy
+     - Abuse reporting
+
+  8. PRODUCT-SPECIFIC TERMS
+     - VexioSales terms
+     - Marketing automation terms
+     - HRM product terms
+     - Expense management terms
+     - Future products clause
+
+  9. BILLING & REFUNDS
+     - Payment terms
+     - Subscription billing
+     - Refund policy
+     - Cancellation
+
+  10. CONTACT INFORMATION
+      - Company: Data Tranquil Inc (DBA VexioHQ)
+      - Email: legal@vexiohq.com / support@vexiohq.com
+      - Address: [Your business address]
+      - Phone: [Support phone]
+
+  === KEY COMPLIANCE REQUIREMENTS ===
+
+  - TCPA (Telephone Consumer Protection Act) - SMS consent
+  - CAN-SPAM - Email marketing
+  - CCPA (California Consumer Privacy Act)
+  - GDPR (if serving EU customers)
+  - COPPA (Children's Online Privacy)
+  - SOC 2 readiness language
+
+  === SMS SPECIFIC LANGUAGE (REQUIRED BY CARRIERS) ===
+
+  Include exactly:
+  "By providing your phone number, you consent to receive SMS messages from VexioHQ
+  and its products. Message frequency varies. Message and data rates may apply.
+  Reply STOP to unsubscribe. Reply HELP for help. Carriers are not liable for
+  delayed or undelivered messages."
+
+  === STYLE ===
+
+  - Professional legal language but readable
+  - Clear section headings
+  - Last updated date at top
+  - Version number
+  - Table of contents with anchor links
+  - Mobile-friendly formatting
+
+  === COMPANY DETAILS ===
+
+  Company: Data Tranquil Inc
+  DBA: VexioHQ
+  Type: S-Corp
+  Products: VexioSales, VexioMarketing, VexioHRM, VexioExpense, future verticals
+  Website: vexiohq.com
+  Support Email: support@vexiohq.com
+  Legal Email: legal@vexiohq.com
