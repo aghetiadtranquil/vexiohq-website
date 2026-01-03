@@ -428,7 +428,7 @@ Users of our communication features (email, SMS, voice) must comply with all app
 
 To report abuse, spam, or violations of this policy:
 
-- Email: abuse@vexiohq.com
+- Email: support@vexiohq.com
 - Include relevant details, screenshots, and message headers if applicable
 
 We investigate all reports and take appropriate action, which may include account suspension or termination.
@@ -538,7 +538,7 @@ A Data Tranquil Inc. Company (S-Corp)
 | **Legal & Compliance** | legal@vexiohq.com |
 | **Privacy Concerns** | privacy@vexiohq.com |
 | **Billing Questions** | billing@vexiohq.com |
-| **Abuse Reports** | abuse@vexiohq.com |
+| **Abuse Reports** | support@vexiohq.com |
 
 ### Our Products
 
