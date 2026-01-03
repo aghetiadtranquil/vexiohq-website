@@ -662,7 +662,7 @@ export default function TermsAndConditions() {
               To report abuse, spam, or violations of this policy:
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Email: abuse@vexiohq.com</li>
+              <li>Email: support@vexiohq.com</li>
               <li>Include relevant details, screenshots, and message headers if applicable</li>
             </ul>
             <p className="mb-4">
@@ -844,7 +844,7 @@ export default function TermsAndConditions() {
 
                 <div>
                   <h4 className="font-semibold">Abuse Reports</h4>
-                  <p>Email: abuse@vexiohq.com</p>
+                  <p>Email: support@vexiohq.com</p>
                 </div>
               </div>
             </div>
