@@ -334,8 +334,28 @@ export default function TermsAndConditions() {
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
               <p className="font-semibold">
                 By providing your phone number, you consent to receive SMS messages from VexioHQ and its
-                products. Message frequency varies. Message and data rates may apply. Reply STOP to
-                unsubscribe. Reply HELP for help. Carriers are not liable for delayed or undelivered messages.
+                products including VexioSales. Message frequency varies. Message and data rates may apply.
+                Reply STOP to unsubscribe. Reply HELP for help. Carriers are not liable for delayed or undelivered messages.
+              </p>
+            </div>
+
+            {/* VexioSales SMS Program Description */}
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
+              <h3 className="text-lg font-bold mb-2">VexioSales SMS Program</h3>
+              <p className="mb-2">
+                <strong>VexioSales is a B2B sales engagement platform.</strong> We send SMS messages to business leads
+                who have opted in through our platform. Messages include:
+              </p>
+              <ul className="list-disc pl-6 mb-2">
+                <li>Follow-up communications after sales calls</li>
+                <li>Appointment reminders and confirmations</li>
+                <li>Two-way conversational messages with prospects</li>
+                <li>Account notifications and security alerts</li>
+                <li>2FA verification codes</li>
+              </ul>
+              <p className="text-sm">
+                <strong>All recipients have provided consent before receiving messages.</strong> We support
+                STOP/HELP keywords for compliance.
               </p>
             </div>
 
@@ -345,7 +365,7 @@ export default function TermsAndConditions() {
               By providing your mobile phone number and checking the SMS consent box, you provide your
               express written consent to receive text messages from VexioHQ and its product lines
               (VexioSales, VexioMarketing, VexioHRM, VexioExpense). This consent covers transactional
-              messages related to your account.
+              messages related to your account and service-related communications.
             </p>
             <p className="mb-4">
               <strong>Separate Promotional Consent.</strong> Consent to receive promotional or marketing
@@ -355,74 +375,128 @@ export default function TermsAndConditions() {
             </p>
 
             {/* Verbal Consent Script - Required for Twilio */}
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.2 Verbal Consent Script</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6" id="verbal-consent-script">3.2 Verbal Consent Script</h3>
             <p className="mb-4">
-              When obtaining verbal consent for SMS communications over the phone, VexioHQ representatives
-              use the following script:
+              When obtaining verbal consent for SMS communications over the phone, VexioHQ and VexioSales
+              representatives <strong>must use the following standardized script</strong>:
             </p>
-            <div className="bg-gray-100 border-l-4 border-gray-500 p-4 mb-4 italic">
-              <p className="mb-2">
-                &quot;Before we continue, I&apos;d like to ask for your permission to send you text messages from VexioHQ.
-                These messages may include account notifications, appointment reminders, security alerts,
-                verification codes, and updates about our services.
-              </p>
-              <p className="mb-2">
-                Message frequency varies based on your account activity. Message and data rates may apply
-                depending on your carrier plan.
-              </p>
-              <p className="mb-2">
-                You can opt out at any time by replying STOP to any message, or reply HELP for assistance.
-              </p>
-              <p className="mb-2">
-                Do you consent to receive SMS text messages from VexioHQ at the phone number you provided?&quot;
-              </p>
-              <p className="mt-4 font-semibold not-italic">
-                [Wait for clear affirmative response: &quot;Yes&quot;, &quot;I agree&quot;, &quot;Sure&quot;, or similar]
-              </p>
+            <div className="bg-gray-100 border-2 border-gray-400 p-6 mb-4 rounded-lg">
+              <p className="font-bold text-lg mb-4 text-gray-800">VERBAL CONSENT SCRIPT:</p>
+              <div className="italic text-gray-700 space-y-3">
+                <p>
+                  &quot;Before we continue, I need to ask for your permission to send you text messages.
+                </p>
+                <p>
+                  By providing your consent, you agree to receive SMS text messages from VexioHQ and VexioSales.
+                  These messages may include follow-up communications after our sales calls, appointment reminders
+                  and confirmations, account notifications, security alerts, and two-way conversational messages
+                  about our services.
+                </p>
+                <p>
+                  Message frequency varies based on your account activity and our conversations.
+                  Message and data rates may apply depending on your carrier plan.
+                </p>
+                <p>
+                  You can opt out at any time by replying STOP to any message. Reply HELP for assistance.
+                </p>
+                <p>
+                  Do you consent to receive SMS text messages from VexioHQ and VexioSales at the phone number
+                  you provided?&quot;
+                </p>
+              </div>
+              <div className="mt-6 p-3 bg-white border border-gray-300 rounded">
+                <p className="font-bold text-gray-800">
+                  [WAIT for clear affirmative response: &quot;Yes&quot;, &quot;I agree&quot;, &quot;I consent&quot;, &quot;Sure&quot;, &quot;That&apos;s fine&quot;, or similar]
+                </p>
+              </div>
             </div>
+            <p className="mb-2"><strong>Documentation Requirements:</strong></p>
+            <ul className="list-disc pl-6 mb-4">
+              <li>Date and time consent was obtained</li>
+              <li>Phone number receiving consent</li>
+              <li>Name of representative who obtained consent</li>
+              <li>Record of affirmative response</li>
+            </ul>
             <p className="mb-4">
-              Verbal consent is documented with the date, time, phone number, and the representative who
-              obtained consent. A confirmation SMS is sent immediately after verbal consent is obtained.
+              A confirmation SMS is sent immediately after verbal consent is obtained to confirm enrollment.
             </p>
 
             {/* Opt-In Workflow - Required for Twilio */}
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.3 Opt-In Workflow</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6" id="opt-in-workflow">3.3 Opt-In Workflow</h3>
             <p className="mb-4">
-              VexioHQ collects SMS consent through the following methods:
+              VexioHQ and VexioSales collect SMS consent through the following methods:
             </p>
 
-            <p className="mb-2"><strong>Method 1: Web Form Opt-In</strong></p>
-            <p className="mb-2">During account registration or contact form submission, users see the following checkbox:</p>
-            <div className="bg-gray-100 border p-4 mb-4 rounded">
-              <label className="flex items-start gap-3">
-                <input type="checkbox" className="mt-1" disabled />
-                <span className="text-sm">
-                  I agree to receive SMS text messages from VexioHQ at the phone number provided. Messages may include
-                  account notifications, appointment reminders, security alerts, and service updates. Message frequency varies.
-                  Message and data rates may apply. Reply STOP to unsubscribe or HELP for help. View our{' '}
-                  <span className="text-blue-600 underline">Terms &amp; Conditions</span> and{' '}
-                  <span className="text-blue-600 underline">Privacy Policy</span>.
-                </span>
-              </label>
+            <div className="border border-gray-300 rounded-lg p-4 mb-4">
+              <p className="font-bold text-lg mb-2">Method 1: Web Form Opt-In</p>
+              <p className="mb-2 text-sm text-gray-600">During account registration or contact form submission, users must check the following checkbox:</p>
+              <div className="bg-gray-100 border p-4 rounded">
+                <label className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1" disabled />
+                  <span className="text-sm">
+                    <strong>I agree to receive SMS text messages from VexioHQ and VexioSales</strong> at the phone number provided.
+                    Messages may include follow-up communications after sales calls, appointment reminders and confirmations,
+                    account notifications, security alerts, and two-way conversational messages.
+                    Message frequency varies based on account activity. Message and data rates may apply.
+                    Reply STOP to unsubscribe or HELP for help. View our{' '}
+                    <span className="text-blue-600 underline">Terms &amp; Conditions</span> and{' '}
+                    <span className="text-blue-600 underline">Privacy Policy</span>.
+                  </span>
+                </label>
+              </div>
             </div>
 
-            <p className="mb-2"><strong>Method 2: Verbal Consent (Phone)</strong></p>
-            <p className="mb-4">
-              During phone conversations with VexioHQ representatives, users may provide verbal consent using
-              the script outlined in Section 3.2 above. Verbal consent is recorded and documented.
-            </p>
+            <div className="border border-gray-300 rounded-lg p-4 mb-4">
+              <p className="font-bold text-lg mb-2">Method 2: Verbal Consent (Phone)</p>
+              <p className="mb-2">
+                During phone conversations with VexioHQ or VexioSales representatives, users may provide verbal consent
+                using the <strong>exact script outlined in Section 3.2 above</strong>. All verbal consent is recorded
+                and documented with timestamp, phone number, and representative name.
+              </p>
+            </div>
 
-            <p className="mb-2"><strong>Method 3: Keyword Opt-In</strong></p>
-            <p className="mb-4">
-              Users can text <strong>START</strong>, <strong>YES</strong>, or <strong>SUBSCRIBE</strong> to our
-              SMS number to opt-in. They will receive a confirmation message explaining the types of messages,
-              frequency, and how to opt-out.
-            </p>
+            <div className="border border-gray-300 rounded-lg p-4 mb-4">
+              <p className="font-bold text-lg mb-2">Method 3: Keyword Opt-In</p>
+              <p className="mb-4">
+                Users can text one of the following keywords to our SMS number to opt-in:
+              </p>
+              <div className="flex gap-4 mb-4">
+                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold">START</span>
+                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold">YES</span>
+                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold">SUBSCRIBE</span>
+              </div>
+              <p className="text-sm text-gray-600">
+                Upon receiving an opt-in keyword, we send a confirmation message explaining the types of messages,
+                frequency, and how to opt-out.
+              </p>
+            </div>
 
-            <p className="mb-2"><strong>Opt-In Confirmation Message:</strong></p>
-            <div className="bg-gray-100 border p-4 mb-4 rounded text-sm">
-              &quot;VexioHQ: Thanks for opting in to SMS updates. You&apos;ll receive account notifications, reminders &amp;
-              service updates. Msg frequency varies. Msg&amp;data rates may apply. Reply STOP to unsubscribe, HELP for help.&quot;
+            <div className="border border-gray-300 rounded-lg p-4 mb-4">
+              <p className="font-bold text-lg mb-2">Opt-In Confirmation Message:</p>
+              <div className="bg-gray-100 border p-4 rounded text-sm font-mono">
+                &quot;Thanks for opting in to VexioHQ SMS updates. You&apos;ll receive messages about your account and
+                appointments. Reply STOP to unsubscribe, HELP for help.&quot;
+              </div>
+            </div>
+
+            <div className="border border-gray-300 rounded-lg p-4 mb-4">
+              <p className="font-bold text-lg mb-2">Sample Messages:</p>
+              <p className="text-sm text-gray-600 mb-2">Examples of messages you may receive:</p>
+              <div className="bg-gray-100 border p-4 rounded text-sm font-mono mb-2">
+                &quot;Hi [Name], thanks for your interest in VexioSales! When&apos;s a good time for a quick call to discuss
+                how we can help? Reply STOP to opt out.&quot;
+              </div>
+              <div className="bg-gray-100 border p-4 rounded text-sm font-mono">
+                &quot;VexioHQ: Your appointment is confirmed for tomorrow at 2 PM. Reply STOP to unsubscribe.&quot;
+              </div>
+            </div>
+
+            <div className="border border-gray-300 rounded-lg p-4 mb-6">
+              <p className="font-bold text-lg mb-2">Help Message Response:</p>
+              <div className="bg-gray-100 border p-4 rounded text-sm font-mono">
+                &quot;VexioHQ SMS Support: For help, visit https://vexiohq.com/support or email support@vexiohq.com.
+                Reply STOP to unsubscribe.&quot;
+              </div>
             </div>
 
             <h3 className="text-xl font-semibold mb-3 mt-6">3.4 Types of Messages</h3>
