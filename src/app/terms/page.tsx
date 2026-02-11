@@ -354,7 +354,78 @@ export default function TermsAndConditions() {
               condition of purchase or service.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.2 Types of Messages</h3>
+            {/* Verbal Consent Script - Required for Twilio */}
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.2 Verbal Consent Script</h3>
+            <p className="mb-4">
+              When obtaining verbal consent for SMS communications over the phone, VexioHQ representatives
+              use the following script:
+            </p>
+            <div className="bg-gray-100 border-l-4 border-gray-500 p-4 mb-4 italic">
+              <p className="mb-2">
+                &quot;Before we continue, I&apos;d like to ask for your permission to send you text messages from VexioHQ.
+                These messages may include account notifications, appointment reminders, security alerts,
+                verification codes, and updates about our services.
+              </p>
+              <p className="mb-2">
+                Message frequency varies based on your account activity. Message and data rates may apply
+                depending on your carrier plan.
+              </p>
+              <p className="mb-2">
+                You can opt out at any time by replying STOP to any message, or reply HELP for assistance.
+              </p>
+              <p className="mb-2">
+                Do you consent to receive SMS text messages from VexioHQ at the phone number you provided?&quot;
+              </p>
+              <p className="mt-4 font-semibold not-italic">
+                [Wait for clear affirmative response: &quot;Yes&quot;, &quot;I agree&quot;, &quot;Sure&quot;, or similar]
+              </p>
+            </div>
+            <p className="mb-4">
+              Verbal consent is documented with the date, time, phone number, and the representative who
+              obtained consent. A confirmation SMS is sent immediately after verbal consent is obtained.
+            </p>
+
+            {/* Opt-In Workflow - Required for Twilio */}
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.3 Opt-In Workflow</h3>
+            <p className="mb-4">
+              VexioHQ collects SMS consent through the following methods:
+            </p>
+
+            <p className="mb-2"><strong>Method 1: Web Form Opt-In</strong></p>
+            <p className="mb-2">During account registration or contact form submission, users see the following checkbox:</p>
+            <div className="bg-gray-100 border p-4 mb-4 rounded">
+              <label className="flex items-start gap-3">
+                <input type="checkbox" className="mt-1" disabled />
+                <span className="text-sm">
+                  I agree to receive SMS text messages from VexioHQ at the phone number provided. Messages may include
+                  account notifications, appointment reminders, security alerts, and service updates. Message frequency varies.
+                  Message and data rates may apply. Reply STOP to unsubscribe or HELP for help. View our{' '}
+                  <span className="text-blue-600 underline">Terms &amp; Conditions</span> and{' '}
+                  <span className="text-blue-600 underline">Privacy Policy</span>.
+                </span>
+              </label>
+            </div>
+
+            <p className="mb-2"><strong>Method 2: Verbal Consent (Phone)</strong></p>
+            <p className="mb-4">
+              During phone conversations with VexioHQ representatives, users may provide verbal consent using
+              the script outlined in Section 3.2 above. Verbal consent is recorded and documented.
+            </p>
+
+            <p className="mb-2"><strong>Method 3: Keyword Opt-In</strong></p>
+            <p className="mb-4">
+              Users can text <strong>START</strong>, <strong>YES</strong>, or <strong>SUBSCRIBE</strong> to our
+              SMS number to opt-in. They will receive a confirmation message explaining the types of messages,
+              frequency, and how to opt-out.
+            </p>
+
+            <p className="mb-2"><strong>Opt-In Confirmation Message:</strong></p>
+            <div className="bg-gray-100 border p-4 mb-4 rounded text-sm">
+              &quot;VexioHQ: Thanks for opting in to SMS updates. You&apos;ll receive account notifications, reminders &amp;
+              service updates. Msg frequency varies. Msg&amp;data rates may apply. Reply STOP to unsubscribe, HELP for help.&quot;
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.4 Types of Messages</h3>
             <p className="mb-4">You may receive the following types of SMS messages:</p>
             <ul className="list-disc pl-6 mb-4">
               <li><strong>Transactional Messages:</strong> Account notifications, security alerts, verification codes, appointment reminders</li>
@@ -363,20 +434,20 @@ export default function TermsAndConditions() {
               <li><strong>AI Agent Communications:</strong> Responses from our AI voice and text agents</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.3 Message Frequency</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.5 Message Frequency</h3>
             <p className="mb-4">
               Message frequency varies based on your account activity and preferences. Transactional messages
               are sent as needed. Promotional messages (if separately consented) are typically sent no more
               than 4 times per month.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.4 Rates and Charges</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.6 Rates and Charges</h3>
             <p className="mb-4 font-semibold">
               Standard message and data rates may apply. Check with your mobile carrier for details about
               your text messaging plan.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.5 Opt-Out Instructions</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.7 Opt-Out Instructions</h3>
             <p className="mb-4">
               To stop receiving SMS messages from VexioHQ:
             </p>
@@ -392,7 +463,7 @@ export default function TermsAndConditions() {
               may continue as required for service delivery until you close your account.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.6 Opt-In Confirmation</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.8 Opt-In Keywords</h3>
             <p className="mb-4">
               To subscribe or re-subscribe to SMS messages:
             </p>
@@ -402,7 +473,7 @@ export default function TermsAndConditions() {
               <li>Update your preferences in account settings</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.7 Help Instructions</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.9 Help Instructions</h3>
             <p className="mb-4">
               For help with SMS communications:
             </p>
@@ -412,20 +483,20 @@ export default function TermsAndConditions() {
               <li>Phone: +1 (415) 390-5748</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.8 Supported Carriers</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.10 Supported Carriers</h3>
             <p className="mb-4">
               Our SMS services are compatible with major carriers including AT&amp;T, Verizon, T-Mobile,
               Sprint, and most regional carriers. Carrier participation may change without notice.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.9 Delivery Disclaimer</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.11 Delivery Disclaimer</h3>
             <p className="mb-4">
               We cannot guarantee SMS delivery. Delivery depends on your carrier, network conditions,
               and device settings. Neither VexioHQ nor mobile carriers are liable for delayed or
               undelivered messages.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3 mt-6">3.10 TCPA Compliance</h3>
+            <h3 className="text-xl font-semibold mb-3 mt-6">3.12 TCPA Compliance</h3>
             <p className="mb-4">
               VexioHQ complies with the Telephone Consumer Protection Act (TCPA). We only send messages
               to users who have provided express written consent. We maintain internal do-not-call lists
