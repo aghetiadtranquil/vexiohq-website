@@ -23,8 +23,9 @@ These decisions override any conflicting language elsewhere in this spec. Droid 
 | 9 | GA wording in beta checklist | Replace "CRM integration (Salesforce, HubSpot) — coming in GA" with: **"Guided Salesforce and HubSpot onboarding during beta; broader self-serve integrations planned for GA."** | Beta scope section |
 | 10 | Terms alignment | Public claims on the product page must not exceed what the terms/legal pages currently state. If in doubt, soften. | All security/compliance copy |
 | 11 | Feature screenshots | **Use cropped panel versions** for Features 2-4. Full-page views made sections look like duplicates. `05-enrichment-panel.jpeg`, `07-conversation-panel.jpeg`, `09-voice-panel.jpeg`. Feature 1 keeps `02-pipeline-kanban.jpeg` full-width but ensure all 4 columns are legible. Feature 3 (Conversation) should be visually more prominent — it's the key differentiator. | Feature showcase sections, screenshot table, DoD |
-| 12 | Image framing | **Use `object-contain` (not `object-cover`)** on all panel screenshots (Features 2-4) so images display in full without cropping. Add `bg-white` or `bg-slate-50` to image containers to fill empty space cleanly. Every side of the image must be fully visible — no cutoff at top, bottom, left, or right. | Feature showcase image elements in page.tsx |
-| 13 | Screenshot retakes (BLOCKED — needs demo data) | **Pipeline:** Add demo deals to the "New" column so it's not empty, then retake `02-pipeline-kanban.jpeg` with all 4 columns populated. **Conversation:** Retake `07-conversation-panel.jpeg` showing actual conversation detail (email threads, SMS history, call transcripts) — not the table/list view. The conversation detail is the "aha moment" and must look like real unified messaging. | `public/images/landing/02-pipeline-kanban.jpeg`, `public/images/landing/07-conversation-panel.jpeg` |
+| 12 | Image framing | **Use `object-contain` (not `object-cover`)** on panel screenshots (Features 2-3) so images display in full without cropping. Feature 1 (Pipeline) uses `object-cover` for full-width display. Every side of panel images must be fully visible — no cutoff. | Feature showcase image elements in page.tsx |
+| 13 | Screenshot retakes (DONE) | Retaken with demo data from VexioSales TechFlow Solutions org (`seed_demo.py`). Pipeline: `02-pipeline-kanban.png` (4 populated stages). Enrichment: `04-lead-intelligence.jpg` (Score 85, HIGH BUDGET). Conversation: `03-email-communication.jpg` (email thread with AI outreach + reply). | `public/images/landing/` |
+| 14 | Feature 4 removal | **Remove Inbound Voice & SMS section.** Screenshot not production-ready. Feature remains in beta checklist. Can be re-added when a proper screenshot is available. Page now has 3 feature showcase sections, 7 total sections. | Section 4, section flow, DoD |
 
 ---
 
@@ -118,39 +119,39 @@ Between steps: connecting arrow/line icons.
 
 ---
 
-### Section 4: FEATURE SHOWCASE (4 Features)
+### Section 4: FEATURE SHOWCASE (3 Features — Updated 2026-03-23)
 **Background:** Alternating white and `#f5f8fc` per feature
 **Layout:** Each feature is text + screenshot, alternating left/right
 
-**Feature 1: Pipeline Visibility**
+**Note:** Reduced from 4 to 3 features. Inbound Intelligence was removed because the screenshot was not production-ready and the feature is not as visually differentiating as the other three. It can be re-added in a future pass when a proper screenshot is available.
+
+**Feature 1: Pipeline Visibility** (white bg, text left, screenshot right)
 - Eyebrow: `PIPELINE MANAGEMENT`
 - H3: **"See every deal, every stage, every signal — in real time."**
 - Body: "Drag-and-drop kanban board with deal values, contact info, and AI-flagged stalled opportunities. No more surprises in pipeline reviews."
 - Buyer pain it solves: "I have no idea what's stuck or why."
-- Screenshot: `02-pipeline-kanban.jpeg`
+- Screenshot: `02-pipeline-kanban.png` (full pipeline view — 4 stages with demo deals: New $8,500, Contacted $5,964, Qualified $24,000, Proposal $35,964)
 
-**Feature 2: AI Lead Enrichment**
+**Feature 2: AI Lead Enrichment** (light bg, screenshot left, text right)
 - Eyebrow: `AI LEAD ENRICHMENT`
 - H3: **"Know everything about a lead before the first call."**
 - Body: "AI qualification score, best approach recommendation, personalization hooks, company details, and contact info — all in one panel. Stop Googling before every meeting."
 - Buyer pain it solves: "I spend hours researching before calls."
-- Screenshot: `05-enrichment-panel.jpeg` (cropped panel — AI score, personalization hooks, company info)
+- Screenshot: `04-lead-intelligence.jpg` (Lead Intelligence card — Score 85, HIGH BUDGET tag, Best Approach: Direct Demo, 3 personalization hooks)
 
-**Feature 3: Unified Conversation Tracking (KEY DIFFERENTIATOR — make this prominent)**
+**Feature 3: Unified Conversation Tracking (KEY DIFFERENTIATOR — make this prominent)** (white bg, text left, screenshot right)
 - Eyebrow: `ALL CHANNELS, ONE VIEW`
 - H3: **"Every call, email, and text — tracked in one place per lead."**
 - Body: "When a lead calls, you see their full email history. When they reply to an SMS, you see the voice transcript. VexioSales unifies SMS, email, and voice conversations into a single timeline per contact — so your rep never asks 'wait, have we talked to them before?'"
 - Buyer pain it solves: "My reps use 5 different tools and still don't know what was said to a lead last week."
 - Why this matters: Most CRMs show email OR calls — not both. Reps waste time switching tabs, losing context, sending duplicate outreach. This is the single pane of glass they've been asking for.
-- Screenshot: `07-conversation-panel.jpeg` (cropped panel — Communication Analytics, channel buttons, email history. **Display more prominently than other feature screenshots — this is the key differentiator.**)
-- **Design note:** Consider showing this as a wider/more prominent section than other features — it's the "aha moment" for buyers
+- Screenshot: `03-email-communication.jpg` (Email conversation thread — AI-sent outreach + lead reply, sentiment tags, full message preview. **Display more prominently than other feature screenshots — this is the key differentiator.**)
+- **Design note:** Uses wider grid `[1fr_1.2fr]` to make this section more prominent
 
-**Feature 4: Inbound Intelligence + AI Next Actions**
-- Eyebrow: `INBOUND VOICE & SMS`
-- H3: **"Someone called. VexioSales already knows what to do next."**
-- Body: "Inbound calls and messages are automatically matched to existing leads. AI analyzes the conversation, scores urgency, and recommends the next best action — so your rep doesn't just call back, they call back prepared."
-- Buyer pain it solves: "Someone called but we have no idea who they are or what they want."
-- Screenshot: `09-voice-panel.jpeg` (cropped panel — Score 78, HOT, Next Best Action, Re-enrich, Convert to Deal)
+**~~Feature 4: Inbound Intelligence~~ (REMOVED 2026-03-23)**
+- Removed from build. Screenshot (`09-voice-panel.jpeg`) was not production-ready — showed contact info and basic lead intelligence rather than the inbound voice/SMS differentiator.
+- Inbound call and message intelligence remains in the beta checklist as a product capability.
+- Can be re-added when a proper screenshot showing the actual inbound call matching + AI next-action flow is available.
 
 ---
 
@@ -227,19 +228,22 @@ Between steps: connecting arrow/line icons.
 
 Each screenshot is used **exactly once**. No section shares a screenshot with another.
 
-Features 2-4 now use **cropped panel versions** instead of full-page views. The full-page views made these sections look like duplicates at scan speed because they all shared the same leads list background. The panel crops focus on the sidebar — the actual differentiator.
+Features 2-3 use cropped panel/detail views from the VexioSales demo environment (seeded via `seed_demo.py`). Feature 1 uses the full pipeline view. All screenshots sourced from the TechFlow Solutions demo org.
 
 | Section | Screenshot File | View Type | What It Shows |
 |---|---|---|---|
 | Hero | `01-dashboard.jpeg` | Cropped top-left | Dashboard metrics + sidebar + Quick Actions |
-| Feature 1: Pipeline | `02-pipeline-kanban.jpeg` | Full view | 4 pipeline stages (New→Contacted→Qualified→Proposal) with real deals. **Ensure all 4 columns are legible** — adjust framing if needed so the "New" column is not cut off. |
-| Feature 2: Enrichment | `05-enrichment-panel.jpeg` | Cropped panel | AI score 85, personalization hooks, company info sidebar |
-| Feature 3: Conversation | `07-conversation-panel.jpeg` | Cropped panel | Communication Analytics, channel buttons, email history sidebar. **This is the key differentiator — keep this section visually more prominent than Features 2 and 4.** |
-| Feature 4: Inbound | `09-voice-panel.jpeg` | Cropped panel | Voice intelligence sidebar (Score 78, HOT, Next Best Action, Re-enrich, Convert to Deal) |
+| Feature 1: Pipeline | `02-pipeline-kanban.png` | Full view | 4 pipeline stages with demo deals: New ($8,500 NovaBridge), Contacted ($5,964 CloudScale), Qualified ($24,000 DataVault), Proposal ($35,964 FinanceFlow) |
+| Feature 2: Enrichment | `04-lead-intelligence.jpg` | Detail panel | Lead Intelligence card — Score 85, HIGH BUDGET, Best Approach: Direct Demo, 3 personalization hooks |
+| Feature 3: Conversation | `03-email-communication.jpg` | Detail panel | Email conversation thread — AI-sent outreach + lead reply, sentiment tags, full message preview. **Key differentiator — displayed more prominently.** |
 
 **How It Works section:** No screenshot. Uses numbered step illustrations only.
 
-**Unused screenshots (archived):** `05-enrichment-company.jpeg`, `07-conversation-history.jpeg`, `09-priya-voice-call.jpeg` — these are full-page versions, no longer used in this build.
+**Available but unused screenshots:**
+
+- `05-ai-strategy.jpg` — Strategy tab (Recommended Approach, Value Proposition, Personalization Hooks). Available for future use.
+- `05-enrichment-panel.jpeg`, `07-conversation-panel.jpeg`, `09-voice-panel.jpeg` — Previous panel crops, replaced by new demo screenshots.
+- `05-enrichment-company.jpeg`, `07-conversation-history.jpeg`, `09-priya-voice-call.jpeg` — Full-page versions, archived.
 
 ---
 
@@ -331,18 +335,17 @@ Already implemented (keep as-is):
 1. [DARK]  Hero — H1 + dashboard screenshot + stat cards (Section 1)
 2. [LIGHT] Pain → Solution — 3 pain-point cards (Section 2)
 3. [WHITE] How It Works — 3-step numbered flow, no screenshot (Section 3)
-4. [ALT]   Feature Showcase — 4 features alternating text/screenshot (Section 4):
+4. [ALT]   Feature Showcase — 3 features alternating text/screenshot (Section 4):
            4a. [WHITE] Pipeline — text left, screenshot right
            4b. [LIGHT] Enrichment — screenshot left, text right
-           4c. [WHITE] Conversation Tracking — text left, screenshot right
-           4d. [LIGHT] Inbound Intelligence — screenshot left, text right
+           4c. [WHITE] Conversation Tracking — text left, screenshot right (wider grid, key differentiator)
 5. [DARK]  Beta Scope — what's included checklist (Section 5)
 6. [WHITE] Product Principles — 4-card grid (Section 6)
 7. [LIGHT] FAQ — 6 questions, static cards, all visible (Section 7)
 8. [DARK]  CTA — "See VexioSales in action" (Section 8)
 ```
 
-**8 sections total.** Trust bar and social proof deferred — will add once VexioSales has its own beta customers or integration partners.
+**7 sections total.** Inbound Intelligence removed (screenshot not production-ready). Trust bar and social proof deferred — will add once VexioSales has its own beta customers or integration partners.
 
 ---
 
@@ -417,10 +420,10 @@ VexioSales sits in a specific market gap:
 
 Before marking this build complete, verify ALL of the following:
 
-- [ ] All 8 sections present in order (Hero → Pain/Solution → How It Works → Feature Showcase (4) → Beta Scope → Product Principles → FAQ → CTA)
+- [ ] All 7 sections present in order (Hero → Pain/Solution → How It Works → Feature Showcase (3) → Beta Scope → Product Principles → FAQ → CTA)
 - [ ] No `ScrollReveal` import anywhere in the file
 - [ ] No ScrollReveal import. No animations of any kind.
-- [ ] 5 screenshots used exactly once each: `01-dashboard`, `02-pipeline-kanban`, `05-enrichment-panel`, `07-conversation-panel`, `09-voice-panel`
+- [ ] 4 screenshots used exactly once each: `01-dashboard`, `02-pipeline-kanban`, `04-lead-intelligence`, `03-email-communication`
 - [ ] No screenshot appears in more than one section
 - [ ] JSON-LD preserved: SoftwareApplication, FAQPage, BreadcrumbList
 - [ ] Metadata preserved: title, description, canonical, OG
