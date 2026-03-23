@@ -344,7 +344,7 @@ export default function VexioSalesPage() {
             <div className="rounded-2xl border border-slate-200 bg-[#f8fafc] p-3 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.30)]">
               <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <Image
-                  src="/images/landing/02-pipeline-kanban.jpeg"
+                  src="/images/landing/02-pipeline-kanban.png"
                   alt="VexioSales pipeline kanban board with four deal stages and real deal values"
                   width={980}
                   height={1320}
@@ -363,11 +363,11 @@ export default function VexioSalesPage() {
             <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.30)]">
               <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <Image
-                  src="/images/landing/05-enrichment-panel.jpeg"
+                  src="/images/landing/04-lead-intelligence.jpg"
                   alt="VexioSales AI enrichment panel showing qualification score, personalization hooks, and company details"
                   width={980}
                   height={1320}
-                  className="h-[380px] w-full object-cover object-top sm:h-[440px] lg:h-[480px]"
+                  className="h-[380px] w-full object-contain object-center sm:h-[440px] lg:h-[480px]"
                 />
               </div>
             </div>
@@ -405,44 +405,13 @@ export default function VexioSalesPage() {
             <div className="rounded-2xl border border-slate-200 bg-[#f8fafc] p-3 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.30)]">
               <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <Image
-                  src="/images/landing/07-conversation-panel.jpeg"
+                  src="/images/landing/03-email-communication.jpg"
                   alt="VexioSales unified conversation panel with Communication Analytics, channel buttons, and email timeline"
                   width={980}
                   height={1320}
-                  className="h-[400px] w-full object-cover object-top sm:h-[480px] lg:h-[520px]"
+                  className="h-[400px] w-full object-contain object-center sm:h-[480px] lg:h-[520px]"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4d: Feature 4 — Inbound Intelligence (light, screenshot left, text right) */}
-      <section className="bg-[#f5f8fc] py-24 text-slate-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.30)]">
-              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-                <Image
-                  src="/images/landing/09-voice-panel.jpeg"
-                  alt="VexioSales voice intelligence panel showing lead score, urgency rating, and next best action"
-                  width={980}
-                  height={1320}
-                  className="h-[380px] w-full object-cover object-top sm:h-[440px] lg:h-[480px]"
-                />
-              </div>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">INBOUND VOICE &amp; SMS</p>
-              <h3 className="mt-5 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-                Someone called. VexioSales already knows what to do next.
-              </h3>
-              <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
-                Inbound calls and messages are automatically matched to existing leads. AI analyzes the conversation,
-                scores urgency, and recommends the next best action — so your rep doesn&apos;t just call back, they call
-                back prepared.
-              </p>
             </div>
           </div>
         </div>
