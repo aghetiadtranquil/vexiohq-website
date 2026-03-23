@@ -81,9 +81,9 @@ const menuData = {
           {
             title: 'VexioSales',
             desc: 'AI-powered sales intelligence & CRM',
-            href: '/products/vexio-sales',
+            href: '/products/vexiosales',
             icon: 'sales',
-            badge: 'Live'
+            badge: 'Beta'
           },
           {
             title: 'VexioExpense',
@@ -225,6 +225,8 @@ export default function StableMegaMenu() {
                                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                                       item.badge === 'Live'
                                         ? 'bg-green-100 text-green-700'
+                                        : item.badge === 'Beta'
+                                        ? 'bg-sky-100 text-sky-700'
                                         : item.badge === 'Coming Soon'
                                         ? 'bg-blue-100 text-blue-700'
                                         : 'bg-gray-100 text-gray-600'
@@ -302,7 +304,13 @@ export default function StableMegaMenu() {
                   <span className="font-medium text-gray-900">{item.title}</span>
                   {item.badge && (
                     <span className={`text-xs px-2 py-0.5 rounded-full ${
-                      item.badge === 'Live' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
+                      item.badge === 'Live'
+                        ? 'bg-green-100 text-green-700'
+                        : item.badge === 'Beta'
+                        ? 'bg-sky-100 text-sky-700'
+                        : item.badge === 'Coming Soon'
+                        ? 'bg-blue-100 text-blue-700'
+                        : 'bg-gray-100 text-gray-600'
                     }`}>
                       {item.badge}
                     </span>

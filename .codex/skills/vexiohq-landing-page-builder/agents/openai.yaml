@@ -1,0 +1,4 @@
+interface:
+  display_name: "VexioHQ Landing Builder"
+  short_description: "Build or revise the VexioHQ landing page."
+  default_prompt: "Use $vexiohq-landing-page-builder to build or revise the VexioHQ landing page from the project handoff and source docs."

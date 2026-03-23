@@ -72,6 +72,16 @@ const nextConfig = {
   },
 
   // Headers for caching and security
+  async redirects() {
+    return [
+      {
+        source: '/products/vexio-sales/:path*',
+        destination: '/products/vexiosales/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
